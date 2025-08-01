@@ -8,10 +8,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 public class DriverFactory {
 
-    public WebDriver driver;
+   public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
-    public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
-
+   WebDriver driver;
     public WebDriver init_driver (String browser)
     {
 

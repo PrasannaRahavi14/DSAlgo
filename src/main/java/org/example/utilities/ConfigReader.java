@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class ConfigReader {
 
-    private Properties prop;
+    private static Properties prop;
 
     public Properties init_prop() {
         prop = new Properties();
@@ -23,4 +23,6 @@ public class ConfigReader {
 
         return prop;
     }
+
+    public static String getProperty(String key){ return prop.getProperty(key);}
 }
