@@ -16,4 +16,16 @@ public class ArraySteps {
     @Then("User should be navigated to the Array page")
     public void userShouldBeNavigatedToTheArrayPage() {
     }
+
+    @Given("User is on the Array page")
+    public void userIsOnTheArrayPage() {
+    }
+
+    @When("User clicks Arrays in Python hyperlink")
+    public void userClicksArraysInPythonHyperlink() {
+    }
+
+    @Then("User should be redirected to Arrays in Python page")
+    public void userShouldBeRedirectedToArraysInPythonPage() {
+    }
 }
