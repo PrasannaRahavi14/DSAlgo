@@ -2,10 +2,11 @@ package org.example.stepdefinitions;
 
 import java.time.Duration;
 
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -28,12 +29,30 @@ public class HomeSteps {
 
 	}
 
-	/*@Then("The user should be redireced to Home page to verify NumbyNinja")
+	@Then("The user should be redireced to Home page to verify NumbyNinja")
 	public void the_user_should_be_redireced_to_home_page_to_verify_numby_ninja() {
-		 boolean numbytext=driver.findElement(By.xpath("//a[text()='NumpyNinja']")).isDisplayed();
+		 /*boolean numbytext=driver.findElement(By.xpath("//a[text()='NumpyNinja']")).isDisplayed();
 		  Assert.assertEquals(numbytext,true);
-		  driver.quit();
+		  driver.quit();*/
+		
+		
+		String expectedTitle="NumpyNinja";
+		String actualTitle="";
+		actualTitle=driver.getTitle();
+		if(actualTitle.equals(expectedTitle))
+		{
+			System.out.println("test is passed");
+		}
+		else
+		{
+			System.out.println("test is failed");
+		}
+		}
+		/*boolean numbytext = driver.findElement(By.xpath("//a[text()='NumpyNinja']")).isDisplayed();
+	    System.out.println("Is NumpyNinja link displayed? " + numbytext);
+	    Assert.assertTrue(numbytext, "NumpyNinja link should be displayed");
+	    driver.quit();*/
 
 	    
-	}*/
 	}
+	
