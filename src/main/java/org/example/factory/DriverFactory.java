@@ -14,13 +14,13 @@ public class DriverFactory {
     public WebDriver init_driver (String browser)
     {
 
-        if(browser.equalsIgnoreCase("chrome"))
+        if(browser.equals("chrome"))
         {
             WebDriverManager.chromedriver().setup();
             tlDriver.set(new ChromeDriver());
         }
 
-        else if (browser.equalsIgnoreCase("edge"))
+        else if (browser.equals("edge"))
         {
             WebDriverManager.edgedriver().setup();
             tlDriver.set(new EdgeDriver());

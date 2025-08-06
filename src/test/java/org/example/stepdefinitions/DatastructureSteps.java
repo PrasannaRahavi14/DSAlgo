@@ -1,32 +1,66 @@
 package org.example.stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.example.factory.DriverFactory;
+import org.example.pages.DataStructurePage;
+import org.example.pages.HomePage;
+import org.example.pages.LandingPage;
+import org.example.pages.LoginPage;
+import org.example.utilities.ConfigReader;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class DatastructureSteps {
-    @Given("the user signed in to ds algo page")
-    public void theUserSignedInToDsAlgoPage() {
-        
-    }
+
+    WebDriver driver = DriverFactory.getDriver();
+    LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
+    LandingPage landingpage = new LandingPage(DriverFactory.getDriver());
+    HomePage homePage = new HomePage(DriverFactory.getDriver());
+
+    DataStructurePage dsp = new DataStructurePage(DriverFactory.getDriver());
+    String url = ConfigReader.getProperty("baseurl");
 
     @Given("The user is in Home Page after login")
     public void theUserIsInHomePageAfterLogin() {
-        
+        String title_hp = homePage.getTitle();
+        Assert.assertEquals(title_hp, "NumpyNinja");
+        Assert.assertEquals(homePage.CheckName(), "Prasanna");
     }
 
-    @When("The user clicks the option {string} from the dropdown")
-    public void theUserClicksTheOptionFromTheDropdown(String arg0) {
+//    @When("The user clicks the option {string} from the dropdown")
+//    public void theUserClicksTheOptionFromTheDropdown(String arg0) {
+//
+//    }
 
-    }
-
-
-    @When("The user clicks the {string} Button")
-    public void theUserClicksTheButton(String arg0) {
-    }
 
     @Given("The user is in {string} Page")
-    public void theUserIsInPage(String arg0) {
+    public void theUserIsInPage(String expectedText) {
+        Assert.assertEquals(dsp.getTitleforDSI(),expectedText);
+    }
 
+    @Given("the user is on Landing Page")
+    public void theUserIsOnLandingPage() {
+        driver.get(url);
+        String title_lp =  landingpage.getTitle();
+        Assert.assertEquals(title_lp, "Preparing for the Interviews");
+        landingpage.clickGetStartedBtn();
+    }
+
+    @And("the user signed in to ds algo page with username {string} and password {string}")
+    public void theUserSignedInToDsAlgoPageWithUsernameAndPassword(String un, String pwd) {
+        homePage.clickSignInLink();
+        loginpage.doLogin(un,pwd);
+    }
+
+
+//    @When("The user clicks the {string} from the topics")
+//    public void theUserClicksTheFromTheTopics(String arg0) {
+//    }
+
+    @When("The user clicks the Get Started Button of DS page")
+    public void theUserClicksTheGetStartedButtonOfDSPage() {
+        homePage.clickGetStartedForDS();
     }
 }

@@ -1,0 +1,8 @@
+org\example\pages\LandingPage.class
+org\example\pages\LoginPage.class
+org\example\pages\HomePage.class
+org\example\utilities\ConfigReader.class
+org\example\pages\DataStructurePage.class
+org\example\utilities\Constants.class
+org\example\utilities\ElementsUtil.class
+org\example\factory\DriverFactory.class

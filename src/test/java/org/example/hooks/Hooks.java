@@ -24,7 +24,8 @@ public class Hooks {
     public void launchBrowser()
     {
        String browserName = prop.getProperty("browser");
-       driverFactory = new DriverFactory();
+        System.out.println("Browser from config: " + browserName);
+        driverFactory = new DriverFactory();
        driver = driverFactory.init_driver(browserName);
     }
 
