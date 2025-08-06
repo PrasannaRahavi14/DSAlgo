@@ -1,4 +1,3 @@
-
 Feature: Data Structures Page Landing
 
   Background:
