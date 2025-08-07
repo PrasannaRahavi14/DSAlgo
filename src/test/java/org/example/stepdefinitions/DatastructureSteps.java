@@ -9,6 +9,7 @@ import org.example.pages.HomePage;
 import org.example.pages.LandingPage;
 import org.example.pages.LoginPage;
 import org.example.utilities.ConfigReader;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -37,7 +38,9 @@ public class DatastructureSteps {
 
     @Given("The user is in {string} Page")
     public void theUserIsInPage(String expectedText) {
-        Assert.assertEquals(dsp.getTitleforDSI(),expectedText);
+   //     Assert.assertEquals(dsp.getTitleforDSI(),expectedText);
+       System.out.println("The user is in the page : " +dsp.validateTitle(expectedText));
+       Assert.assertEquals(dsp.validateTitle(expectedText),expectedText);
     }
 
     @Given("the user is on Landing Page")
@@ -55,9 +58,10 @@ public class DatastructureSteps {
     }
 
 
-//    @When("The user clicks the {string} from the topics")
-//    public void theUserClicksTheFromTheTopics(String arg0) {
-//    }
+    @When("The user clicks the {string} from the topics")
+    public void theUserClicksTheFromTheTopics(String topic) {
+        dsp.clickTopicLink(topic);
+    }
 
     @When("The user clicks the Get Started Button of DS page")
     public void theUserClicksTheGetStartedButtonOfDSPage() {
