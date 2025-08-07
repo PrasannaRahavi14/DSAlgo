@@ -3,6 +3,8 @@ package org.example.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import rst.pdfbox.layout.text.ReplacedWhitespace;
+
 public class LoginPage {
 
     private WebDriver driver;
@@ -41,5 +43,36 @@ public class LoginPage {
         driver.findElement(Password).sendKeys(pwd);
         driver.findElement(LoginBtn).click();
     }
-
+    
+    public void replacewithemptystring()
+    {
+    	driver.findElement(Username).sendKeys("");
+    	driver.findElement(Password).sendKeys("");
+    	driver.findElement(LoginBtn).click();
+    }
+    public void replacewithemptystringusrnme()
+    {
+    	driver.findElement(Username).sendKeys("");
+    	driver.findElement(LoginBtn).click();
+    
+    }
+    public void replacewithemptystringpwd()
+    {
+    	driver.findElement(Password).sendKeys("");
+    	driver.findElement(LoginBtn).click();
+    }
+    
+    public void invalidusrnme(String pwd)
+    {
+    	driver.findElement(Username).sendKeys("hello");
+    	driver.findElement(Password).sendKeys(pwd);
+    }
+    
+    public void invalidpwd(String un)
+    {
+    	driver.findElement(Username).sendKeys(un);
+    	driver.findElement(Password).sendKeys("");
+    	driver.findElement(LoginBtn).click();
+    }
+    
 }
