@@ -1,7 +1,9 @@
 package org.example.stepdefinitions;
 
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.factory.DriverFactory;
 import org.example.pages.DataStructurePage;
@@ -9,9 +11,12 @@ import org.example.pages.HomePage;
 import org.example.pages.LandingPage;
 import org.example.pages.LoginPage;
 import org.example.utilities.ConfigReader;
+import org.example.utilities.ExcelReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+
+import java.util.Map;
 
 public class DatastructureSteps {
 
@@ -19,9 +24,10 @@ public class DatastructureSteps {
     LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
     LandingPage landingpage = new LandingPage(DriverFactory.getDriver());
     HomePage homePage = new HomePage(DriverFactory.getDriver());
-
     DataStructurePage dsp = new DataStructurePage(DriverFactory.getDriver());
     String url = ConfigReader.getProperty("baseurl");
+    private final String filePath = "src/test/resources/testdata/TestData1.xlsx";
+
 
     @Given("The user is in Home Page after login")
     public void theUserIsInHomePageAfterLogin() {
@@ -66,5 +72,29 @@ public class DatastructureSteps {
     @When("The user clicks the Get Started Button of DS page")
     public void theUserClicksTheGetStartedButtonOfDSPage() {
         homePage.clickGetStartedForDS();
+    }
+
+    @Given("the user is in DataStructure page")
+    public void theUserIsInDataStructurePage() {
+        driver.get(url);
+        String title_lp =  landingpage.getTitle();
+        Assert.assertEquals(title_lp, "Preparing for the Interviews");
+        landingpage.clickGetStartedBtn();
+        String title_hp = homePage.getTitle();
+        Assert.assertEquals(title_hp, "NumpyNinja");
+        homePage.clickSignInLink();
+        Map<String, String> loginData = ExcelReader.getDefaultLogin(filePath);
+        loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));
+        Assert.assertEquals(homePage.CheckName(), "Prasanna");
+        homePage.clickGetStartedForDS();
+        Assert.assertEquals(dsp.getTitleforDSI(),"Data Structures-Introduction");
+
+
+    }
+
+    @Then("The user should be in {string} Page")
+    public void theUserShouldBeInPage(String textPage) {
+        System.out.println("The user is in the page : " +dsp.validateTitle(textPage));
+        Assert.assertEquals(dsp.validateTitle(textPage),textPage);
     }
 }

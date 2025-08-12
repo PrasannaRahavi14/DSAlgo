@@ -1,23 +1,14 @@
 Feature: Data Structures Page Validation
 
   Background:
-    Given the user is on Landing Page
-    And the user signed in to ds algo page with username "Prasanna" and password "Welcome@01"
+    Given the user is in DataStructure page
 
-  Scenario: Navigate to Data Structures Page with button
-    Given The user is in Home Page after login
-    When The user clicks the Get Started Button of DS page
-    Then The user is in "Data Structures-Introduction" Page
+@test123
+  Scenario: verify the user is able to navigate to time complexity page
+    When The user clicks the "Time Complexity" from the topics
+    Then The user should be in "Time Complexity" Page
 
-#  Scenario: Navigate to Data Structures Page with dropdown
-#    Given The user is in Home Page after login
-#    When The user clicks the option "Data Structures" from the dropdown
-#    Then The user is in "Data Structures Introduction" Page
-
-@test234
-  Scenario: Navigate to Time Complexity Page
-    Given The user is in Home Page after login
-    When The user clicks the Get Started Button of DS page
-    Then The user is in "Data Structures-Introduction" Page
-    And The user clicks the "Time Complexity" from the topics
-    Then The user is in "Time Complexity" Page
+#  Scenario : verify the user is able to navigate to try editor page
+#    Given The user is in "Time Complexity" Page
+#    When The user click Try here button
+#    Then The user should be redirected to the page having a try editor with run button
