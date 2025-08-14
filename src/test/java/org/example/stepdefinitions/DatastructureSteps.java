@@ -10,6 +10,7 @@ import org.example.pages.DataStructurePage;
 import org.example.pages.HomePage;
 import org.example.pages.LandingPage;
 import org.example.pages.LoginPage;
+import org.example.utilities.BaseLogger;
 import org.example.utilities.ConfigReader;
 import org.example.utilities.ExcelReader;
 import org.openqa.selenium.By;
@@ -18,7 +19,7 @@ import org.testng.Assert;
 
 import java.util.Map;
 
-public class DatastructureSteps {
+public class DatastructureSteps extends BaseLogger {
 
     WebDriver driver = DriverFactory.getDriver();
     LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
@@ -76,6 +77,7 @@ public class DatastructureSteps {
 
     @Given("the user is in DataStructure page")
     public void theUserIsInDataStructurePage() {
+        log.info("Executing the Background Scenario : Navigating to the DataStructure Page");
         driver.get(url);
         String title_lp =  landingpage.getTitle();
         Assert.assertEquals(title_lp, "Preparing for the Interviews");
@@ -88,13 +90,15 @@ public class DatastructureSteps {
         Assert.assertEquals(homePage.CheckName(), "Prasanna");
         homePage.clickGetStartedForDS();
         Assert.assertEquals(dsp.getTitleforDSI(),"Data Structures-Introduction");
+        log.info ("Background Scenario executed successfully : Landed in DataStructure Page");
 
 
     }
 
     @Then("The user should be in {string} Page")
     public void theUserShouldBeInPage(String textPage) {
-        System.out.println("The user is in the page : " +dsp.validateTitle(textPage));
+        log.info("The user is in the page : " +dsp.validateTitle(textPage));
         Assert.assertEquals(dsp.validateTitle(textPage),textPage);
+
     }
 }

@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import org.example.utilities.BaseLogger;
 import org.example.utilities.ElementsUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-public class DataStructurePage {
+public class DataStructurePage extends BaseLogger {
 
     ElementsUtil elementsUtil;
 
@@ -34,10 +35,12 @@ public class DataStructurePage {
     //3. actions for the page
     public String getTitleforDSI()
     {
-       return driver.findElement(getTitle_DSI).getText();
+       log.info("Getting the title of DataStructure Page");
+        return driver.findElement(getTitle_DSI).getText();
     }
     public void clickTopicLink(String text)
     {
+        log.info("Clicking on the topic link : "+ text);
         driver.findElement(getTopicLinkByText(text)).click();
 
     }
@@ -56,11 +59,13 @@ public class DataStructurePage {
 
     public String validateTitle(String title)
     {
-       By xpath = getTitleXPath(title);
+        log.info("Title of the page : "+title);
+      By xpath = getTitleXPath(title);
       return driver.findElement(xpath).getText();
     }
     public void clickTryHereBtn()
     {
+        log.info("Clicking on the Try Here Button");
         driver.findElement(tryHereBtn).click();
     }
     public boolean tryEditorRunBtnVisible() {

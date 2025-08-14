@@ -1,9 +1,10 @@
 package org.example.pages;
 
+import org.example.utilities.BaseLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class LoginPage extends BaseLogger {
 
     private WebDriver driver;
 
@@ -37,6 +38,7 @@ public class LoginPage {
 
     public void doLogin(String un, String pwd)
     {
+        log.info("Performing Login");
         driver.findElement(Username).sendKeys(un);
         driver.findElement(Password).sendKeys(pwd);
         driver.findElement(LoginBtn).click();
