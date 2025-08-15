@@ -4,7 +4,7 @@ Feature: Data Structures Page Landing
     Given the user is on Landing Page
     And the user signed in to ds algo page with username "Prasanna" and password "Welcome@01"
 
-@test123
+#@test123
   Scenario: Navigate to Data Structures Page with button
     Given The user is in Home Page after login
     When The user clicks the Get Started Button of DS page

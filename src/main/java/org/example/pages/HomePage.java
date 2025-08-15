@@ -10,7 +10,9 @@ public class HomePage {
     private ElementsUtil elementsUtil;
     private By PageTitle = By.cssSelector(".navbar-brand");
     private By SignInLink = By.cssSelector("a[href='/login']");
-    private By NameCheckAfterLogin = By.xpath("//a[contains(text(),'Prasanna')]");
+   private By NameCheckAfterLogin = By.xpath("//a[contains(text(),'Prasanna')]");
+    private By RegisterLink = By.cssSelector("a[href='/register']");
+    		
 
     private By GetStartedBtn_DS = By.xpath("//a[@href='data-structures-introduction']");
 
@@ -32,7 +34,12 @@ public class HomePage {
         //driver.findElement(SignInLink).click();
         elementsUtil.doClick(SignInLink);
     }
+    public void clickRegisterLink()
+    {
+    	//driver.findElement(RegisterLink).click();
 
+    	elementsUtil.doClick(RegisterLink);
+    }
     public String CheckName()
     {
 
