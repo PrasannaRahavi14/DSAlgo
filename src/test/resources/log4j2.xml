@@ -8,7 +8,7 @@
         </Console>
 
         <!-- File logging -->
-        <File name="FileLogger" fileName="logs/automation.log" append="true">
+        <File name="FileLogger" fileName="target/logs/execution.log" append="true">
             <PatternLayout>
                 <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n</Pattern>
             </PatternLayout>
