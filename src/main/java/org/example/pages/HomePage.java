@@ -10,7 +10,7 @@ public class HomePage {
     private ElementsUtil elementsUtil;
     private By PageTitle = By.cssSelector(".navbar-brand");
     private By SignInLink = By.cssSelector("a[href='/login']");
-   private By NameCheckAfterLogin = By.xpath("//a[contains(text(),'Prasanna')]");
+    private By NameCheckAfterLogin = By.xpath("//a[contains(text(),'Prasanna')]");
     private By RegisterLink = By.cssSelector("a[href='/register']");
     		
 
