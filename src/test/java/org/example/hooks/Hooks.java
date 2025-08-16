@@ -45,12 +45,14 @@ public class Hooks {
         log.info("Starting scenario: " + scenario.getName());
     }
 
-    @After(order = 1)
-    public void quitBrowser() {
+    @After(order = 0)
+    public void quitBrowser()
+    {
+        log.info("Closing the browser");
         driver.quit();
     }
 
-    @After(order = 0)
+    @After(order = 1)
     public void tearDown(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
             log.error("Scenario failed: " + scenario.getName());

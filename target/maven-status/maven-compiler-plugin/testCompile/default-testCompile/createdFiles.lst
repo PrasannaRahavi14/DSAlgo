@@ -2,5 +2,6 @@ org\example\stepdefinitions\QueuePageStepDefinition.class
 org\example\stepdefinitions\LoginSteps.class
 org\example\runners\TestRunner.class
 org\example\hooks\Hooks.class
+org\example\stepdefinitions\ArraySteps.class
 org\example\stepdefinitions\DatastructureSteps.class
 org\example\stepdefinitions\Register.class
