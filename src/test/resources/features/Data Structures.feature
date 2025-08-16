@@ -18,4 +18,5 @@ Feature: Data Structures Page Landing
 #  Scenario: Navigate to Time Complexity Page
 #    Given The user is in "Data Structures Introduction" Page
 #    When The user clicks the "Time Complexity" from the topics
+#    Then The user is in "Time Complexity" Page
 
