@@ -100,7 +100,7 @@ public class RegisterStepdef {
 	   //Assert.assertEquals(ActualMsg, "Please fill out this field.");
 	   System.out.println("Actual message: " + ActualMsg);
 	   Assert.assertEquals(ActualMsg, ExpectedMsg, "Please fill out this field.");
-	 
+	   System.out.println();
    }
    
    @When("the user clicks Register button after entering different passwords in Password and Password Confirmation fields")
