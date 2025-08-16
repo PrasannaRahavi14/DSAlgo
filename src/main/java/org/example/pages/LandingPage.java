@@ -1,9 +1,10 @@
 package org.example.pages;
 
+import org.example.utilities.BaseLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LandingPage {
+public class LandingPage extends BaseLogger {
 
     private WebDriver driver;
 
@@ -16,11 +17,13 @@ public class LandingPage {
 
     public void clickGetStartedBtn ()
     {
+        log.info("Clicking the Get Started Button of Landing page");
         driver.findElement(GetStartedBtn).click();
     }
 
     public String getTitle()
     {
+        log.info("Getting the title of the landing page");
         return driver.findElement(Title_lp).getText();
     }
 

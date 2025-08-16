@@ -1,21 +1,19 @@
-Feature: Data Structures Page Landing
+Feature: Data Structures Page Validation
 
   Background:
-    Given the user is on Landing Page
-    And the user signed in to ds algo page with username "Prasanna" and password "Welcome@01"
+    Given the user is in DataStructure page
 
-@test123
-  Scenario: Navigate to Data Structures Page with button
-    Given The user is in Home Page after login
-    When The user clicks the Get Started Button of DS page
-    Then The user is in "Data Structures-Introduction" Page
+@test236
+  Scenario: verify the user is able to navigate to time complexity page
+    When The user clicks the "Time Complexity" from the topics
+    Then The user should be in "Time Complexity" Page
 
-#  Scenario: Navigate to Data Structures Page with dropdown
-#    Given The user is in Home Page after login
-#    When The user clicks the option "Data Structures" from the dropdown
-#    Then The user is in "Data Structures Introduction" Page
+#  Scenario : verify the user is able to navigate to try editor page
+#    Given The user is in the time complexity page
+#    When The user click Try here button
+#    Then The user should be redirected to the page having a try editor with run button
 #
-#  Scenario: Navigate to Time Complexity Page
-#    Given The user is in "Data Structures Introduction" Page
-#    When The user clicks the "Time Complexity" from the topics
-#    Then The user is in "Time Complexity" Page
+#  Scenario : Verify the user is able to see the output for the valid python code
+#    Given The user is in the try editor page
+#    When The user enters the valid code and clicks run button
+#    Then The user should be able to see the output in the console
