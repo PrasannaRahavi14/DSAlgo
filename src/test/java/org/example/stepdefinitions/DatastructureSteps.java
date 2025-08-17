@@ -11,24 +11,18 @@ import org.example.pages.HomePage;
 import org.example.pages.LandingPage;
 import org.example.pages.LoginPage;
 import org.example.utilities.BaseLogger;
-import org.example.utilities.ConfigReader;
-import org.example.utilities.ExcelReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import java.util.Map;
+
 
 public class DatastructureSteps extends BaseLogger {
 
-    WebDriver driver = DriverFactory.getDriver();
     LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
     LandingPage landingpage = new LandingPage(DriverFactory.getDriver());
     HomePage homePage = new HomePage(DriverFactory.getDriver());
     DataStructurePage dsp = new DataStructurePage(DriverFactory.getDriver());
-    String url = ConfigReader.getProperty("baseurl");
-    private final String filePath = "src/test/resources/testdata/TestData1.xlsx";
-
 
     @Given("The user is in Home Page after login")
     public void theUserIsInHomePageAfterLogin() {
@@ -51,7 +45,7 @@ public class DatastructureSteps extends BaseLogger {
 
     @Given("the user is on Landing Page")
     public void theUserIsOnLandingPage() {
-        driver.get(url);
+       landingpage.getURL();
         String title_lp =  landingpage.getTitle();
         Assert.assertEquals(title_lp, "Preparing for the Interviews");
         landingpage.clickGetStartedBtn();
@@ -77,15 +71,12 @@ public class DatastructureSteps extends BaseLogger {
     @Given("the user is in DataStructure page")
     public void theUserIsInDataStructurePage() {
         log.info("Executing the Background Scenario : Navigating to the DataStructure Page");
-        driver.get(url);
-        String title_lp =  landingpage.getTitle();
-        Assert.assertEquals(title_lp, "Preparing for the Interviews");
+        landingpage.getURL();
+        Assert.assertEquals(landingpage.getTitle(), "Preparing for the Interviews");
         landingpage.clickGetStartedBtn();
-        String title_hp = homePage.getTitle();
-        Assert.assertEquals(title_hp, "NumpyNinja");
+        Assert.assertEquals(homePage.getTitle(), "NumpyNinja");
         homePage.clickSignInLink();
-        Map<String, String> loginData = ExcelReader.getDefaultLogin(filePath);
-        loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));
+        loginpage.performLoginDataDriven();
         Assert.assertEquals(homePage.CheckName(), "Prasanna");
         homePage.clickGetStartedForDS();
         Assert.assertEquals(dsp.getTitleforDSI(),"Data Structures-Introduction");
@@ -134,10 +125,8 @@ public class DatastructureSteps extends BaseLogger {
     @When("The user enters the valid python code and clicks run button")
     public void theUserEntersTheValidPythonCodeAndClicksRunButton() {
 
-        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filePath,"DataStructure","ValidCode");
-        String codeToInput = getCode.get("Python Code");
-        log.info("Entering python code in the editor : "+codeToInput);
-        dsp.enterPythonCode(codeToInput);
+        log.info("Entering python code in the editor : "+dsp.getPythonCodeDataDriven());
+        dsp.enterPythonCode(dsp.getPythonCodeDataDriven());
         log.info("Clicking on Run button");
         dsp.clickRunBtn();
     }
@@ -146,8 +135,7 @@ public class DatastructureSteps extends BaseLogger {
     public void theUserShouldBeAbleToSeeTheOutputInTheConsole() {
         String actualOutput = dsp.getOutputFromConsole();
         log.info("Output printed in the console : "+actualOutput);
-        Map<String, String> getOutput = ExcelReader.getRowByTestCaseId(filePath,"DataStructure","ValidCode");
-        String expectedOutput = getOutput.get("Expected Output");
+        String expectedOutput = dsp.getOutputDataDriven();
         log.info("Expected Output : "+expectedOutput);
         Assert.assertEquals(actualOutput,expectedOutput);
         log.info("Actual Output matched with the Expected Output");

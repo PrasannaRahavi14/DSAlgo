@@ -1,7 +1,9 @@
 package org.example.pages;
 
 import org.example.utilities.BaseLogger;
+import org.example.utilities.ConfigReader;
 import org.example.utilities.ElementsUtil;
+import org.example.utilities.ExcelReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +16,7 @@ import java.util.NoSuchElementException;
 public class DataStructurePage extends BaseLogger {
 
     ElementsUtil elementsUtil;
+    String filepath = ConfigReader.getProperty("testData");
 
     //1. locators
     private WebDriver driver;
@@ -103,6 +106,21 @@ public class DataStructurePage extends BaseLogger {
     {
         return driver.findElement(outputConsole).getText();
     }
+
+    public String getPythonCodeDataDriven()
+    {
+        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
+        String codeToInput = getCode.get("Python Code");
+        return codeToInput;
+    }
+
+    public String getOutputDataDriven()
+    {
+        Map<String, String> getOutput = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
+        String output = getOutput.get("Expected Output");
+        return output;
+    }
+
 
 
 
