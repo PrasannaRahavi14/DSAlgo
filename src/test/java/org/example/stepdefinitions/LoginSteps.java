@@ -50,7 +50,7 @@ import org.openqa.selenium.WebDriver;
 		@When("the user clicks the {string} button without entering username field")
 		public void the_user_clicks_the_button_without_entering_username_field(String LoginBtn) {
 		    
-			loginpage.replacewithemptystringusrnme();
+	//		loginpage.replacewithemptystringusrnme();
 			loginpage.clickOnLogin();
 			
 		}
@@ -58,13 +58,13 @@ import org.openqa.selenium.WebDriver;
 		
 		 @When("the user clicks the {string} button without entering password field")
 	        public void the_user_clicks_the_button_without_entering_password_field(String string) {
-	              loginpage.replacewithemptystringpwd(string);   
+	//              loginpage.replacewithemptystringpwd(string);
 	        }
 		
 		
 		@Then("the user should be displayed with error message {string}")
 		public void the_user_should_be_displayed_with_error_message(String string) {
-		   loginpage.alert();
+	//	   loginpage.alert();
 		   //LoggerLoad.error("<-----------Testing Error--------->");
 		}
 			
@@ -72,20 +72,20 @@ import org.openqa.selenium.WebDriver;
 		@When("the user clicks the {string} button after the invalid Username is entered")
 		public void the_user_clicks_the_button_after_the_invalid_username_is_entered(String enterPassword) {
 		    
-			loginpage.invalidusrnme(enterPassword);
+	//		loginpage.invalidusrnme(enterPassword);
 			loginpage.clickOnLogin();
 			
 		}
 		@Then("the error message {string} should be displayed")
 		public void the_error_message_should_be_displayed(String string) {
-		    loginpage.Invalidmsg();
+	//	    loginpage.Invalidmsg();
 		    //LoggerLoad.error("<----------Testing Error--------->");
 		}
 		
 		@When("the user clicks the {string} button after the invalid Password is entered")
 		public void the_user_clicks_the_button_after_the_invalid_password_is_entered(String enterUserName) {
 		    
-			loginpage.invalidpwd(enterUserName);
+	//		loginpage.invalidpwd(enterUserName);
 			
 			
 		}

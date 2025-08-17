@@ -30,7 +30,7 @@ public class RegisterStepdef {
 	 @When("the user clicks on Register link on the Home page") 
 	 public void the_user_clicks_on_register_link_on_the_home_page() { 
 		
-		 homePage.clickRegisterLink();
+		 homePage.clickRegister();
 		 
 	  }
 	 
@@ -46,7 +46,7 @@ public class RegisterStepdef {
 	     
 		 driver.get(url);
 		 landingpage.clickGetStartedBtn();
-		 homePage.clickRegisterLink();
+		 homePage.clickRegister();
 		 registerpage.getTitleRegisterpage();
 	 }
 	 
