@@ -165,8 +165,8 @@ public class RegisterPage {
     public void getPwdNumericValue()
     {
     	driver.findElement(By.id("id_username")).sendKeys("Qwerty@123");
-		driver.findElement(By.id("id_password1")).sendKeys("123456789098");
-		driver.findElement(By.id("id_password2")).sendKeys("123456789098");
+		driver.findElement(By.id("id_password1")).sendKeys("123456789");
+		driver.findElement(By.id("id_password2")).sendKeys("123456789");
 		driver.findElement(By.xpath("//input[@value='Register']")).click();
     }
     
