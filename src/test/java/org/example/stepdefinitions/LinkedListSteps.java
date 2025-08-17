@@ -1,7 +1,8 @@
 package org.example.stepdefinitions;
 
 import org.example.factory.DriverFactory;
-import org.example.pages.Home;
+import org.example.pages.HomePage;
+import org.example.pages.LandingPage;
 import org.example.pages.LinkedListPage;
 import org.example.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +13,8 @@ import io.cucumber.java.en.When;
 
 public class LinkedListSteps {
 	 WebDriver driver = DriverFactory.getDriver();
-	 Home home = new Home(DriverFactory.getDriver());
+	 HomePage home = new HomePage(DriverFactory.getDriver());
+	 LandingPage landingPage = new LandingPage(DriverFactory.getDriver());
 	 LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
 	 LinkedListPage linkedlistpage = new LinkedListPage(DriverFactory.getDriver());
 
@@ -22,8 +24,8 @@ public class LinkedListSteps {
 @Given("the user in Linked List page after signed in")
 public void the_user_in_linked_list_page_after_signed_in() {
 	
-	home.launchPage();
-	home.clickGetStarted();
+	landingPage.getURL();
+	landingPage.clickGetStartedBtn();
 	home.clickSignIn();
 	   loginpage.doLogin("dummyuser", "numpy@123");
 	   home.clickLinkedListGet();

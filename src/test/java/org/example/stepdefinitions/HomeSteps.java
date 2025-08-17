@@ -1,14 +1,10 @@
     package org.example.stepdefinitions;
-    import java.time.Duration;
 
-import org.example.factory.DriverFactory;
-import org.example.pages.Home;
-import org.example.pages.HomePage;
-import org.example.pages.LoginPage;
-import org.example.utilities.ConfigReader;
-import org.openqa.selenium.By;
-    import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.chrome.ChromeDriver;
+	import org.example.factory.DriverFactory;
+	import org.example.pages.HomePage;
+	import org.example.pages.LandingPage;
+	import org.example.pages.LoginPage;
+	import org.openqa.selenium.WebDriver;
 	import org.testng.Assert;
 
 	import io.cucumber.java.en.Given;
@@ -17,20 +13,22 @@ import org.openqa.selenium.By;
 
 	public class HomeSteps {
 		 WebDriver driver = DriverFactory.getDriver();
-		 Home home = new Home(DriverFactory.getDriver());
+		 HomePage home = new HomePage(DriverFactory.getDriver());
+	//	 Home home = new Home(DriverFactory.getDriver());
+		LandingPage landingPage = new LandingPage(DriverFactory.getDriver());
 		 LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
 
 		
 		@Given("The user is on dsAlgo portal page")
 		public void the_user_is_on_ds_algo_portal_page() {
-			 home.launchPage();
-			
+			 landingPage.getURL();
+
 					}
 
 		@When("The user click Get started button")
 		public void the_user_click_get_started_button() {
 			
-			home.clickGetStarted();
+			landingPage.clickGetStartedBtn();
 
 		}
 
@@ -43,9 +41,8 @@ import org.openqa.selenium.By;
 			}
 		@Given("The user is on the Home page")
 		public void the_user_is_on_the_home_page() {
-		   home.launchPage();
-		   home.clickGetStarted();
-		   
+			landingPage.getURL();
+			landingPage.clickGetStartedBtn();
 		   
 		}
 		@When("The user clicks on Get Started link on homepage {string} without login")
@@ -53,7 +50,7 @@ import org.openqa.selenium.By;
 			
 			switch(option) {
 			case "Datastructures" :
-				home.clickDataGet(); 
+				home.clickGetStartedForDS();
 				break;
 			case "Array" :
 				home.clickArrayGet(); 
@@ -68,7 +65,7 @@ import org.openqa.selenium.By;
 				home.clickQueueGet(); 
 				break;
 			case "Tree" :
-				home.clickTreeGet();
+				home.clickGetStartedForTree();
 				break;
 			case "Graph" :
 				home.clickGraphGet(); 
@@ -109,8 +106,8 @@ import org.openqa.selenium.By;
 		}
 		@Given("The user successfully sign in {string} and {string}")
 		public void the_user_successfully_sign_in_and(String userName, String password) {
-			home.launchPage();
-			   home.clickGetStarted();
+			landingPage.getURL();
+			landingPage.clickGetStartedBtn();
 			   home.clickSignIn();
 			   loginpage.doLogin(userName, password);
 		}
