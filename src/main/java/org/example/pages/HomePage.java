@@ -14,7 +14,7 @@ public class HomePage extends BaseLogger {
     private By NameCheckAfterLogin = By.xpath("//a[contains(text(),'Prasanna')]");
 
     private By GetStartedBtn_DS = By.xpath("//a[@href='data-structures-introduction']");
-
+    private By RegisterLink = By.cssSelector("a[href='/register']");
     public HomePage(WebDriver driver)
     {
 
@@ -47,5 +47,11 @@ public class HomePage extends BaseLogger {
     {
         log.info("Clicking on the Get Started Button of DataStructure from HomePage");
         driver.findElement(GetStartedBtn_DS).click();
+    }
+    public void clickRegisterLink()
+    {
+    	//driver.findElement(RegisterLink).click();
+
+    	elementsUtil.doClick(RegisterLink);
     }
 }
