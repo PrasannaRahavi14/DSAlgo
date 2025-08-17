@@ -42,7 +42,6 @@ public class DatastructureSteps extends BaseLogger {
 //
 //    }
 
-
     @Given("The user is in {string} Page")
     public void theUserIsInPage(String expectedText) {
    //     Assert.assertEquals(dsp.getTitleforDSI(),expectedText);
@@ -97,8 +96,61 @@ public class DatastructureSteps extends BaseLogger {
 
     @Then("The user should be in {string} Page")
     public void theUserShouldBeInPage(String textPage) {
-        log.info("The user is in the page : " +dsp.validateTitle(textPage));
         Assert.assertEquals(dsp.validateTitle(textPage),textPage);
+
+    }
+
+    @Given("The user is in the time complexity page after clicking {string}")
+    public void theUserIsInTheTimeComplexityPageAfterClicking(String topic) {
+       dsp.clickTopicLink(topic);
+       Assert.assertEquals(dsp.validateTitle(topic),"Time Complexity");
+    }
+
+    @When("The user click Try here button")
+    public void theUserClickTryHereButton() {
+        dsp.clickTryHereBtn();
+    }
+
+    @Then("The user should be redirected to the page having a try editor with run button")
+    public void theUserShouldBeRedirectedToThePageHavingATryEditorWithRunButton() {
+        log.info("Checking the try editor code block is available");
+        Assert.assertTrue(dsp.tryEditorVisible(),"Try Editor Code block not available");
+        log.info("Checking the Run button is available");
+        Assert.assertTrue(dsp.runBtnVisible(),"Run button not visible");
+    }
+
+
+    @Given("The user is in the try editor page of the topic {string}")
+    public void theUserIsInTheTryEditorPageOfTheTopic(String topic) {
+        dsp.clickTopicLink(topic);
+        Assert.assertEquals(dsp.validateTitle(topic),"Time Complexity");
+        dsp.clickTryHereBtn();
+        log.info("Checking the try editor code block is available");
+        Assert.assertTrue(dsp.tryEditorVisible(),"Try Editor Code block not available");
+        log.info("Checking the Run button is available");
+        Assert.assertTrue(dsp.runBtnVisible(),"Run button not visible");
+    }
+
+    @When("The user enters the valid python code and clicks run button")
+    public void theUserEntersTheValidPythonCodeAndClicksRunButton() {
+
+        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filePath,"DataStructure","ValidCode");
+        String codeToInput = getCode.get("Python Code");
+        log.info("Entering python code in the editor : "+codeToInput);
+        dsp.enterPythonCode(codeToInput);
+        log.info("Clicking on Run button");
+        dsp.clickRunBtn();
+    }
+
+    @Then("The user should be able to see the output in the console")
+    public void theUserShouldBeAbleToSeeTheOutputInTheConsole() {
+        String actualOutput = dsp.getOutputFromConsole();
+        log.info("Output printed in the console : "+actualOutput);
+        Map<String, String> getOutput = ExcelReader.getRowByTestCaseId(filePath,"DataStructure","ValidCode");
+        String expectedOutput = getOutput.get("Expected Output");
+        log.info("Expected Output : "+expectedOutput);
+        Assert.assertEquals(actualOutput,expectedOutput);
+        log.info("Actual Output matched with the Expected Output");
 
     }
 }
