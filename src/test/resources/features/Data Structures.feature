@@ -1,7 +1,7 @@
 Feature: Data Structures Page Validation
 
   Background:
-    Given the user is in DataStructure page
+    Given the user is in DataStructure page after login
 
 @TC001
   Scenario: verify the user is able to navigate to time complexity page

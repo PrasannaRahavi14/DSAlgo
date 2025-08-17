@@ -68,23 +68,6 @@ public class DatastructureSteps extends BaseLogger {
         homePage.clickGetStartedForDS();
     }
 
-    @Given("the user is in DataStructure page")
-    public void theUserIsInDataStructurePage() {
-        log.info("Executing the Background Scenario : Navigating to the DataStructure Page");
-        landingpage.getURL();
-        Assert.assertEquals(landingpage.getTitle(), "Preparing for the Interviews");
-        landingpage.clickGetStartedBtn();
-        Assert.assertEquals(homePage.getTitle(), "NumpyNinja");
-        homePage.clickSignInLink();
-        loginpage.performLoginDataDriven();
-        Assert.assertEquals(homePage.CheckName(), "Prasanna");
-        homePage.clickGetStartedForDS();
-        Assert.assertEquals(dsp.getTitleforDSI(),"Data Structures-Introduction");
-        log.info ("Background Scenario executed successfully : Landed in DataStructure Page");
-
-
-    }
-
     @Then("The user should be in {string} Page")
     public void theUserShouldBeInPage(String textPage) {
         Assert.assertEquals(dsp.validateTitle(textPage),textPage);
@@ -140,5 +123,20 @@ public class DatastructureSteps extends BaseLogger {
         Assert.assertEquals(actualOutput,expectedOutput);
         log.info("Actual Output matched with the Expected Output");
 
+    }
+
+    @Given("the user is in DataStructure page after login")
+    public void theUserIsInDataStructurePageAfterLogin() {
+        log.info("Executing the Background Scenario : Navigating to the DataStructure Page");
+        landingpage.getURL();
+        Assert.assertEquals(landingpage.getTitle(), "Preparing for the Interviews");
+        landingpage.clickGetStartedBtn();
+        Assert.assertEquals(homePage.getTitle(), "NumpyNinja");
+        homePage.clickSignInLink();
+        loginpage.performLoginDataDriven();
+        Assert.assertEquals(homePage.CheckName(), "Prasanna");
+        homePage.clickGetStartedForDS();
+        Assert.assertEquals(dsp.getTitleforDSI(),"Data Structures-Introduction");
+        log.info ("Background Scenario executed successfully : Landed in DataStructure Page");
     }
 }
