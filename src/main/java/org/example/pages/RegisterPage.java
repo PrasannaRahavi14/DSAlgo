@@ -47,8 +47,7 @@ public class RegisterPage {
     {
     	driver.findElement(By.id("id_username")).sendKeys("");
 		driver.findElement(By.id("id_password1")).sendKeys("");
-		driver.findElement(By.id("id_password2")).sendKeys("");
-		driver.findElement(By.xpath("//input[@value='Register']")).click();
+		driver.findElement(By.id("id_password2")).sendKeys("");		driver.findElement(By.xpath("//input[@value='Register']")).click();
     }
 
     public void getUsernameValues()
