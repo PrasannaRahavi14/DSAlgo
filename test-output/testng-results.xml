@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-18T16:52:07 EDT" name="Default suite" finished-at="2025-08-18T16:53:05 EDT" duration-ms="57687">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-08-18T16:52:07 EDT" name="Default test" finished-at="2025-08-18T16:53:05 EDT" duration-ms="57687">
+      <class name="org.example.runners.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:52:07 EDT" name="setUpClass" finished-at="2025-08-18T16:52:08 EDT" duration-ms="445" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7d80e1b3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:52:08 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-18T16:52:14 EDT" duration-ms="6164" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that the "Implementation of Queue in Python" is displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing Queue Page in Ds-Algo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:52:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-18T16:52:18 EDT" duration-ms="4200" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify "Tryhere" navigates to next page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing Queue Page in Ds-Algo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:52:18 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-18T16:52:25 EDT" duration-ms="6985" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Python code works"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing Queue Page in Ds-Algo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:52:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-18T16:52:30 EDT" duration-ms="4986" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Invalid Python code works"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing Queue Page in Ds-Algo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:52:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-18T16:52:37 EDT" duration-ms="6811" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is on Queue Page after Signed in with valid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing Queue Page in Ds-Algo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:52:37 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-18T16:52:44 EDT" duration-ms="7002" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is on Queue Page after Signed in with valid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing Queue Page in Ds-Algo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:52:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-18T16:52:51 EDT" duration-ms="7015" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is on Queue Page after Signed in with valid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing Queue Page in Ds-Algo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:52:51 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-18T16:52:56 EDT" duration-ms="4465" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is on Queue Page after Signed in with Invalid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing Queue Page in Ds-Algo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:52:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-18T16:53:01 EDT" duration-ms="4967" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is on Queue Page after Signed in with Invalid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing Queue Page in Ds-Algo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:53:01 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-18T16:53:05 EDT" duration-ms="4597" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User is on Queue Page after Signed in with Invalid python code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Testing Queue Page in Ds-Algo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-18T16:53:05 EDT" name="tearDownClass" finished-at="2025-08-18T16:53:05 EDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- org.example.runners.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
