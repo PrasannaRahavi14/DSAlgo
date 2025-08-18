@@ -1,4 +1,4 @@
 package org.example.utilities;
 
-public class DriverFactory {
+public class Constants {
 }
