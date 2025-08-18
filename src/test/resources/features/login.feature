@@ -3,7 +3,6 @@ Feature: User sigin to DSAlgo Portal
 Background:
 Given the user is on the Signin page
 
-
 @fail
 Scenario: Failed login due to empty username and password
 When the user clicks "Login" button 

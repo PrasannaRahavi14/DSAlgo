@@ -15,38 +15,31 @@ public class HomePage extends BaseLogger {
     private By NameCheckAfterLogin = By.xpath("//a[contains(text(),'Prasanna')]");
 
     private By GetStartedBtn_DS = By.xpath("//a[@href='data-structures-introduction']");
+    private By GetStartedBtn_Array = By.xpath("//a[@href='array']");
+    private By GetStartedBtn_LinkedList=By.xpath("//a[@href='linked-list']");
+    private By GetStartedBtn_Stack=By.xpath("//a[@href='stack']");
+    private By GetStartedBtn_Queue=By.cssSelector("a[href='queue']");
     private By GetStartedBtn_Tree = By.xpath("//a[@href='tree']");
-    private By arrayGet=By.xpath("/html/body/div[2]/div[2]/div/div/a");
-    private By linkedListGet=By.xpath("/html/body/div[3]/div[3]/div/div/a");
-    private By stackGet=By.xpath("/html/body/div[2]/div[4]/div/div/a");
-    private By queueGet=By.xpath("/html/body/div[2]/div[5]/div/div/a");
-    private By graphGet=By.xpath("/html/body/div[2]/div[7]/div/div/a");
+    private By GetStartedBtn_Graph=By.xpath("//a[@href='graph']");
     private By dataDrpdown= By.xpath("//a[@class='nav-link dropdown-toggle']");
-    private By arraysDrpdown= By.xpath("//*[@id=\"navbarCollapse\"]/div[1]/div/div/a[1]");
-    private By linkedListDrpdown=By.xpath("//*[@id=\"navbarCollapse\"]/div[1]/div/div/a[2]");
-    private By stackDrpdown=By.xpath("//*[@id=\"navbarCollapse\"]/div[1]/div/div/a[3]");
-    private By queueDrpdown=By.xpath("//*[@id=\"navbarCollapse\"]/div[1]/div/div/a[4]");
-    private By treeDrpdown= By.xpath("//*[@id=\"navbarCollapse\"]/div[1]/div/div/a[5]");
-    private By graphDrpdown= By.xpath("//*[@id=\"navbarCollapse\"]/div[1]/div/div/a[6]");
+    private By arraysDrpdown= By.xpath("//a[@href='/array']");
+    private By linkedListDrpdown=By.xpath("//a[@href='/linked-list']");
+    private By stackDrpdown=By.xpath("//a[@href='/stack']");
+    private By queueDrpdown=By.xpath("//a[@href='/queue']");
+    private By treeDrpdown= By.xpath("//a[@href='/tree']");
+    private By graphDrpdown= By.xpath("//a[@href='/graph']");
     private By titleDataStructure=By.xpath("//h4[text()='Data Structures-Introduction']");
-    private By titleArray=By.xpath("/html/body/div[2]/h4");
+    private By titleArray=By.xpath("//h4[text()='Array']");
     private By titleLinkedList=By.xpath("//h4[text()='Linked List']");
     private By titleStack=By.xpath("//h4[text()='Stack']");
     private By titleQueue=By.xpath("//h4[text()='Queue']");
     private By titleTree=By.xpath("//h4[text()='Tree']");
     private By titleGraph=By.xpath("//h4[text()='Graph']");
-    private By DSAfterSignIn=By.xpath("/html/body/div[3]/div[1]/div/div/a");
-    private By AAfterSignIn=By.xpath("/html/body/div[3]/div[2]/div/div/a");
-    private By LLAfterSignIn=By.xpath("/html/body/div[3]/div[3]/div/div/a");
-    private By SAfterSignIn=By.xpath("/html/body/div[3]/div[4]/div/div/a");
-    private By QAfterSignIn=By.xpath("/html/body/div[3]/div[5]/div/div/a");
-    private By TAfterSignIn=By.xpath("/html/body/div[3]/div[6]/div/div/a");
-    private By GAfterSignIn=By.xpath("/html/body/div[3]/div[7]/div/div/a");
     private By warnMsg=By.xpath("//div[@class='alert alert-primary']");
     private By registerButton=By.xpath("//a[text()=' Register ']");
     private By signInButton=By.xpath("//a[text()='Sign in']");
     private By signOutButton=By.xpath("//a[text()='Sign out']");
-    private By successLogOut=By.xpath("/html/body/div[2]");
+    private By successLogOut=By.xpath("//div[@class='alert alert-primary']");
 
 
     public HomePage(WebDriver driver)
@@ -59,21 +52,21 @@ public class HomePage extends BaseLogger {
     public String getTitle()
     {
         log.info("Getting the title of HomePage");
-       // return driver.findElement(PageTitle).getText();
+       
         return elementsUtil.doGetText(PageTitle);
     }
 
     public void clickSignInLink()
     {
         log.info("Clicking on the SignIn Link from the HomePage");
-        //driver.findElement(SignInLink).click();
+        
         elementsUtil.doClick(SignInLink);
     }
 
     public String CheckName()
     {
         log.info("Successfully logged in");
-        //return driver.findElement(NameCheckAfterLogin).getText();
+        
         return elementsUtil.doGetText(NameCheckAfterLogin);
     }
 
@@ -89,129 +82,160 @@ public class HomePage extends BaseLogger {
     }
     public String titleNumby()
     {
+    	log.info("Verifying Home Page Title");
         return elementsUtil.doGetText(PageTitle);
     }
 
-    public void clickArrayGet()
+    public void clickGetStartedForArray()
     {
-        elementsUtil.doClick(arrayGet);
+    	 log.info("Clicking on the Get Started Button of Array from HomePage");
+        elementsUtil.doClick(GetStartedBtn_Array);
     }
-    public void clickLinkedListGet()
+    public void clickGetStartedForLinkedList()
     {
-        elementsUtil.doClick(linkedListGet);
+    	log.info("Clicking on the Get Started Button of Linked List from HomePage");
+        elementsUtil.doClick(GetStartedBtn_LinkedList);
     }
-    public void clickStackGet()
+    public void clickGetStartedForStack()
     {
-        elementsUtil.doClick(stackGet);
+    	 log.info("Clicking on the Get Started Button of Stack from HomePage");
+        elementsUtil.doClick(GetStartedBtn_Stack);
     }
 
-    public void clickQueueGet() {
-
-        elementsUtil.doClick(queueGet);
+    public void clickGetStartedForQueue() {
+    	log.info("Clicking on the Get Started Button of Queue from HomePage");
+        elementsUtil.doClick(GetStartedBtn_Queue);
     }
-   public void clickGraphGet() {
-
-        elementsUtil.doClick(graphGet);
+   public void clickGetStartedForGraph() {
+	   log.info("Clicking on the Get Started Button of Graph from HomePage");
+        elementsUtil.doClick(GetStartedBtn_Graph);
     }
     public void clickDrpdown() {
+    	log.info("Clicking on the Drop down from HomePage");
         elementsUtil.doClick(dataDrpdown);
     }
     public void clickArraysDrpdown() {
+    	log.info("Clicking on the Arrays from Drop down");
         elementsUtil.doClick(arraysDrpdown);
     }
     public void clickLinkedListDrpdown() {
+    	log.info("Clicking on the Linked List from Drop down");
         elementsUtil.doClick(linkedListDrpdown);
     }
     public void clickStackDrpdown() {
+    	log.info("Clicking on the Stack from Drop down");
         elementsUtil.doClick(stackDrpdown);
     }
     public void clickQueueDrpdown() {
+    	log.info("Clicking on the Queue from Drop down");
         elementsUtil.doClick(queueDrpdown);
     }
     public void clickTreeDrpdown() {
+    	log.info("Clicking on the Tree from Drop down");
         elementsUtil.doClick(treeDrpdown);
     }
     public void clickGraphDrpdown() {
+    	log.info("Clicking on the Graph from Drop down");
         elementsUtil.doClick(graphDrpdown);
     }
     public String getErrorMessageText() {
+    	log.info("Getting Warning Message before Signed In");
         return driver.findElement(warnMsg).getText();
 
     }
-    public void clickDSAftsign()
+    public void clickDataStructureAftsign()
     {
-        elementsUtil.doClick(DSAfterSignIn);
+    	log.info("Clicking Data Structure Get Started button after Signed In");
+        elementsUtil.doClick(GetStartedBtn_DS);
     }
     public String getDataStructuretitle()
     {
+    	log.info("Getting Data Structure Title");
         return driver.findElement(titleDataStructure).getText();
     }
-    public void clickAAftsign()
+    public void clickArrayAftsign()
     {
-        elementsUtil.doClick(AAfterSignIn);
+    	log.info("Clicking Array Get Started button after Signed In");
+        elementsUtil.doClick(GetStartedBtn_Array);
     }
     public String getArraytitle()
     {
+    	log.info("Getting Array Title");
         return driver.findElement(titleArray).getText();
     }
-    public void clickLLAftsign()
+    public void clickLinkedListAftsign()
     {
-        elementsUtil.doClick(LLAfterSignIn);
+    	log.info("Clicking Linked List Get Started button after Signed In");
+        elementsUtil.doClick(GetStartedBtn_LinkedList);
     }
     public String getLinkedListtitle()
     {
+    	log.info("Getting Linked List Title");
         return driver.findElement(titleLinkedList).getText();
     }
 
-    public void clickSAftsign()
+    public void clickStackAftsign()
     {
-        elementsUtil.doClick(SAfterSignIn);
+    	log.info("Clicking Stack Get Started button after Signed In");
+        elementsUtil.doClick(GetStartedBtn_Stack);
     }
     public String getStacktitle()
     {
+    	log.info("Getting Stack Title");
         return driver.findElement(titleStack).getText();
     }
-    public void clickQAftsign()
+    public void clickQueueAftsign()
     {
-        elementsUtil.doClick(QAfterSignIn);
+    	log.info("Clicking Queue Get Started button after Signed In");
+        elementsUtil.doClick(GetStartedBtn_Queue);
     }
     public String getQueuetitle()
     {
+    	log.info("Getting Queue Title");
         return driver.findElement(titleQueue).getText();
     }
-    public void clickTAftsign()
+    public void clickTreeAftsign()
     {
-        elementsUtil.doClick(TAfterSignIn);
+    	log.info("Clicking Tree Get Started button after Signed In");
+        elementsUtil.doClick(GetStartedBtn_Tree);
     }
     public String getTreetitle()
     {
+    	log.info("Getting Tree Title");
         return driver.findElement(titleTree).getText();
     }
-    public void clickGAftsign()
+    public void clickGraphAftsign()
     {
-        elementsUtil.doClick(GAfterSignIn);
+    	log.info("Clicking Graph Get Started button after Signed In");
+        elementsUtil.doClick(GetStartedBtn_Graph);
     }
     public String getGraphtitle()
     {
+    	log.info("Getting Graph Title");
         return driver.findElement(titleGraph).getText();
     }
     public void clickRegister()
     {
+    	log.info("Clicking Register button from Home Page");
         elementsUtil.doClick(registerButton);
     }
     public void clickSignIn()
     {
+    	log.info("Clicking Sign In button from Home Page");
         elementsUtil.doClick(signInButton);
     }
     public boolean isRegisterElementDisplayed() {
         try {
+        	log.info("Verifying Register button displayed in Register Page");
             return elementsUtil.waitForElementToBeVisible(registerButton).isDisplayed();
+            
         } catch (TimeoutException e) {
             return false;
         }
     }
     public boolean isSignInElementDisplayed() {
         try {
+        	log.info("Verifying Sign In button displayed in Sign In Page");
             return elementsUtil.waitForElementToBeVisible(signInButton).isDisplayed();
         } catch (TimeoutException e) {
             return false;
@@ -219,9 +243,11 @@ public class HomePage extends BaseLogger {
     }
     public void clickSignOut()
     {
+    	log.info("Clicking Sign Out button from Home Page");
         elementsUtil.doClick(signOutButton);
     }
     public String getSuccessMessageText() {
+    	log.info("Getting Success Message for LogOut");
         return driver.findElement(successLogOut).getText();
     }
 
