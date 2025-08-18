@@ -11,7 +11,7 @@ Scenario: Navigate to Operations in Stack page
 @Stack_002
 Scenario: Navigate to Try Editor page
  Given the user is on Operations in Stack page
- When the user clicks "Try Here" button
+ When the user clicks the "Try Here" button
  Then the user should be redirected to a page having an try Editor with a Run button to test
 
 

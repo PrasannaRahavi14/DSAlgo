@@ -6,10 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.factory.DriverFactory;
-import org.example.pages.DataStructurePage;
-import org.example.pages.HomePage;
-import org.example.pages.LandingPage;
-import org.example.pages.LoginPage;
+import org.example.pages.*;
 import org.example.utilities.BaseLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,6 +20,7 @@ public class DatastructureSteps extends BaseLogger {
     LandingPage landingpage = new LandingPage(DriverFactory.getDriver());
     HomePage homePage = new HomePage(DriverFactory.getDriver());
     DataStructurePage dsp = new DataStructurePage(DriverFactory.getDriver());
+
 
     @Given("The user is in Home Page after login")
     public void theUserIsInHomePageAfterLogin() {
