@@ -54,7 +54,7 @@ Scenario Outline: User is on Home page and click getstarted link "<option>" on h
       
 
 Scenario Outline:: Verify "<module>" page after sign in 
-Given The user successfully sign in "dummyuser" and "numpy@123"
+Given The user successfully sign in "Username" and "Password"
 When The user clicks "Get Started" button under "<module>" page
 Then The user should be directed to "<module>" page to verify the title
 Examples:
@@ -70,13 +70,13 @@ Examples:
       
       
 Scenario Outline: Verify the user is able to click on "<module>" from dropdown on home page after Sign in
-    Given  The user successfully sign in "dummyuser" and "numpy@123"
+    Given  The user successfully sign in "Username" and "Password"
     When The user clicks on "<module>" from dropdown on home page after Sign in
     Then The user should be directed to "<module>" page to verify the title
     Examples:
     
       | module         |
-      | Array         |
+      | Array          |
       | Linkedlist     |
       | Stack          |
       | Queue          |
@@ -84,7 +84,7 @@ Scenario Outline: Verify the user is able to click on "<module>" from dropdown o
       | Graph          |         
 
 Scenario: Verify Successfull SignOut message
-Given The user successfully sign in "dummyuser" and "numpy@123" 
+Given The user successfully sign in "Username" and "Password" 
 When  The user click on Sign Out button from home page
 Then The user can able to see "Logged out successfully" message
   
