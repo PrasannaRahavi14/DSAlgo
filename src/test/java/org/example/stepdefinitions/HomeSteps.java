@@ -1,14 +1,14 @@
     package org.example.stepdefinitions;
-    import java.time.Duration;
 
-import org.example.factory.DriverFactory;
-import org.example.pages.Home;
-import org.example.pages.HomePage;
-import org.example.pages.LoginPage;
-import org.example.utilities.ConfigReader;
-import org.openqa.selenium.By;
+	import java.util.Map;
+
+    import org.example.factory.DriverFactory;
+	import org.example.pages.HomePage;
+	import org.example.pages.LandingPage;
+	import org.example.pages.LoginPage;
+    import org.example.utilities.ConfigReader;
+    import org.example.utilities.ExcelReader;
     import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.chrome.ChromeDriver;
 	import org.testng.Assert;
 
 	import io.cucumber.java.en.Given;
@@ -17,20 +17,25 @@ import org.openqa.selenium.By;
 
 	public class HomeSteps {
 		 WebDriver driver = DriverFactory.getDriver();
-		 Home home = new Home(DriverFactory.getDriver());
+		 HomePage home = new HomePage(DriverFactory.getDriver());
+	     LandingPage landingPage = new LandingPage(DriverFactory.getDriver());
 		 LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
+		 String url = ConfigReader.getProperty("baseurl");
+		 private final String filePath = "src/test/resources/testdata/TestData1.xlsx";
+
+		
 
 		
 		@Given("The user is on dsAlgo portal page")
 		public void the_user_is_on_ds_algo_portal_page() {
-			 home.launchPage();
-			
+			 landingPage.getURL();
+
 					}
 
 		@When("The user click Get started button")
 		public void the_user_click_get_started_button() {
 			
-			home.clickGetStarted();
+			landingPage.clickGetStartedBtn();
 
 		}
 
@@ -43,9 +48,8 @@ import org.openqa.selenium.By;
 			}
 		@Given("The user is on the Home page")
 		public void the_user_is_on_the_home_page() {
-		   home.launchPage();
-		   home.clickGetStarted();
-		   
+			landingPage.getURL();
+			landingPage.clickGetStartedBtn();
 		   
 		}
 		@When("The user clicks on Get Started link on homepage {string} without login")
@@ -53,25 +57,25 @@ import org.openqa.selenium.By;
 			
 			switch(option) {
 			case "Datastructures" :
-				home.clickDataGet(); 
+				home.clickGetStartedForDS();
 				break;
 			case "Array" :
-				home.clickArrayGet(); 
+				home.clickGetStartedForArray(); 
 				break;
 			case "Linkedlist" :
-				home.clickLinkedListGet(); 
+				home.clickGetStartedForLinkedList(); 
 				break;
 			case "Stack" :
-				home.clickStackGet();
+				home.clickGetStartedForStack();
 				break;
 			case "Queue" :
-				home.clickQueueGet(); 
+				home.clickGetStartedForQueue();
 				break;
 			case "Tree" :
-				home.clickTreeGet();
+				home.clickGetStartedForTree();
 				break;
 			case "Graph" :
-				home.clickGraphGet(); 
+				home.clickGetStartedForGraph(); 
 				break;
 			}		
 			
@@ -108,11 +112,13 @@ import org.openqa.selenium.By;
 			home.getErrorMessageText();
 		}
 		@Given("The user successfully sign in {string} and {string}")
-		public void the_user_successfully_sign_in_and(String userName, String password) {
-			home.launchPage();
-			   home.clickGetStarted();
+		public void the_user_successfully_sign_in_and(String UserName, String Password) {
+			landingPage.getURL();
+			landingPage.clickGetStartedBtn();
 			   home.clickSignIn();
-			   loginpage.doLogin(userName, password);
+			   Map<String, String> loginData = ExcelReader.getDefaultLogin(filePath);
+			   loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));
+			   
 		}
 
 		
@@ -121,25 +127,25 @@ import org.openqa.selenium.By;
 		public void the_user_clicks_button_under_page(String button,String module) {
 			switch(module) {
 			case "Datastructures" :
-				home.clickDSAftsign();
+				home.clickDataStructureAftsign();
 				break;
 			case "Array" :
-				home.clickAAftsign();
+				home.clickArrayAftsign();
 				break;
 			case "Linkedlist" :
-			    home.clickLLAftsign();
+			    home.clickLinkedListAftsign();
 			    break;
 		    case "Stack" :
-			    home.clickSAftsign();
+			    home.clickStackAftsign();
 			    break;
 		    case "Queue" :
-				home.clickQAftsign();
+				home.clickQueueAftsign();
 				break;
 			case "Tree" :
-				home.clickTAftsign();
+				home.clickTreeAftsign();
 				break;
 			case "Graph" :
-				home.clickGAftsign();
+				home.clickGraphAftsign();
 				break;
 		   		}
 		}
@@ -150,48 +156,31 @@ import org.openqa.selenium.By;
 			{
 			case "Datastructures" :
 				String titleDSI=home.getDataStructuretitle();
-				System.out.println("titleDSI-->"+titleDSI);
 				Assert.assertEquals(titleDSI, "Data Structures-Introduction");
-				System.out.println("titleDSI-->");
-				
 				break;
 			case "Array" :
-				String titleA=home.getArraytitle();
-				System.out.println("titleA-->"+titleA);
-				Assert.assertEquals(titleA, "Array");
-				System.out.println("titleA-->");
+				String titleArray=home.getArraytitle();
+				Assert.assertEquals(titleArray, "Array");
 				break;
 			case "Linkedlist" :
 				String titleLL=home.getLinkedListtitle();
-				System.out.println("titleLL-->"+titleLL);
 				Assert.assertEquals(titleLL, "Linked List");
-				System.out.println("titleLL-->");
-				
 				break;
 			case "Stack" :
-				String titleS=home.getStacktitle();
-				System.out.println("titleS-->"+titleS);
-				Assert.assertEquals(titleS, "Stack");
-				System.out.println("titleS-->");
+				String titleStack=home.getStacktitle();
+				Assert.assertEquals(titleStack, "Stack");
 				break;
 			case "Queue" :
-				String titleQ=home.getQueuetitle();
-				System.out.println("titleQ-->"+titleQ);
-				Assert.assertEquals(titleQ, "Queue");
-				System.out.println("titleQ-->");
-				
+				String titleQueue=home.getQueuetitle();
+				Assert.assertEquals(titleQueue, "Queue");
 				break;
 			case "Tree" :
-				String titleT=home.getTreetitle();
-				System.out.println("titleT-->"+titleT);
-				Assert.assertEquals(titleT, "Tree");
-				System.out.println("titleT-->");
+				String titleTree=home.getTreetitle();
+				Assert.assertEquals(titleTree, "Tree");
 				break;
 			case "Graph" :
-				String titleG=home.getGraphtitle();
-				System.out.println("titleG-->"+titleG);
-				Assert.assertEquals(titleG, "Graph");
-				System.out.println("titleG-->");
+				String titleGraph=home.getGraphtitle();
+				Assert.assertEquals(titleGraph, "Graph");
 				break;
 			}
 			
