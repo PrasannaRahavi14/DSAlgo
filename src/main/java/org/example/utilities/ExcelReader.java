@@ -33,7 +33,7 @@ public class ExcelReader {
                 for (int c = 0; c < colCount; c++) {
                     String columnName = headerRow.getCell(c).getStringCellValue();
                     Cell cell = currentRow.getCell(c);
-                    String cellValue = (cell == null) ? "" : cell.toString();
+                    String cellValue = (cell == null) ? "" : cell.toString().trim();
                     rowData.put(columnName, cellValue);
                 }
                 excelData.add(rowData);
