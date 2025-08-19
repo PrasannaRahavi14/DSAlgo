@@ -9,20 +9,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-public class DataStructurePage extends BaseLogger {
-
+public class TreePage extends BaseLogger {
+    private WebDriver driver;
     ElementsUtil elementsUtil;
     String filepath = ConfigReader.getProperty("testData");
 
-    //1. locators
-    private WebDriver driver;
-    private By getTitle_DSI = By.cssSelector("h4[class='bg-secondary text-white']");
-    private By getTitle_TimeComplexity = By.cssSelector("div[class='col-sm'] p[class='bg-secondary text-white']");
+    public TreePage(WebDriver driver) {
+        this.driver = driver;
+        this.elementsUtil = new ElementsUtil(driver);
+    }
 
+    private By getTitle_Tree = By.cssSelector("h4[class='bg-secondary text-white']");
+    private By getTitle_topic = By.cssSelector("div[class='col-sm'] p[class='bg-secondary text-white']");
     private By getTopicLinkByText(String topic) {
         String xpath = "//a[text()='" + topic + "']";
         return By.xpath(xpath);
@@ -34,50 +35,40 @@ public class DataStructurePage extends BaseLogger {
     private By tryEditor_text = By.cssSelector(".CodeMirror div.CodeMirror-code");
     private By outputConsole = By.xpath("//pre[@id='output']");
 
-    //2. constructor
-    public DataStructurePage(WebDriver driver) {
-
-        this.driver = driver;
-        this.elementsUtil = new ElementsUtil(driver);
+    public String getTitleforTree() {
+        log.info("Getting the title of Tree Page");
+        return driver.findElement(getTitle_Tree).getText();
     }
-
-
-    //3. actions for the page
-    public String getTitleforDSI() {
-        log.info("Getting the title of DataStructure Page");
-        return driver.findElement(getTitle_DSI).getText();
-    }
-
     public void clickTopicLink(String text) {
         log.info("Clicking on the topic link : " + text);
         driver.findElement(getTopicLinkByText(text)).click();
 
     }
 
-    public By getTitleXPath(String pageTitle) {
-        Map<String, By> titleToXPath = new HashMap<>();
-        titleToXPath.put("Data Structures-Introduction", getTitle_DSI);
-        titleToXPath.put("Time Complexity", getTitle_TimeComplexity);
+    public void validateTitleforTopics(String topic)
+    {
+        String topicsPageTitle = driver.findElement(getTitle_topic).getText();
+        if(topicsPageTitle.equalsIgnoreCase(topic))
+        {
+            log.info ("The user is in the correct topic page as expected : "+topicsPageTitle);
 
-
-        if (!titleToXPath.containsKey(pageTitle)) {
-            throw new IllegalArgumentException("No XPath mapped for page title: " + pageTitle);
+        }
+        else {
+            log.info ("The user is in the topics page "+topicsPageTitle+" but expected to be in "+topic);
         }
 
-        return titleToXPath.get(pageTitle);
     }
+    public void clickTryHereBtn(String topic) {
 
-    public String validateTitle(String title) {
-        log.info("Title of the page : " + title);
-        By xpath = getTitleXPath(title);
-        return driver.findElement(xpath).getText();
+        String topicsPageTitle = driver.findElement(getTitle_topic).getText();
+        if(topicsPageTitle.equalsIgnoreCase(topic))
+        {
+            log.info("Clicking on the Try Here Button of "+topic);
+            driver.findElement(tryHereBtn).click();
+        }
+        else{ log.info("you are in the wrong topics page "+topic);}
+
     }
-
-    public void clickTryHereBtn() {
-        log.info("Clicking on the Try Here Button");
-        driver.findElement(tryHereBtn).click();
-    }
-
     public boolean tryEditorVisible() {
         try {
             return elementsUtil.isElementDisplayed(tryEditor);
@@ -106,27 +97,18 @@ public class DataStructurePage extends BaseLogger {
     {
         return driver.findElement(outputConsole).getText();
     }
-
     public String getPythonCodeDataDriven()
     {
-        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
+        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"Tree","ValidCode");
         String codeToInput = getCode.get("Python Code");
         return codeToInput;
     }
 
     public String getOutputDataDriven()
     {
-        Map<String, String> getOutput = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
+        Map<String, String> getOutput = ExcelReader.getRowByTestCaseId(filepath,"Tree","ValidCode");
         String output = getOutput.get("Expected Output");
         return output;
     }
-
-    public String getInvalidCodeDataDriven()
-    {
-        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","InvalidCode");
-        String codeToInput = getCode.get("Python Code");
-        return codeToInput;
-    }
-
 
 }
