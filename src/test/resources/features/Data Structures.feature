@@ -31,7 +31,7 @@ Feature: Data Structures Page Validation
   | InvalidCode |
 
 @DS005
-  Scenario: verify the user is able to check any broken links present
+  Scenario: verify the user is able to check broken links or empty page
     Given The user is in the time complexity page after clicking "Time Complexity"
     When The user clicks Practice Questions link
     Then The user should be able to check if the page is valid or not

@@ -70,7 +70,7 @@ Feature: Tree Page Validation
 #      | Implementation Of BST          |  ValidCode     |
 
 @TR005
-  Scenario Outline: verify the user is able to check the practice page
+  Scenario Outline: verify the user is able to check the broken link or empty page
     Given The user is in the topics page after clicking the "<topics>" link
     When The user clicks on the practice question link
     Then The user is able to check if the empty is empty or not
