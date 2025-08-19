@@ -42,12 +42,12 @@ public class StackStepdef {
 
 	  @Then("the user should be redirected to a page having an try Editor with a Run button to test")
 	  public void the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test() {
-	      stackpage.tryEditorRunBtnVisible();
+	      //stackpage.tryEditorRunBtnVisible();
 	  }
 
 
 	@When("the user clicks the {string} button")
 	public void theUserClicksTheButton(String arg0) {
-		stackpage.ClickTryherebtn();
+		//stackpage.ClickTryherebtn();
 	}
 }

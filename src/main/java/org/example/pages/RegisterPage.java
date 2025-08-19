@@ -1,27 +1,35 @@
 package org.example.pages;
 
+import java.util.Map;
+
+import org.example.utilities.BaseLogger;
+import org.example.utilities.ConfigReader;
+import org.example.utilities.ElementsUtil;
+import org.example.utilities.ExcelReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class RegisterPage {
+public class RegisterPage extends BaseLogger {
 
 	private WebDriver driver;
+	ElementsUtil elementsUtil;
 	private By getTitle_DSI = By.cssSelector("h4[class='bg-secondary text-white']");
 	private By getTitleRegisterpage = By.xpath("//title[contains(text(), ' Registration ')]");
 	private By getRegister_Page = By.cssSelector("a[href='/register']");
 	private By username = By.id("id_username");
 	private By password = By.id("id_password1");
 	private By pwdconfirmation = By.id("id_password2");
-	private By pwdMismatchAlertmsg = By.xpath("//div[contains(@class,'alert') and contains(text(),'password_mismatch:')]");
+	private By pwdMismatchAlertmsg = By.xpath("//div[@role='alert']");
 	private By NewAccountAlertmsg = By.xpath("//div[contains(@class,'alert') and contains(text(),'New Account Created')]");
 	private By LoginLink = By.xpath("(//a[@href='/login'])[2]");
 	private By Loginpage = By.xpath("//a[contains(text(), 'NumpyNinja')]");
-			
+	String filepath = ConfigReader.getProperty("testData");		
     
 	public RegisterPage(WebDriver driver) {
     this.driver = driver;
+    this.elementsUtil = new ElementsUtil(driver);
    
     }
 
@@ -32,6 +40,7 @@ public class RegisterPage {
     
     public String getTitleRegisterpage()
     {
+    	log.info("Getting the title of RegisterPage");
     	return driver.findElement(getTitleRegisterpage).getText();
     }
     public boolean getRegister()
@@ -43,19 +52,32 @@ public class RegisterPage {
     	
         return driver.findElement(Loginpage).isDisplayed();
     }
+    
     public void getEmptyValues()
     {
-    	driver.findElement(By.id("id_username")).sendKeys("");
-		driver.findElement(By.id("id_password1")).sendKeys("");
-		driver.findElement(By.id("id_password2")).sendKeys("");		driver.findElement(By.xpath("//input[@value='Register']")).click();
+    	log.info("Performing Register with TestData from Excel:");
+        Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","EmptyValues");       
+        String username = RegisterData.get("username");
+        String password = RegisterData.get("password");
+        String pwdconfirmation = RegisterData.get("password confirmation");
+		driver.findElement(By.xpath("//input[@value='Register']")).click();
+		System.out.println("Username is: " + username);
+		System.out.println("Password is: " + password);
+		System.out.println("Password Confirmation is: " + pwdconfirmation);
+    
     }
 
     public void getUsernameValues()
     {
-    	driver.findElement(By.id("id_username")).sendKeys("Prasanna1");
-		driver.findElement(By.id("id_password1")).sendKeys("");
-		driver.findElement(By.id("id_password2")).sendKeys("");
+    	log.info("Performing Register with TestData from Excel:");
+    	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","UsernameValues");
+    	String username = RegisterData.get("username");
+        String password = RegisterData.get("password");
+        String pwdconfirmation = RegisterData.get("password confirmation");
 		driver.findElement(By.xpath("//input[@value='Register']")).click();
+		System.out.println("Username is: " + username);
+		System.out.println("Password is: " + password);
+		System.out.println("Password Confirmation is: " + pwdconfirmation);
     }
     
     public String getUsernameValidationMessage()
@@ -71,11 +93,17 @@ public class RegisterPage {
     }
     
     public void getPasswordValues()
-    {
-    	driver.findElement(By.id("id_username")).sendKeys("");
-		driver.findElement(By.id("id_password1")).sendKeys("Welcome@01");
-		driver.findElement(By.id("id_password2")).sendKeys("");
+    {   
+    	log.info("Performing Register with TestData from Excel:");
+    	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","PasswordValues");
+    	String username = RegisterData.get("username");
+        String password = RegisterData.get("password");
+        String pwdconfirmation = RegisterData.get("password confirmation");
 		driver.findElement(By.xpath("//input[@value='Register']")).click();
+		System.out.println("Username is: " + username);
+		System.out.println("Password is: " + password);
+		System.out.println("Password Confirmation is: " + pwdconfirmation);
+		
     }
     
     public String getPaswordValidationMessage()
@@ -92,10 +120,15 @@ public class RegisterPage {
 
     public void getNoPasswordConfirmation()
     {
-    	driver.findElement(By.id("id_username")).sendKeys("Prasanna1");
-		driver.findElement(By.id("id_password1")).sendKeys("Welcome@01");
-		driver.findElement(By.id("id_password2")).sendKeys("");
-		driver.findElement(By.xpath("//input[@value='Register']")).click();
+    	log.info("Performing Register with TestData from Excel:");
+    	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","NoPasswordConfirmation");
+    	String username = RegisterData.get("username");
+        String password = RegisterData.get("password");
+        String pwdconfirmation = RegisterData.get("password confirmation");
+    	driver.findElement(By.xpath("//input[@value='Register']")).click();
+    	System.out.println("Username is: " + username);
+		System.out.println("Password is: " + password);
+		System.out.println("Password Confirmation is: " + pwdconfirmation);
     }
     
     public String getPwdConfimationValidationMessage()
@@ -112,10 +145,15 @@ public class RegisterPage {
     
     public void getValidCredentials()
     {
-    	driver.findElement(By.id("id_username")).sendKeys("NinjaNumpy1");
-		driver.findElement(By.id("id_password1")).sendKeys("Welcome@01");
-		driver.findElement(By.id("id_password2")).sendKeys("Welcome@01");
-		driver.findElement(By.xpath("//input[@value='Register']")).click();
+  	    log.info("Performing Register with TestData from Excel:");
+    	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","ValidCredentials");
+    	String username = RegisterData.get("username");
+        String password = RegisterData.get("password");
+        String pwdconfirmation = RegisterData.get("password confirmation");
+    	driver.findElement(By.xpath("//input[@value='Register']")).click();
+    	System.out.println("Username is: " + username);
+		System.out.println("Password is: " + password);
+		System.out.println("Password Confirmation is: " + pwdconfirmation);
     	
     }
     
@@ -133,11 +171,16 @@ public class RegisterPage {
     
     public void getMismatchPassword()
     {
-    	driver.findElement(By.id("id_username")).sendKeys("Rahavi@123");
-		driver.findElement(By.id("id_password1")).sendKeys("Connect@1234");
-		driver.findElement(By.id("id_password2")).sendKeys("Connect#123");
-		driver.findElement(By.xpath("//input[@value='Register']")).click();
-		
+    	log.info("Performing Register with TestData from Excel:");
+     	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","MismatchPassword");
+     	String username = RegisterData.get("username");
+        String password = RegisterData.get("password");
+        String pwdconfirmation = RegisterData.get("password confirmation");
+     	driver.findElement(By.xpath("//input[@value='Register']")).click();
+     	System.out.println("Username is: " + username);
+ 		System.out.println("Password is: " + password);
+ 		System.out.println("Password Confirmation is: " + pwdconfirmation);
+ 	
     }
     
     public String getPwdMismatchAlertmsg()
@@ -145,7 +188,7 @@ public class RegisterPage {
     	WebElement field = driver.findElement(pwdMismatchAlertmsg);
         return (String) ((JavascriptExecutor) driver)
             .executeScript("return arguments[0].validationMessage;", field);
-    	
+		
     }
     
     public By getPwdMismatchAlertlocator() {
@@ -154,19 +197,28 @@ public class RegisterPage {
     
     public void getInvalidUsername()
     {
-
-    	driver.findElement(By.id("id_username")).sendKeys("QW!!23 45 QW");
-		driver.findElement(By.id("id_password1")).sendKeys("Welcome@01");
-		driver.findElement(By.id("id_password2")).sendKeys("Welcome@01");
-		driver.findElement(By.xpath("//input[@value='Register']")).click();
+    	log.info("Performing Register with TestData from Excel:");
+     	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","InvalidUsername");
+     	String username = RegisterData.get("username");
+        String password = RegisterData.get("password");
+        String pwdconfirmation = RegisterData.get("password confirmation");
+     	driver.findElement(By.xpath("//input[@value='Register']")).click();
+     	System.out.println("Username is: " + username);
+ 		System.out.println("Password is: " + password);
+ 		System.out.println("Password Confirmation is: " + pwdconfirmation);
     }
         
     public void getPwdNumericValue()
     {
-    	driver.findElement(By.id("id_username")).sendKeys("Qwerty@123");
-		driver.findElement(By.id("id_password1")).sendKeys("123456789");
-		driver.findElement(By.id("id_password2")).sendKeys("123456789");
-		driver.findElement(By.xpath("//input[@value='Register']")).click();
+    	log.info("Performing Register with TestData from Excel:");
+     	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","PwdNumericValue");
+     	String username = RegisterData.get("username");
+        String password = RegisterData.get("password");
+        String pwdconfirmation = RegisterData.get("password confirmation");
+     	driver.findElement(By.xpath("//input[@value='Register']")).click();
+     	System.out.println("Username is: " + username);
+ 		System.out.println("Password is: " + password);
+ 		System.out.println("Password Confirmation is: " + pwdconfirmation);
     }
     
     public void getClickLoginLink()
