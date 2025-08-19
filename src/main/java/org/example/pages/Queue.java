@@ -1,8 +1,11 @@
 package org.example.pages;
 
 import java.time.Duration;
+import java.util.Map;
 
+import org.example.utilities.ConfigReader;
 import org.example.utilities.ElementsUtil;
+import org.example.utilities.ExcelReader;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,6 +13,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -20,16 +24,18 @@ public class Queue {
 
     private WebDriver driver;
     private ElementsUtil elementsutil;
+    
+    String filepath = ConfigReader.getProperty("testData");
 
     private By getTitle_Queue = By.xpath("//div/h4[text()='Queue']");
     private By Tryhere = By.xpath("//a[text()='Try here>>>']");
-    private By code =By.id("editor");
     private By Run = By.xpath("//button[@type='button']");
     private By output = By.xpath("//pre[@id='output']");
     private By ImplementofQueue = By.cssSelector("a[href='implementation-lists']");
     private By ImplementCollections = By.cssSelector("a[href='implementation-collections']");
     private By ImplementArray = By.cssSelector("a[href='Implementation-array']");
     private By QueueOp = By.cssSelector("a[href='QueueOp']");
+    private By tryEditor_text = By.cssSelector(".CodeMirror div.CodeMirror-code");
     
     public Queue (WebDriver driver) 
     {
@@ -42,15 +48,14 @@ public class Queue {
        return driver.findElement(getTitle_Queue).getText();
     }
 
-    public void ImplementationofQueue()
-    {
-    	
-    	elementsutil.doClick(ImplementofQueue);
-    }
-    
     
     public void QueueTopics(String option) {
-        if (option.equalsIgnoreCase("Implementation using collections deque")) {
+    	System.out.println("Received option: " + option);
+    	if(option.equalsIgnoreCase("Implementation of Queue in python"))
+    	{
+    		elementsutil.doClick(ImplementofQueue);
+    	}
+    	else if (option.equalsIgnoreCase("Implementation using collections deque")) {
         
         elementsutil.doClick(ImplementCollections);
         } 
@@ -75,7 +80,24 @@ public class Queue {
     	driver.findElement(Tryhere).click();
     }
       
-    
+    public void enterPythonCode(String input)
+    {
+        WebElement editor = driver.findElement(tryEditor_text);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(editor).click().sendKeys(input).perform();
+    }
+    public String getPythonCodeDataDriven()
+    {
+        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
+        String codeToInput = getCode.get("Python Code");
+        return codeToInput;
+    }
+    public String getInvalidCodeDataDriven()
+    {
+        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","InvalidCode");
+        String codeToInput = getCode.get("Python Code");
+        return codeToInput;
+    }
     public void Run()
     {
     	
