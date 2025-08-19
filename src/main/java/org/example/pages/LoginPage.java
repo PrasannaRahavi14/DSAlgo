@@ -2,18 +2,20 @@ package org.example.pages;
 
 import org.example.utilities.BaseLogger;
 import org.example.utilities.ConfigReader;
+import org.example.utilities.ElementsUtil;
 import org.example.utilities.ExcelReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.List;
 import java.util.Map;
 
 public class LoginPage extends BaseLogger {
 
     private WebDriver driver;
+    private ElementsUtil elementsUtil;
+
     String filepath = ConfigReader.getProperty("testData");
     //1. By Locators :
     private By SignInLink = By.xpath("//a[text()='Sign in']");
@@ -21,7 +23,9 @@ public class LoginPage extends BaseLogger {
     private By Password = By.xpath("//input[@name='password']");
     private By LoginBtn = By.cssSelector("input[value='Login']");
     private By Alertmsg = By.id("id_username");
-    
+    private By GetStartedBtn = By.cssSelector(".btn");
+
+
     String url = ConfigReader.getProperty("baseurl");
 
 
@@ -29,11 +33,12 @@ public class LoginPage extends BaseLogger {
     public LoginPage(WebDriver driver)
     {
         this.driver=driver;
+        this.elementsUtil = new ElementsUtil(driver);
     }
-    
+
     public void Loginurl()
     {
-    	driver.get(url);
+        driver.get(url);
     }
 
     //3. page actions
@@ -51,6 +56,27 @@ public class LoginPage extends BaseLogger {
     {
         driver.findElement(LoginBtn).click();
     }
+
+    public void clickGetStartedBtn ()
+    {
+
+        driver.findElement(GetStartedBtn).click();
+    }
+
+    public void clickSignInLink()
+    {
+
+        elementsUtil.doClick(SignInLink);
+    }
+
+    public void Login()
+    {
+        driver.get(url);
+        driver.findElement(GetStartedBtn).click();
+        elementsUtil.doClick(SignInLink);
+        performLoginDataDriven();
+    }
+
     public void performLoginDataDriven()
     {
         log.info("Performing Login with TestData from Excel");
@@ -69,89 +95,40 @@ public class LoginPage extends BaseLogger {
         driver.findElement(LoginBtn).click();
     }
 
-    public void InvalidLogin()
-    {
-    	log.info("Performing Login with TestData from Excel:");
-        Map<String, String> loginData = ExcelReader.getRowByTestCaseId(filepath,"Login","TC01");
-       
-       String username = loginData.get("username");
-       String password = loginData.get("password");
-       driver.findElement(Username).sendKeys(username);
-       driver.findElement(Password).sendKeys(password);
-        
+    public void FailedLogin(String TestCaseID) {
+
+        log.info("Performing Login with TestData from Excel:");
+        Map<String, String> loginData = ExcelReader.getRowByTestCaseId(filepath,"Login",TestCaseID);
+
+        String username = loginData.get("username");
+        String password = loginData.get("password");
+
+        if (username != null && !username.trim().isEmpty()) {
+            driver.findElement(Username).sendKeys(username);
+        }
+        if (password != null && !password.trim().isEmpty()) {
+            driver.findElement(Password).sendKeys(password);
+        }
+
         driver.findElement(LoginBtn).click();
+
     }
-    
-    public void UsernameMissing()
-    {
-    	log.info("Performing Login with TestData from Excel:");
-        Map<String, String> loginData = ExcelReader.getRowByTestCaseId(filepath,"Login","TC02");
-       
-       String username = loginData.get("username");
-       String password = loginData.get("password");
-       driver.findElement(Username).sendKeys(username);
-       driver.findElement(Password).sendKeys(password);
-        
-        driver.findElement(LoginBtn).click();
-    }
-    
-    public void Passwordmissing()
-    {
-    	log.info("Performing Login with TestData from Excel:");
-        Map<String, String> loginData = ExcelReader.getRowByTestCaseId(filepath,"Login","TC03");
-       
-       String username = loginData.get("username");
-       String password = loginData.get("password");
-       driver.findElement(Username).sendKeys(username);
-       driver.findElement(Password).sendKeys(password);
-        
-        driver.findElement(LoginBtn).click();
-       
-    }
-    
-    public void Invalidusername()
-    {
-    	log.info("Performing Login with TestData from Excel:");
-        Map<String, String> loginData = ExcelReader.getRowByTestCaseId(filepath,"Login","TC04");
-       
-       String username = loginData.get("username");
-       String password = loginData.get("password");
-       driver.findElement(Username).sendKeys(username);
-       driver.findElement(Password).sendKeys(password);
-        
-        driver.findElement(LoginBtn).click();
-    	
-    }
-    
-    public void Invalidpassword()
-    {
-    	log.info("Performing Login with TestData from Excel:");
-        Map<String, String> loginData = ExcelReader.getRowByTestCaseId(filepath,"Login","TC05");
-       
-       String username = loginData.get("username");
-       String password = loginData.get("password");
-       driver.findElement(Username).sendKeys(username);
-       driver.findElement(Password).sendKeys(password);
-        
-        driver.findElement(LoginBtn).click();
-    	
-    }
-    
+
     public void alert()
     {
-    	
-    	WebElement field = driver.findElement(Alertmsg);
-    	boolean isRequired = Boolean.parseBoolean(field.getAttribute("required"));
-    	System.out.println("Is required? " + isRequired);
-    	
-    	Boolean valid = (Boolean) ((JavascriptExecutor) driver)
-    	        .executeScript("return arguments[0].checkValidity();", field);
 
-    	if (!valid) {
-    	    String validationMessage = (String) ((JavascriptExecutor) driver)
-    	        .executeScript("return arguments[0].validationMessage;", field);
-    	    System.out.println("Browser says: " + validationMessage);
-    	}
+        WebElement field = driver.findElement(Alertmsg);
+        boolean isRequired = Boolean.parseBoolean(field.getAttribute("required"));
+        System.out.println("Is required? " + isRequired);
+
+        Boolean valid = (Boolean) ((JavascriptExecutor) driver)
+                .executeScript("return arguments[0].checkValidity();", field);
+
+        if (!valid) {
+            String validationMessage = (String) ((JavascriptExecutor) driver)
+                    .executeScript("return arguments[0].validationMessage;", field);
+            System.out.println("Browser says: " + validationMessage);
+        }
     }
 
 }

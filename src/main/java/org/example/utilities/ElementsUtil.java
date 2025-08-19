@@ -1,9 +1,6 @@
 package org.example.utilities;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,7 +12,7 @@ public class ElementsUtil {
 
     public ElementsUtil(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     public WebElement waitForElementToBeVisible(By locator) {
@@ -43,5 +40,26 @@ public class ElementsUtil {
         element.clear();
         element.sendKeys(value);
     }
+
+    public Alert waitForAlertSafe() {
+        try {
+            return wait.until(ExpectedConditions.alertIsPresent());
+        } catch (TimeoutException e) {
+            System.out.println("No alert appeared.");
+            return null;
+        }
+    }
+
+    public String getAlertTextSafe() {
+        Alert alert = waitForAlertSafe();
+        return (alert != null) ? alert.getText() : null;
+    }
+
+    public void acceptAlertSafe() {
+        Alert alert = waitForAlertSafe();
+        if (alert != null) alert.accept();
+    }
+
+
 
 }

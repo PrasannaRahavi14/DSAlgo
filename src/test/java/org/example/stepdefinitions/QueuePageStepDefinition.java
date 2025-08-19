@@ -76,7 +76,7 @@ public class QueuePageStepDefinition extends BaseLogger{
     }
     @When("the user enters the valid python code and clicks {string}")
     public void the_user_enters_the_valid_python_code_and_clicks(String string) {
-    	Ds.enterPythonCode(Ds.getPythonCodeDataDriven());
+   // 	Ds.enterPythonCode(Ds.getPythonCodeDataDriven());
         Qp.Run();
         
     }
@@ -90,7 +90,7 @@ public class QueuePageStepDefinition extends BaseLogger{
     public void the_user_enters_invalid_python_data() {
     	Qp.ImplementationofQueue();
     	Qp.Tryhere();
-    	Ds.enterPythonCode(Ds.getInvalidCodeDataDriven());
+    //	Ds.enterPythonCode(Ds.getInvalidCodeDataDriven());
     	
     }
     @Then("the user should see error popup {string}")
@@ -109,7 +109,7 @@ public class QueuePageStepDefinition extends BaseLogger{
     public void the_user_clicks(String option) {
         Qp.QueueTopics(option);
         Qp.Tryhere();
-        Ds.enterPythonCode(Ds.getPythonCodeDataDriven());
+    //    Ds.enterPythonCode(Ds.getPythonCodeDataDriven());
         Qp.Run();
        
         
@@ -124,7 +124,7 @@ public class QueuePageStepDefinition extends BaseLogger{
     public void the_user_clicks_on_queue_page(String option) {
         Qp.QueueTopics(option);
         Qp.Tryhere();
-        Ds.enterPythonCode(Ds.getInvalidCodeDataDriven());
+    //    Ds.enterPythonCode(Ds.getInvalidCodeDataDriven());
         Qp.Run();
         
     }
