@@ -18,7 +18,7 @@ public class HomePage extends BaseLogger {
     private By GetStartedBtn_Array = By.xpath("//a[@href='array']");
     private By GetStartedBtn_LinkedList=By.xpath("//a[@href='linked-list']");
     private By GetStartedBtn_Stack=By.xpath("//a[@href='stack']");
-    private By GetStartedBtn_Queue=By.xpath("//a[@href='queue']");
+    private By GetStartedBtn_Queue=By.cssSelector("a[href='queue']");
     private By GetStartedBtn_Tree = By.xpath("//a[@href='tree']");
     private By GetStartedBtn_Graph=By.xpath("//a[@href='graph']");
     private By dataDrpdown= By.xpath("//a[@class='nav-link dropdown-toggle']");
