@@ -1,5 +1,7 @@
 package org.example.pages;
 
+import java.util.HashMap;
+import java.util.Map;
 //import java.util.Map;
 import java.util.NoSuchElementException;
 
@@ -7,6 +9,7 @@ import org.example.factory.DriverFactory;
 import org.example.utilities.BaseLogger;
 import org.example.utilities.ConfigReader;
 import org.example.utilities.ElementsUtil;
+import org.example.utilities.ExcelReader;
 //import org.example.utilities.ExcelReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -30,6 +33,11 @@ public class Stackpage extends BaseLogger{
     private By outputConsole = By.xpath("//pre[@id='output']");
     ElementsUtil elementsUtil;
     String filepath = ConfigReader.getProperty("testData");
+    
+    private By getTopicLinkByText(String topic) {
+        String xpath = "//a[text()='" + topic + "']";
+        return By.xpath(xpath);
+    }
     
     public Stackpage(WebDriver driver) {
         this.driver = driver;
@@ -61,7 +69,32 @@ public class Stackpage extends BaseLogger{
     	log.info("Getting the title of Operations in Stack");
     	return driver.findElement(operationspage_title).getText();
     }
-    
+    public void clickTopicLink(String text) {
+        log.info("Clicking on the topic link : " + text);
+        driver.findElement(getTopicLinkByText(text)).click();
+
+    }
+  //3. actions for the page
+  
+    public By getTitleXPath(String pageTitle) {
+        Map<String, By> titleToXPath = new HashMap<>();
+        titleToXPath.put("Stack", stackpagetitle);
+        titleToXPath.put("Operations in Stack", operationspage_title);
+
+
+        if (!titleToXPath.containsKey(pageTitle)) {
+            throw new IllegalArgumentException("No XPath mapped for page title: " + pageTitle);
+        }
+
+        return titleToXPath.get(pageTitle);
+    }
+
+    public String validateTitle(String title) {
+        log.info("Title of the page : " + title);
+        By xpath = getTitleXPath(title);
+        return driver.findElement(xpath).getText();
+    }
+
     public void clickTryHereBtn() {
         log.info("Clicking on the Try Here Button");
         driver.findElement(tryherebtn).click();
@@ -96,17 +129,26 @@ public class Stackpage extends BaseLogger{
         return driver.findElement(outputConsole).getText();
     }
 
-//    public String getPythonCodeDataDriven()
-//    {
-//        //Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
-//        String codeToInput = getCode.get("Python Code");
-//        return codeToInput;
-//    }
-//
-//    public String getOutputDataDriven()
-//    {
-//       // Map<String, String> getOutput = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
-//        String output = getOutput.get("Expected Output");
-//        return output;
-//    }
+    public String getPythonCodeDataDriven()
+    {
+        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
+        String codeToInput = getCode.get("Python Code");
+        return codeToInput;
+    }
+
+    public String getOutputDataDriven()
+    {
+        Map<String, String> getOutput = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
+        String output = getOutput.get("Expected Output");
+        return output;
+    }
+
+    public String getInvalidCodeDataDriven()
+    {
+        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","InvalidCode");
+        String codeToInput = getCode.get("Python Code");
+        return codeToInput;
+    }
+
+
     }

@@ -1,6 +1,7 @@
 package org.example.pages;
 
 import java.util.Map;
+//import java.util.NoSuchElementException;
 
 import org.example.utilities.BaseLogger;
 import org.example.utilities.ConfigReader;
@@ -16,12 +17,11 @@ public class RegisterPage extends BaseLogger {
 	private WebDriver driver;
 	ElementsUtil elementsUtil;
 	private By getTitle_DSI = By.cssSelector("h4[class='bg-secondary text-white']");
-	private By getTitleRegisterpage = By.xpath("//title[contains(text(), ' Registration ')]");
 	private By getRegister_Page = By.cssSelector("a[href='/register']");
 	private By username = By.id("id_username");
 	private By password = By.id("id_password1");
 	private By pwdconfirmation = By.id("id_password2");
-	private By pwdMismatchAlertmsg = By.xpath("//div[@role='alert']");
+	private By pwdMismatchAlertmsg = By.xpath("//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')]");
 	private By NewAccountAlertmsg = By.xpath("//div[contains(@class,'alert') and contains(text(),'New Account Created')]");
 	private By LoginLink = By.xpath("(//a[@href='/login'])[2]");
 	private By Loginpage = By.xpath("//a[contains(text(), 'NumpyNinja')]");
@@ -37,17 +37,16 @@ public class RegisterPage extends BaseLogger {
     {
   return driver.findElement(getTitle_DSI).getText();
     }
-    
-    public String getTitleRegisterpage()
-    {
-    	log.info("Getting the title of RegisterPage");
-    	return driver.findElement(getTitleRegisterpage).getText();
-    }
+
     public boolean getRegister()
     {
     	return driver.findElement(getRegister_Page).isEnabled();
     }
-   
+    
+    public String ValidateTitleRegisterPage()
+    {
+    	return driver.findElement(getRegister_Page).getText();
+    }
     public boolean isRegisterPageDisplayed() {
     	
         return driver.findElement(Loginpage).isDisplayed();
@@ -194,6 +193,10 @@ public class RegisterPage extends BaseLogger {
     public By getPwdMismatchAlertlocator() {
         return pwdMismatchAlertmsg;
     }
+    public String getpwdmismatchtext() {
+       
+            return elementsUtil.doGetText(pwdMismatchAlertmsg);
+    }
     
     public void getInvalidUsername()
     {
@@ -231,5 +234,7 @@ public class RegisterPage extends BaseLogger {
     	
         return driver.findElement(Loginpage).isDisplayed();
     }
+
+	
 
 }

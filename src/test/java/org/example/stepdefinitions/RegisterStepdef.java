@@ -5,7 +5,6 @@ import org.example.pages.HomePage;
 import org.example.pages.LandingPage;
 import org.example.pages.RegisterPage;
 import org.example.utilities.BaseLogger;
-import org.example.utilities.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -19,13 +18,13 @@ public class RegisterStepdef extends BaseLogger {
 	RegisterPage registerpage = new RegisterPage(DriverFactory.getDriver());
 	HomePage homePage = new HomePage(DriverFactory.getDriver());
 	LandingPage landingpage = new LandingPage(DriverFactory.getDriver());
-	String url = ConfigReader.getProperty("baseurl");
-    
+	    
 	@Given("the user is on the Home page")
-	public void the_user_is_on_the_home_page() { 
-		driver.get(url);
-		landingpage.clickGetStartedBtn(); 
-	}
+	public void the_user_is_on_the_home_page() {
+		
+		landingpage.getURL();
+		landingpage.clickGetStartedBtn();
+      }
 
 	 @When("the user clicks on Register link on the Home page") 
 	 public void the_user_clicks_on_register_link_on_the_home_page() { 	
@@ -34,16 +33,19 @@ public class RegisterStepdef extends BaseLogger {
 	 
 	 @Then("The user should land on Register page.")
 	 public void the_user_should_land_on_register_page() { 
-		 registerpage.getTitleRegisterpage();
-	     registerpage.getRegister();      
+		 registerpage.getRegister(); 
+	     String ActualTitle = registerpage.ValidateTitleRegisterPage();
+	     log.info("The user is on page: " + ActualTitle);
+
 	 }
 
 	@Given("The user is on Register page after clicking on register link from homepage")
 	 public void the_user_is_on_register_page_after_clicking_on_register_link_from_homepage() {
-		 driver.get(url);
+		 landingpage.getURL();
 		 landingpage.clickGetStartedBtn();
 		 homePage.clickRegister();
-		 registerpage.getTitleRegisterpage();
+		 String ActualTitle = registerpage.ValidateTitleRegisterPage();
+	     log.info("The user is on page: " + ActualTitle);
 	 }
 	 
 	@When("the user clicks on Register button with all fields empty")
@@ -97,8 +99,7 @@ public class RegisterStepdef extends BaseLogger {
    public void the_user_should_able_to_see_an_pwd_warning_message(String ExpectedAlert) {
        String ActualAlert = registerpage.getPwdMismatchAlertmsg();  
        log.info("Actual message: " + ActualAlert);
-	  // Assert.assertEquals(ActualAlert, ExpectedAlert);
-      Assert.assertEquals(ActualAlert, ExpectedAlert, "password_mismatch:The two password fields didn’t match.");
+	   Assert.assertEquals(ActualAlert, ExpectedAlert, "password_mismatch:The two password fields didn’t match.");
      }
    
    @When("the user clicks Register button with valid Username,Password and Password Confirmation")
