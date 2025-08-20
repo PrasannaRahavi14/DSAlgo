@@ -27,9 +27,16 @@ public class ArrayPage extends BaseLogger {
     private By runBtn = By.xpath("//button[@type='button']");
     private By tryEditor_text = By.cssSelector(".CodeMirror div.CodeMirror-code");
     private By outputConsole = By.xpath("//pre[@id='output']");
+    private By practiceQuestions=By.xpath("//a[@class='list-group-item list-group-item-light text-info']");
+    private By practiceQuestions_PageText=By.xpath("//a[@href='/question/1']");
     //private By runBtn = By.cssSelector("button[type='button']");
 
     private By getTopicLinkByText(String topic) {
+        String xpath = "//a[text()='" + topic + "']";
+        return By.xpath(xpath);
+    }
+
+    private By getPracticeQuestionsTopicLinkByText(String topic) {
         String xpath = "//a[text()='" + topic + "']";
         return By.xpath(xpath);
     }
@@ -86,7 +93,7 @@ public class ArrayPage extends BaseLogger {
     {
         WebElement editor = driver.findElement(tryEditor_text);
         Actions actions = new Actions(driver);
-        actions.moveToElement(editor).click().sendKeys(input).perform();
+        actions.moveToElement(editor).click().keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).sendKeys(input).perform();
     }
 
     public void clickRunBtn()
@@ -136,6 +143,21 @@ public class ArrayPage extends BaseLogger {
             log.info("No alert appeared.");
             return "";
         }
+    }
+
+    public void clickPracticeQuestions()
+    {
+        driver.findElement(practiceQuestions).click();
+    }
+
+    public String practiceQuestionsPageVisibility()
+    {
+        return driver.findElement(practiceQuestions_PageText).getText();
+    }
+
+    public void clickPracticeQuestionsArrayTopicLink(String practiceQuestionsTopics) {
+        log.info("Clicking on the Practice Questions topic link : " + practiceQuestionsTopics);
+        driver.findElement(getPracticeQuestionsTopicLinkByText(practiceQuestionsTopics)).click();
     }
 
 }

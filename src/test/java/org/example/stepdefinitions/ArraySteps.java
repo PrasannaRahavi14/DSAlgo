@@ -141,4 +141,47 @@ public class ArraySteps extends BaseLogger {
     public void theUserShouldSeeTheErrorPopup() {
         Assert.assertEquals(arrayPage.getAlertPopup(),arrayPage.getInvalidCodeOutput());
     }
+
+    @When("User clicks on Practice Questions hyperlink")
+    public void userClicksOnPracticeQuestionsHyperlink() {
+        log.info("Clicking Practice Questions hyperlink");
+       arrayPage.clickPracticeQuestions();
+    }
+
+    @Then("User should be redirected to Practice Questions page")
+    public void userShouldBeRedirectedToPracticeQuestionsPage() {
+        log.info("Checking for Practice Questions page");
+        Assert.assertEquals(arrayPage.practiceQuestionsPageVisibility(),"Search the array");
+    }
+
+     @When("User clicks {string} option in Practice Questions page")
+    public void userClicksOptionInPracticeQuestionsPage(String practiceQuestionsTopic) {
+         arrayPage.clickPracticeQuestionsArrayTopicLink(practiceQuestionsTopic);
+    }
+
+    @Then("User should be redirected to Run page")
+    public void userShouldBeRedirectedToRunPage() {
+        log.info("Checking the Run button is available");
+        Assert.assertTrue(arrayPage.runBtnVisible(),"Run button not visible");
+    }
+
+    @Given("User is in Practice Questions page under {string}")
+    public void userIsInPracticeQuestionsPageUnder(String ArrayTopics) {
+        arrayPage.clickArrayTopicLink(ArrayTopics);
+        log.info("Clicking Practice Questions hyperlink");
+        arrayPage.clickPracticeQuestions();
+    }
+
+    @Given("User is on Run page under the Array topic {string} and Practice Questions option {string}")
+    public void userIsOnRunPageUnderTheArrayTopicAndPracticeQuestionsOption(String ArrayTopics, String practiceQuestionsTopic) {
+        arrayPage.clickArrayTopicLink(ArrayTopics);
+        log.info("Clicking Practice Questions hyperlink");
+        arrayPage.clickPracticeQuestions();
+        log.info("Clicking " + practiceQuestionsTopic + " hyperlink");
+        arrayPage.clickPracticeQuestionsArrayTopicLink(practiceQuestionsTopic);
+    }
+
+    @When("User enters valid python code in Practice Questions page and click Run")
+    public void userEntersValidPythonCodeInPracticeQuestionsPageAndClickRun() {
+    }
 }
