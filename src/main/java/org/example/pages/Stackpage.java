@@ -23,10 +23,12 @@ public class Stackpage extends BaseLogger{
     LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
     LandingPage landingpage = new LandingPage(DriverFactory.getDriver());
     private By stackpagetitle = By.xpath("//h4[@class='bg-secondary text-white']");
-    private By operationspage = By.xpath("//a[contains(text(), 'Operations in Stack')]");
-    private By operationspage_title = By.xpath("//p[contains(text(), 'Operations in Stack')]");
-    private By Implementation_title = By.cssSelector("a[href='implementation']");
-    private By Applications_title = By.cssSelector("a[href='stack-applications']");
+    private By OperationLink = By.xpath("//a[contains(text(), 'Operations in Stack')]");
+    private By Operationspage_title = By.xpath("//p[contains(text(), 'Operations in Stack')]");
+    private By ImplementationLink = By.cssSelector("a[href='implementation']");
+    private By Implementationpage_title = By.xpath("//p[contains(text(), 'Implementation')]");
+    private By ApplicationsLink= By.cssSelector("a[href='stack-applications']");
+    private By Applicationspage_title = By.xpath("//p[contains(text(), 'Applications')]");
     private By tryherebtn = By.xpath("//a[@href='/tryEditor']");
     private By runBtn = By.cssSelector("button[type='button']");
     private By tryEditor_text = By.cssSelector(".CodeMirror div.CodeMirror-code");
@@ -62,28 +64,29 @@ public class Stackpage extends BaseLogger{
     
     public void getOperationsinstack()
     {
-    	driver.findElement(operationspage).click();
+    	driver.findElement(OperationLink).click();
     	
     }
     
     public String getOperationspagetitle()
     {
     	log.info("Getting the title of Operations in Stack");
-    	return driver.findElement(operationspage_title).getText();
+    	return driver.findElement(Operationspage_title).getText();
     }
     
-    public void QueueTopics(String option) {
+    public String StackTopics(String option) {
         if (option.equalsIgnoreCase("Implementation")) {
         
-        elementsUtil.doClick(Implementation_title);
-        } 
-        
+       elementsUtil.doClick(ImplementationLink);    
+       log.info("The User is on : " + option);
+        return driver.findElement(Implementationpage_title).getText();    
+        }     
         else if (option.equalsIgnoreCase("Applications")) {
-        	
-        	elementsUtil.doClick(Applications_title);
+        	elementsUtil.doClick(ApplicationsLink);  
+        	log.info("The User is on : " + option);
+            return driver.findElement(Applicationspage_title).getText();
         } 
         else {
-        	
             throw new IllegalArgumentException("Unknown option: " + option);
         }
     }
@@ -126,7 +129,7 @@ public class Stackpage extends BaseLogger{
     public By getTitleXPath(String pageTitle) {
         Map<String, By> titleToXPath = new HashMap<>();
         titleToXPath.put("Stack", stackpagetitle);
-        titleToXPath.put("Operations in Stack", operationspage_title);
+        titleToXPath.put("Operations in Stack", Operationspage_title);
 
 
         if (!titleToXPath.containsKey(pageTitle)) {
