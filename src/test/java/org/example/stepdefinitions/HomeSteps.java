@@ -113,11 +113,12 @@
 		}
 		@Given("The user successfully sign in {string} and {string}")
 		public void the_user_successfully_sign_in_and(String UserName, String Password) {
-			landingPage.getURL();
+			/*landingPage.getURL();
 			landingPage.clickGetStartedBtn();
 			   home.clickSignIn();
 			   Map<String, String> loginData = ExcelReader.getDefaultLogin(filePath);
-			   loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));
+			   loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));*/
+			loginpage.Login();
 			   
 		}
 

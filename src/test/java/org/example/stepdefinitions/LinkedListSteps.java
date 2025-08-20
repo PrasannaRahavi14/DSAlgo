@@ -32,12 +32,12 @@ public class LinkedListSteps extends BaseLogger {
 @Given("the user in Linked List page after signed in")
 public void the_user_in_linked_list_page_after_signed_in() {
 	
-	landingPage.getURL();;
+	/*landingPage.getURL();;
 	landingPage.clickGetStartedBtn();
 	home.clickSignIn();
 	Map<String, String> loginData = ExcelReader.getDefaultLogin(filePath);
-    loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));
-	
+    loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));*/
+	loginpage.Login();
      home.clickGetStartedForLinkedList();
 	   }
 
