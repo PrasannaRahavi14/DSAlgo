@@ -88,11 +88,43 @@ public class StackStepdef extends BaseLogger{
 	        stackpage.ClickRun(); 
 	  }
 
-      @Then("TThe user should able to see an {string} in alert window")
-      public void t_the_user_should_able_to_see_an_in_alert_window(String string) {
+	  @Then("The user should able to see an {string} in alert window")
+	  public void the_user_should_able_to_see_an_in_alert_window(String string) {
     	  
     	  log.error("<------Test Error----->");
     	  stackpage.Alertmessage();
       }
+	  
+	  @Given("the user is on the TryEditor page of {string}")
+	  public void the_user_is_on_the_try_editor_page_of(String option) {
+		  stackpage.StackTopics(option);
+	      stackpage.clickTryHereBtn();
+	      
+	  }
 
+	  @When("the user input the valid python code and clicks run button")
+	  public void the_user_input_the_valid_python_code_and_clicks_run_button() {
+		  log.info("Entering the Python Code in the editor "+ pycode.getPythonCodeDataDriven());
+	      pycode.enterPythonCode(pycode.getPythonCodeDataDriven());
+	      log.info("Clicking on Run button");
+	      stackpage.ClickRun();
+	  }
+
+	  @Then("the user should be able to see the output from the console")
+	  public void the_user_should_be_able_to_see_the_output_from_the_console() {
+		  String actualOutput = stackpage.getOutputFromConsole();
+	        log.info("Output printed in the console : "+actualOutput);
+	        String expectedOutput = stackpage.getOutputDataDriven();
+	        log.info("Expected Output : "+expectedOutput);
+	        Assert.assertEquals(actualOutput,expectedOutput);
+	        log.info("Actual Output matched with the Expected Output");
+	  }
+	  
+	  @When("the user input the invalid python code and clicks run button")
+	  public void the_user_input_the_invalid_python_code_and_clicks_run_button() {
+		  log.info("Entering the Python Code in the editor "+ pycode.getInvalidCodeDataDriven());
+	        pycode.enterPythonCode(pycode.getInvalidCodeDataDriven());
+	        log.info("Clicking on Run button");
+	        stackpage.ClickRun();   
+		  }
 }
