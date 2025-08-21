@@ -11,6 +11,9 @@ import org.example.utilities.LoggerHelper;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -30,12 +33,10 @@ public class Hooks {
         configReader = new ConfigReader();
         prop = configReader.init_prop();
     }
+
     @Before(order = 1)
     public void launchBrowser() {
-        String browserName = System.getProperty("browser");
-        if (browserName == null) {
-            browserName = prop.getProperty("browser");
-        }
+        String browserName = prop.getProperty("browser");
         log.info("Browser from config: " + browserName);
         driverFactory = new DriverFactory();
         driver = driverFactory.init_driver(browserName);
@@ -75,6 +76,9 @@ public class Hooks {
 
             // Attach to Allure report
             saveScreenshotToAllure(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
+            
+            //Attach to Extent report
+            ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(destFile.getAbsolutePath());
 
             // 4️⃣ Attach Log4j2 log file to Allure (if exists)
             if (Files.exists(Paths.get(LOG_FILE_PATH))) {

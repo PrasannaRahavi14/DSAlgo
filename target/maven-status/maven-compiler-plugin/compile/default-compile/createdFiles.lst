@@ -1,5 +1,6 @@
 org\example\pages\HomePage.class
 org\example\pages\RegisterPage.class
+org\example\pages\Graph.class
 org\example\utilities\ConfigReader.class
 org\example\pages\DataStructurePage.class
 org\example\pages\TreePage.class

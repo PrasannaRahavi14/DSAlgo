@@ -5,7 +5,12 @@ org\example\stepdefinitions\LoginSteps.class
 org\example\hooks\Hooks.class
 org\example\stepdefinitions\ArraySteps.class
 org\example\runners\TestRunner.class
+<<<<<<< HEAD
+org\example\stepdefinitions\Graphsteps.class
+org\example\stepdefinitions\RegisterStepdef.class
+=======
 org\example\stepdefinitions\RegisterStepdef.class
 org\example\stepdefinitions\TreeSteps.class
+>>>>>>> f9725dc57b88bebad1ce7da05cf5e9ed12814193
 org\example\stepdefinitions\LinkedListSteps.class
 org\example\stepdefinitions\DatastructureSteps.class

@@ -8,7 +8,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"org.example.stepdefinitions","org.example.hooks"},
-        plugin = {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
+        plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                           "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
         monochrome = true
         
 )
@@ -16,7 +17,9 @@ import io.cucumber.testng.CucumberOptions;
 public class TestRunner extends AbstractTestNGCucumberTests  {
 	
 	  @Override
-	  @DataProvider(parallel = true) public Object[][] scenarios() { return
-	  super.scenarios(); }
+	  @DataProvider(parallel = true) 
+	  public Object[][] scenarios()
+	  { return super.scenarios(); 
+	  }
 	 
 }
