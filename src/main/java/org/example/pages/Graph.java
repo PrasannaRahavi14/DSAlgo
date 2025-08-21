@@ -67,13 +67,13 @@ public class Graph {
 	    }
 	    public String getPythonCodeDataDriven()
 	    {
-	        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
+	        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"Graph","ValidCode");
 	        String codeToInput = getCode.get("Python Code");
 	        return codeToInput;
 	    }
 	    public String getInvalidCodeDataDriven()
 	    {
-	        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","InvalidCode");
+	        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"Graph","InvalidCode");
 	        String codeToInput = getCode.get("Python Code");
 	        return codeToInput;
 	    }
