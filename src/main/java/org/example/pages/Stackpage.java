@@ -1,4 +1,3 @@
-
 package org.example.pages;
 
 
@@ -21,7 +20,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Stackpage extends BaseLogger{
-    private WebDriver driver;
+	private WebDriver driver;
     HomePage homePage = new HomePage(DriverFactory.getDriver());
     LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
     LandingPage landingpage = new LandingPage(DriverFactory.getDriver());
@@ -38,94 +37,94 @@ public class Stackpage extends BaseLogger{
     private By outputinconsole = By.xpath("//pre[@id='output']");
     ElementsUtil elementsUtil;
     String filepath = ConfigReader.getProperty("testData");
-
+    
     private By getTopicLinkByText(String topic) {
-        //String xpath = "//p[contains(text() = '" + topic + "']";
+    	//String xpath = "//p[contains(text() = '" + topic + "']";
         String xpath = "//a[text()='" + topic + "']";
         return By.xpath(xpath);
     }
-
+    
     public Stackpage(WebDriver driver) {
         this.driver = driver;
         this.elementsUtil = new ElementsUtil(driver);
-    }
-
+    } 
+    
     public void getStartedStack()
     {
-        loginpage.Login();
-        homePage.clickGetStartedForStack();
-
+    	loginpage.Login();
+   	  homePage.clickGetStartedForStack();
+   	
     }
-
+    
     public String getStackpagetitle()
     {
-        return driver.findElement(stackpagetitle).getText();
+       return driver.findElement(stackpagetitle).getText();
     }
-
+    
     public void getOperationsinstack()
     {
-        driver.findElement(OperationLink).click();
-
+    	driver.findElement(OperationLink).click();
+    	
     }
-
+    
     public String getOperationspagetitle()
     {
-        log.info("Getting the title of Operations in Stack");
-        return driver.findElement(Operationspage_title).getText();
+    	log.info("Getting the title of Operations in Stack");
+    	return driver.findElement(Operationspage_title).getText();
     }
-
+    
     public String StackTopics(String option) {
         if (option.equalsIgnoreCase("Implementation")) {
-
-            elementsUtil.doClick(ImplementationLink);
-            log.info("The User is on : " + option);
-            return driver.findElement(Implementationpage_title).getText();
-        }
+        
+       elementsUtil.doClick(ImplementationLink);    
+       log.info("The User is on : " + option);
+        return driver.findElement(Implementationpage_title).getText();    
+        }     
         else if (option.equalsIgnoreCase("Applications")) {
-            elementsUtil.doClick(ApplicationsLink);
-            log.info("The User is on : " + option);
+        	elementsUtil.doClick(ApplicationsLink);  
+        	log.info("The User is on : " + option);
             return driver.findElement(Applicationspage_title).getText();
-        }
+        } 
         else {
             throw new IllegalArgumentException("Unknown option: " + option);
         }
     }
-
+    
     public void clickTryHereBtn() {
         log.info("Clicking on the Try Here Button");
         driver.findElement(tryherebtn).click();
     }
-
+    
     public void ClickRun()
     {
-        driver.findElement(runBtn).click();
+    driver.findElement(runBtn).click();
 
     }
-
-
+    
+    
     public void Alertmessage()
     {
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
-            wait.until(ExpectedConditions.alertIsPresent());
+    	try {
+    	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+    	    wait.until(ExpectedConditions.alertIsPresent());
 
-            Alert alert = driver.switchTo().alert();
-            System.out.println("Alert text: " + alert.getText());
-            alert.accept();
+    	    Alert alert = driver.switchTo().alert();
+    	    System.out.println("Alert text: " + alert.getText());
+    	    alert.accept(); 
 
-        } catch (TimeoutException e) {
-            System.out.println("No alert appeared.");
-        }
-    }
-
+    	} catch (TimeoutException e) {
+    	    System.out.println("No alert appeared.");
+    	}
+    } 
+   
     public void clickTopicLink(String text) {
         log.info("Clicking on the topic link : " + text);
         driver.findElement(getTopicLinkByText(text)).click();
 
     }
-
-    //3. actions for the page
-
+    
+  //3. actions for the page
+  
     public By getTitleXPath(String pageTitle) {
         Map<String, By> titleToXPath = new HashMap<>();
         titleToXPath.put("Stack", stackpagetitle);
@@ -163,7 +162,7 @@ public class Stackpage extends BaseLogger{
     {
         return driver.findElement(outputinconsole).getText();
     }
-
+   
     public void enterPythonCode(String input)
     {
         WebElement editor = driver.findElement(tryEditor_text);
@@ -190,11 +189,11 @@ public class Stackpage extends BaseLogger{
         String codeToInput = getCode.get("Python Code");
         return codeToInput;
     }
+	
+	
+		
+	}
 
 
 
-}
-
-
-
-
+ 
