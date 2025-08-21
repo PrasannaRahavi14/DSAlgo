@@ -193,10 +193,10 @@ public class RegisterPage extends BaseLogger {
     public By getPwdMismatchAlertlocator() {
         return pwdMismatchAlertmsg;
     }
-    public String getpwdmismatchtext() {
-       
-            return elementsUtil.doGetText(pwdMismatchAlertmsg);
-    }
+//    public String getpwdmismatchtext() {
+//       
+//            return elementsUtil.doGetText(pwdMismatchAlertmsg);
+//    }
     
     public void getInvalidUsername()
     {
