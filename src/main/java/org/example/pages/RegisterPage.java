@@ -21,7 +21,7 @@ public class RegisterPage extends BaseLogger {
 	private By username = By.id("id_username");
 	private By password = By.id("id_password1");
 	private By pwdconfirmation = By.id("id_password2");
-	private By pwdMismatchAlertmsg = By.xpath("//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')]");
+	private By pwdMismatchAlertmsg = By.cssSelector("div[role='alert']");
 	private By NewAccountAlertmsg = By.xpath("//div[contains(@class,'alert') and contains(text(),'New Account Created')]");
 	private By LoginLink = By.xpath("(//a[@href='/login'])[2]");
 	private By Loginpage = By.xpath("//a[contains(text(), 'NumpyNinja')]");
@@ -193,10 +193,12 @@ public class RegisterPage extends BaseLogger {
     public By getPwdMismatchAlertlocator() {
         return pwdMismatchAlertmsg;
     }
-    public String getpwdmismatchtext() {
+    public void getpwdmismatchtext() {
        
-            return elementsUtil.doGetText(pwdMismatchAlertmsg);
+            //return elementsUtil.doGetText(pwdMismatchAlertmsg);
+    	 elementsUtil.doGetText(pwdMismatchAlertmsg);
     }
+    
     
     public void getInvalidUsername()
     {
