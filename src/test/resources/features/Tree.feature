@@ -2,7 +2,11 @@ Feature: Tree Page Validation
 
   Background:
     Given The user is in Tree Page after login
-@TR001
+
+  Scenario: Get the total no of topics link in the Tree page
+    When The user sees the topics covered section in Tree
+    Then The user is able to get the total no of topics present in the page
+
   Scenario Outline: verify the user is able to navigate to "<topics>" page
     When The user clicks the "<topics>" link from the topics
     Then The user should be in the "<topics>" Page of the Tree
@@ -22,7 +26,6 @@ Feature: Tree Page Validation
     | Binary Search Trees            |
     | Implementation Of BST          |
 
-@TR002
   Scenario Outline: verify the user is able to navigate to try editor page of "<topics>"
     Given The user is in the topics page after clicking the "<topics>" link
     When The user click Try here button of the "<topics>" page
@@ -43,11 +46,31 @@ Feature: Tree Page Validation
       | Binary Search Trees            |
       | Implementation Of BST          |
 
-@TR003
-  Scenario Outline: Verify the user is able to see the output for the valid python code of "<topics>"
+  Scenario Outline: Verify the user is able to see the output for the "<input>" of the "<topics>"
     Given The user is in the try editor page of the Tree topic "<topics>"
-    When The user inputs the valid python code and clicks run button
-    Then The user should be able to see the output from the console
+    When The user enters "<input>" in the editor and clicks run button
+    Then The user should be able to see the output for "<input>"
+    Examples:
+      | topics                         | input          |
+      | Overview of Trees              |   ValidCode    |
+      | Terminologies                  |  InvalidCode   |
+      | Types of Trees                 |  AlphaNumeric  |
+      | Tree Traversals                |   Numeric      |
+      | Traversals-Illustration        |   ValidCode    |
+      | Binary Trees                   |   InvalidCode  |
+      | Types of Binary Trees          |  AlphaNumeric  |
+      | Implementation in Python       |  Numeric       |
+      | Binary Tree Traversals         |  ValidCode     |
+      | Implementation of Binary Trees |  InvalidCode   |
+      | Applications of Binary trees   |  AlphaNumeric  |
+      | Binary Search Trees            |  Numeric       |
+      | Implementation Of BST          |  ValidCode     |
+
+  Scenario Outline: verify the user is able to check the broken link or empty page
+    Given The user is in the topics page after clicking the "<topics>" link
+    When The user clicks on the practice question link
+    Then The user is able to check if the empty is empty or not
+
     Examples:
       | topics                         |
       | Overview of Trees              |

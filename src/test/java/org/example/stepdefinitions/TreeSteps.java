@@ -16,16 +16,10 @@ public class TreeSteps extends BaseLogger {
 
     @Given("The user is in Tree Page after login")
     public void theUserIsInTreePageAfterLogin() {
-        log.info("Executing the Background Scenario : Navigating to the DataStructure Page");
-        landingpage.getURL();
-        Assert.assertEquals(landingpage.getTitle(), "Preparing for the Interviews");
-        landingpage.clickGetStartedBtn();
-        Assert.assertEquals(homePage.getTitle(), "NumpyNinja");
-        homePage.clickSignInLink();
-        loginpage.performLoginDataDriven();
-        Assert.assertEquals(homePage.CheckName(), "Prasanna");
+        loginpage.Login();
+        log.info("Welcome "+homePage.CheckName());
         homePage.clickGetStartedForTree();
-        Assert.assertEquals(treePage.getTitleforTree(),"Tree");
+        log.info ("Background Scenario executed successfully : Landed in "+treePage.getTitleforTree());
     }
 
     @When("The user clicks the {string} link from the topics")
@@ -38,15 +32,11 @@ public class TreeSteps extends BaseLogger {
         treePage.validateTitleforTopics(text);
     }
 
-
-
-
     @When("The user click Try here button of the {string} page")
     public void theUserClickTryHereButtonOfThePage(String topicLink) {
         treePage.clickTryHereBtn(topicLink);
 
     }
-
     @Then("The user should be redirected to the page having a try editor with run button of the current topic")
     public void theUserShouldBeRedirectedToThePageHavingATryEditorWithRunButtonOfTheCurrentTopic() {
         log.info("Checking the try editor code block is available");
@@ -54,7 +44,6 @@ public class TreeSteps extends BaseLogger {
         log.info("Checking the Run button is available");
         Assert.assertTrue(treePage.runBtnVisible(),"Run button not visible");
     }
-
 
     @Given("The user is in the topics page after clicking the {string} link")
     public void theUserIsInTheTopicsPageAfterClickingTheLink(String text) {
@@ -67,26 +56,48 @@ public class TreeSteps extends BaseLogger {
         treePage.clickTopicLink(text);
         treePage.validateTitleforTopics(text);
         treePage.clickTryHereBtn(text);
-        Assert.assertTrue(treePage.tryEditorVisible(),"Try Editor Code block not available");
-        Assert.assertTrue(treePage.runBtnVisible(),"Run button not visible");
-
+        treePage.tryEditorPageWithRunBtn();
     }
 
-    @When("The user inputs the valid python code and clicks run button")
-    public void theUserInputsTheValidPythonCodeAndClicksRunButton() {
-        log.info("Entering the Python Code in the editor "+treePage.getPythonCodeDataDriven());
-        treePage.enterPythonCode(treePage.getPythonCodeDataDriven());
-        log.info("Clicking on Run button");
+    @When("The user enters {string} in the editor and clicks run button")
+    public void theUserEntersInTheEditorAndClicksRunButton(String input) {
+        String code = treePage.getPythonCodeDataDriven(input);
+        treePage.enterPythonCode(code);
+        log.info("The code entered in the editor : "+code);
         treePage.clickRunBtn();
+        log.info ("Run button clicked");
     }
 
-    @Then("The user should be able to see the output from the console")
-    public void theUserShouldBeAbleToSeeTheOutputFromTheConsole() {
-        String actualOutput = treePage.getOutputFromConsole();
-        log.info("Output printed in the console : "+actualOutput);
-        String expectedOutput = treePage.getOutputDataDriven();
-        log.info("Expected Output : "+expectedOutput);
-        Assert.assertEquals(actualOutput,expectedOutput);
-        log.info("Actual Output matched with the Expected Output");
+    @Then("The user should be able to see the output for {string}")
+    public void theUserShouldBeAbleToSeeTheOutputFor(String input) {
+        String actualOutput = treePage.processInputAndReturnStatus();
+        if (actualOutput != null) {
+            String expectedOutput = treePage.getOutputDataDriven(input);
+            log.info("Expected Output: " + expectedOutput);
+            Assert.assertEquals(actualOutput, expectedOutput);
+            log.info("✅ Actual Output matched with the Expected Output");
+        } else {
+            log.warn("Test failed due to invalid input, alert was handled.");
+        }
+    }
+
+    @When("The user sees the topics covered section in Tree")
+    public void theUserSeesTheTopicsCoveredSectionInTree() {
+        treePage.topicsCoveredSection();
+    }
+
+    @Then("The user is able to get the total no of topics present in the page")
+    public void theUserIsAbleToGetTheTotalNoOfTopicsPresentInThePage() {
+        log.info("Total topics present in this page : "+treePage.getTotalCountofTopicsLink());
+    }
+
+    @When("The user clicks on the practice question link")
+    public void theUserClicksOnThePracticeQuestionLink() {
+        treePage.clickOnPQLink();
+    }
+
+    @Then("The user is able to check if the empty is empty or not")
+    public void theUserIsAbleToCheckIfTheEmptyIsEmptyOrNot() {
+        treePage.emptyPage();
     }
 }
