@@ -14,7 +14,7 @@ import io.cucumber.java.en.When;
 public class StackStepdef extends BaseLogger{
 	WebDriver driver = DriverFactory.getDriver();
 	  Stackpage stackpage = new Stackpage(DriverFactory.getDriver());
-	  DataStructurePage pycode = new DataStructurePage(DriverFactory.getDriver());
+	 // DataStructurePage pycode = new DataStructurePage(DriverFactory.getDriver());
 	 
 	@Given("the user is on the Stack Page")
 	  public void the_user_is_on_the_stack_page() {
@@ -65,7 +65,8 @@ public class StackStepdef extends BaseLogger{
 	  @When("the user write the valid code in Editor and click the {string} button")
 	  public void the_user_write_the_valid_code_in_editor_and_click_the_button(String string) {
 		  log.info("Entering the Python Code in the editor "+ stackpage.getPythonCodeDataDriven());
-	        pycode.enterPythonCode(stackpage.getPythonCodeDataDriven());
+		  stackpage.enterPythonCode(stackpage.getPythonCodeDataDriven());
+	       // stackpage.enterPythonCode(stackpage.getPythonCodeDataDriven());
 	        log.info("Clicking on Run button");
 	        stackpage.ClickRun();
 	  }
@@ -83,7 +84,7 @@ public class StackStepdef extends BaseLogger{
 	  @When("the user write the invalid code in Editor and click the {string} button")
 	  public void the_user_write_the_invalid_code_in_editor_and_click_the_button(String string) {
 		  log.info("Entering the Python Code in the editor "+ stackpage.getInvalidCodeDataDriven());
-	        pycode.enterPythonCode(stackpage.getInvalidCodeDataDriven());
+	        stackpage.enterPythonCode(stackpage.getInvalidCodeDataDriven());
 	        log.info("Clicking on Run button");
 	        stackpage.ClickRun(); 
 	  }
@@ -105,7 +106,7 @@ public class StackStepdef extends BaseLogger{
 	  @When("the user input the valid python code and clicks run button")
 	  public void the_user_input_the_valid_python_code_and_clicks_run_button() {
 		  log.info("Entering the Python Code in the editor "+ stackpage.getInvalidCodeDataDriven());
-	        pycode.enterPythonCode(stackpage.getInvalidCodeDataDriven());
+	        stackpage.enterPythonCode(stackpage.getInvalidCodeDataDriven());
 	      log.info("Clicking on Run button");
 	      stackpage.ClickRun();
 	  }
@@ -123,7 +124,7 @@ public class StackStepdef extends BaseLogger{
 	  @When("the user input the invalid python code and clicks run button")
 	  public void the_user_input_the_invalid_python_code_and_clicks_run_button() {
 		  log.info("Entering the Python Code in the editor "+ stackpage.getInvalidCodeDataDriven());
-	        pycode.enterPythonCode(stackpage.getInvalidCodeDataDriven());
+	        stackpage.enterPythonCode(stackpage.getInvalidCodeDataDriven());
 	        log.info("Clicking on Run button");
 	        stackpage.ClickRun();   
 		  }
