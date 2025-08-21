@@ -67,9 +67,17 @@ public class HomePage extends BaseLogger {
 
     public String CheckName()
     {
-        log.info("Successfully logged in");
-        
-        return elementsUtil.doGetText(NameCheckAfterLogin);
+        String nameAfterLogin = elementsUtil.doGetText(NameCheckAfterLogin);
+
+        if(nameAfterLogin.contains("Prasanna")){
+            log.info("successful login");
+            return nameAfterLogin;
+        }
+        else {
+            log.info("Not successful login");
+            return null;
+        }
+
     }
 
     public  void clickGetStartedForDS()
