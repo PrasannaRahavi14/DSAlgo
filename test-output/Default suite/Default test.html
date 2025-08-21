@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 18 16:52:07 EDT 2025</td>
+<td>Started on:</td><td>Wed Aug 20 21:22:56 EDT 2025</td>
 </tr>
-<tr><td>Total time:</td><td>57 seconds (57687 ms)</td>
+<tr><td>Total time:</td><td>35 seconds (35796 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,247 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with Invalid Password", "User Registration in DSPortalapp"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)]&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [31dda103e4fc941723027f058329b8ff, findElement {value=//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53659}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53659/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 31dda103e4fc941723027f058329b8ff
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.example.pages.RegisterPage.getPwdMismatchAlertmsg(RegisterPage.java:187)
+	at org.example.stepdefinitions.RegisterStepdef.the_user_should_see_an_warning_message_as_below_password_textbox(RegisterStepdef.java:136)
+	at ✽.The user should see an warning message as &quot;Your password can’t be entirely numeric.&quot; below password textbox(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:60)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1686151267", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1686151267'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)]&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [31dda103e4fc941723027f058329b8ff, findElement {value=//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53659}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53659/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 31dda103e4fc941723027f058329b8ff
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.example.pages.RegisterPage.getPwdMismatchAlertmsg(RegisterPage.java:187)
+	at org.example.stepdefinitions.RegisterStepdef.the_user_should_see_an_warning_message_as_below_password_textbox(RegisterStepdef.java:136)
+	at ✽.The user should see an warning message as &quot;Your password can’t be entirely numeric.&quot; below password textbox(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:60)
+</pre></div></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@399c4be1</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with Mismatch Password", "User Registration in DSPortalapp"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)]&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [788fa8611a195486a1916e7d210e8062, findElement {value=//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57417}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57417/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 788fa8611a195486a1916e7d210e8062
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.example.pages.RegisterPage.getPwdMismatchAlertmsg(RegisterPage.java:187)
+	at org.example.stepdefinitions.RegisterStepdef.the_user_should_able_to_see_an_pwd_warning_message(RegisterStepdef.java:100)
+	at ✽.The user should able to see an pwd warning message &quot;password_mismatch:The two password fields didn’t match.&quot;(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:42)
+</pre></div><a href='#' onClick='toggleBox("stack-trace608195686", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace608195686'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)]&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [788fa8611a195486a1916e7d210e8062, findElement {value=//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57417}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57417/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 788fa8611a195486a1916e7d210e8062
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.example.pages.RegisterPage.getPwdMismatchAlertmsg(RegisterPage.java:187)
+	at org.example.stepdefinitions.RegisterStepdef.the_user_should_able_to_see_an_pwd_warning_message(RegisterStepdef.java:100)
+	at ✽.The user should able to see an pwd warning message &quot;password_mismatch:The two password fields didn’t match.&quot;(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:42)
+</pre></div></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@399c4be1</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with Valid Credentials", "User Registration in DSPortalapp"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert&apos;) and contains(text(),&apos;New Account Created&apos;)]&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5b3ab96cb43d4e417860524f4252345, findElement {value=//div[contains(@class,&apos;alert&apos;) and contains(text(),&apos;New Account Created&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52215}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52215/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5b3ab96cb43d4e417860524f4252345
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.example.pages.RegisterPage.getNewAccountAlertmsg(RegisterPage.java:161)
+	at org.example.stepdefinitions.RegisterStepdef.the_user_should_be_redirected_to_home_page_of_ds_algo_with_message(RegisterStepdef.java:112)
+	at ✽.The user should be redirected to Home Page of DS Algo with message &quot;New Account Created. You are logged in as &lt;ID&gt;&quot;(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:48)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1103007161", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1103007161'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert&apos;) and contains(text(),&apos;New Account Created&apos;)]&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5b3ab96cb43d4e417860524f4252345, findElement {value=//div[contains(@class,&apos;alert&apos;) and contains(text(),&apos;New Account Created&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52215}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52215/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5b3ab96cb43d4e417860524f4252345
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.example.pages.RegisterPage.getNewAccountAlertmsg(RegisterPage.java:161)
+	at org.example.stepdefinitions.RegisterStepdef.the_user_should_be_redirected_to_home_page_of_ds_algo_with_message(RegisterStepdef.java:112)
+	at ✽.The user should be redirected to Home Page of DS Algo with message &quot;New Account Created. You are logged in as &lt;ID&gt;&quot;(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:48)
+</pre></div></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@399c4be1</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with Invalid Username", "User Registration in DSPortalapp"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)]&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8ec61956e437fe9a55650b3af8a453c7, findElement {value=//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49374}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49374/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ec61956e437fe9a55650b3af8a453c7
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.example.pages.RegisterPage.getPwdMismatchAlertmsg(RegisterPage.java:187)
+	at org.example.stepdefinitions.RegisterStepdef.the_user_should_see_an_warning_message_as_below_username_textbox(RegisterStepdef.java:124)
+	at ✽.the user should see an warning message as &quot;Username is not valid&quot; below Username textbox(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:54)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1744146882", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1744146882'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)]&quot;}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8ec61956e437fe9a55650b3af8a453c7, findElement {value=//div[contains(@class,&apos;alert&apos;) and contains(text(), &apos; password_mismatch:&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49374}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49374/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ec61956e437fe9a55650b3af8a453c7
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.example.pages.RegisterPage.getPwdMismatchAlertmsg(RegisterPage.java:187)
+	at org.example.stepdefinitions.RegisterStepdef.the_user_should_see_an_warning_message_as_below_username_textbox(RegisterStepdef.java:124)
+	at ✽.the user should see an warning message as &quot;Username is not valid&quot; below Username textbox(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:54)
+</pre></div></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@399c4be1</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,55 +317,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Queue Page after Signed in with Invalid python code", "Testing Queue Page in Ds-Algo"</td>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with only Username and remaining fields empty", "User Registration in DSPortalapp"</td>
 <td></td>
-<td>4</td>
-<td>org.example.runners.TestRunner@65d09a04</td></tr>
+<td>2</td>
+<td>org.example.runners.TestRunner@399c4be1</td></tr>
 <tr>
-<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Python code works", "Testing Queue Page in Ds-Algo"</td>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Landing on Register page", "User Registration in DSPortalapp"</td>
 <td></td>
 <td>6</td>
-<td>org.example.runners.TestRunner@65d09a04</td></tr>
+<td>org.example.runners.TestRunner@399c4be1</td></tr>
 <tr>
-<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Invalid Python code works", "Testing Queue Page in Ds-Algo"</td>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with only Password and remaining fields empty", "User Registration in DSPortalapp"</td>
 <td></td>
-<td>4</td>
-<td>org.example.runners.TestRunner@65d09a04</td></tr>
+<td>3</td>
+<td>org.example.runners.TestRunner@399c4be1</td></tr>
 <tr>
-<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Queue Page after Signed in with valid python code", "Testing Queue Page in Ds-Algo"</td>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with all empty fields", "User Registration in DSPortalapp"</td>
 <td></td>
-<td>6</td>
-<td>org.example.runners.TestRunner@65d09a04</td></tr>
+<td>3</td>
+<td>org.example.runners.TestRunner@399c4be1</td></tr>
 <tr>
-<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Queue Page after Signed in with valid python code", "Testing Queue Page in Ds-Algo"</td>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register without Password confirmation", "User Registration in DSPortalapp"</td>
 <td></td>
-<td>7</td>
-<td>org.example.runners.TestRunner@65d09a04</td></tr>
+<td>3</td>
+<td>org.example.runners.TestRunner@399c4be1</td></tr>
 <tr>
-<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify "Tryhere" navigates to next page", "Testing Queue Page in Ds-Algo"</td>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "User Registration in DSPortalapp"</td>
 <td></td>
-<td>4</td>
-<td>org.example.runners.TestRunner@65d09a04</td></tr>
-<tr>
-<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Queue Page after Signed in with valid python code", "Testing Queue Page in Ds-Algo"</td>
-<td></td>
-<td>7</td>
-<td>org.example.runners.TestRunner@65d09a04</td></tr>
-<tr>
-<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Queue Page after Signed in with Invalid python code", "Testing Queue Page in Ds-Algo"</td>
-<td></td>
-<td>4</td>
-<td>org.example.runners.TestRunner@65d09a04</td></tr>
-<tr>
-<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Queue Page after Signed in with Invalid python code", "Testing Queue Page in Ds-Algo"</td>
-<td></td>
-<td>4</td>
-<td>org.example.runners.TestRunner@65d09a04</td></tr>
-<tr>
-<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that the "Implementation of Queue in Python" is displayed", "Testing Queue Page in Ds-Algo"</td>
-<td></td>
-<td>6</td>
-<td>org.example.runners.TestRunner@65d09a04</td></tr>
+<td>3</td>
+<td>org.example.runners.TestRunner@399c4be1</td></tr>
 </table><p>
 </body>
 </html>
