@@ -1,123 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-19T11:31:10 EDT" name="Default suite" finished-at="2025-08-19T11:31:17 EDT" duration-ms="7556">
+  <suite started-at="2025-08-20T12:53:04 EDT" name="Default suite" finished-at="2025-08-20T12:53:32 EDT" duration-ms="27693">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@e4487af]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-08-19T11:31:10 EDT" name="Default test" finished-at="2025-08-19T11:31:17 EDT" duration-ms="7556">
+    <test started-at="2025-08-20T12:53:04 EDT" name="Default test" finished-at="2025-08-20T12:53:32 EDT" duration-ms="27693">
       <class name="org.example.runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="setUpClass" finished-at="2025-08-19T11:31:10 EDT" duration-ms="582" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T12:53:04 EDT" name="setUpClass" finished-at="2025-08-20T12:53:05 EDT" duration-ms="638" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2611b9a3]]>
+                <![CDATA[org.testng.TestRunner@2d88c1bf]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6296" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T12:53:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T12:53:16 EDT" duration-ms="10602" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Failed login"]]>
+                <![CDATA["Accessing Graph topics with valid Python code"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User sigin to DSAlgo Portal"]]>
+                <![CDATA["Validate Graph Page functionality in Ds-Algo"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:17 EDT" duration-ms="6925" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T12:53:16 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T12:53:23 EDT" duration-ms="7024" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Succesful login"]]>
+                <![CDATA["Accessing Graph topics with valid Python code"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User sigin to DSAlgo Portal"]]>
+                <![CDATA["Validate Graph Page functionality in Ds-Algo"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6229" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T12:53:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T12:53:27 EDT" duration-ms="4441" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Failed login"]]>
+                <![CDATA["Accessing Graph topics with invalid Python code"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User sigin to DSAlgo Portal"]]>
+                <![CDATA["Validate Graph Page functionality in Ds-Algo"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6264" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T12:53:27 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T12:53:32 EDT" duration-ms="4595" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Failed login"]]>
+                <![CDATA["Accessing Graph topics with invalid Python code"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User sigin to DSAlgo Portal"]]>
+                <![CDATA["Validate Graph Page functionality in Ds-Algo"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6229" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Failed login"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User sigin to DSAlgo Portal"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:17 EDT" duration-ms="6357" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Failed login"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User sigin to DSAlgo Portal"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:17 EDT" name="tearDownClass" finished-at="2025-08-19T11:31:17 EDT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T12:53:32 EDT" name="tearDownClass" finished-at="2025-08-20T12:53:32 EDT" duration-ms="336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

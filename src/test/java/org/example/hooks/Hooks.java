@@ -12,6 +12,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -74,6 +76,9 @@ public class Hooks {
 
             // Attach to Allure report
             saveScreenshotToAllure(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
+            
+            //Attach to Extent report
+            ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(destFile.getAbsolutePath());
 
             // 4️⃣ Attach Log4j2 log file to Allure (if exists)
             if (Files.exists(Paths.get(LOG_FILE_PATH))) {
