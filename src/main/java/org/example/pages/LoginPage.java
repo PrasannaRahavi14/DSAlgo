@@ -111,6 +111,7 @@ public class LoginPage extends BaseLogger {
         }
 
         driver.findElement(LoginBtn).click();
+        alert();
         
     }
     
