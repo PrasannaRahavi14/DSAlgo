@@ -14,6 +14,8 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -160,7 +162,13 @@ public class Stackpage extends BaseLogger{
     {
         return driver.findElement(outputinconsole).getText();
     }
-
+   
+    public void enterPythonCode(String input)
+    {
+        WebElement editor = driver.findElement(tryEditor_text);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(editor).click().sendKeys(input).perform();
+    }
     public String getPythonCodeDataDriven()
     {
         Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"Stack","ValidCode");

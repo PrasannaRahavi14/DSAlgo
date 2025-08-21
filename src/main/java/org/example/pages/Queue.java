@@ -88,13 +88,13 @@ public class Queue {
     }
     public String getPythonCodeDataDriven()
     {
-        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","ValidCode");
+        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"Queue","ValidCode");
         String codeToInput = getCode.get("Python Code");
         return codeToInput;
     }
     public String getInvalidCodeDataDriven()
     {
-        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","InvalidCode");
+        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"Queue","InvalidCode");
         String codeToInput = getCode.get("Python Code");
         return codeToInput;
     }
