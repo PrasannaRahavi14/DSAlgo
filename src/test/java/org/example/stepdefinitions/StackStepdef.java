@@ -64,8 +64,8 @@ public class StackStepdef extends BaseLogger{
 	  }
 	  @When("the user write the valid code in Editor and click the {string} button")
 	  public void the_user_write_the_valid_code_in_editor_and_click_the_button(String string) {
-		  log.info("Entering the Python Code in the editor "+ pycode.getPythonCodeDataDriven());
-	        pycode.enterPythonCode(pycode.getPythonCodeDataDriven());
+		  log.info("Entering the Python Code in the editor "+ stackpage.getPythonCodeDataDriven());
+	        pycode.enterPythonCode(stackpage.getPythonCodeDataDriven());
 	        log.info("Clicking on Run button");
 	        stackpage.ClickRun();
 	  }
@@ -82,8 +82,8 @@ public class StackStepdef extends BaseLogger{
 	  
 	  @When("the user write the invalid code in Editor and click the {string} button")
 	  public void the_user_write_the_invalid_code_in_editor_and_click_the_button(String string) {
-		  log.info("Entering the Python Code in the editor "+ pycode.getInvalidCodeDataDriven());
-	        pycode.enterPythonCode(pycode.getInvalidCodeDataDriven());
+		  log.info("Entering the Python Code in the editor "+ stackpage.getInvalidCodeDataDriven());
+	        pycode.enterPythonCode(stackpage.getInvalidCodeDataDriven());
 	        log.info("Clicking on Run button");
 	        stackpage.ClickRun(); 
 	  }
@@ -104,8 +104,8 @@ public class StackStepdef extends BaseLogger{
 
 	  @When("the user input the valid python code and clicks run button")
 	  public void the_user_input_the_valid_python_code_and_clicks_run_button() {
-		  log.info("Entering the Python Code in the editor "+ pycode.getPythonCodeDataDriven());
-	      pycode.enterPythonCode(pycode.getPythonCodeDataDriven());
+		  log.info("Entering the Python Code in the editor "+ stackpage.getInvalidCodeDataDriven());
+	        pycode.enterPythonCode(stackpage.getInvalidCodeDataDriven());
 	      log.info("Clicking on Run button");
 	      stackpage.ClickRun();
 	  }
@@ -122,8 +122,8 @@ public class StackStepdef extends BaseLogger{
 	  
 	  @When("the user input the invalid python code and clicks run button")
 	  public void the_user_input_the_invalid_python_code_and_clicks_run_button() {
-		  log.info("Entering the Python Code in the editor "+ pycode.getInvalidCodeDataDriven());
-	        pycode.enterPythonCode(pycode.getInvalidCodeDataDriven());
+		  log.info("Entering the Python Code in the editor "+ stackpage.getInvalidCodeDataDriven());
+	        pycode.enterPythonCode(stackpage.getInvalidCodeDataDriven());
 	        log.info("Clicking on Run button");
 	        stackpage.ClickRun();   
 		  }
