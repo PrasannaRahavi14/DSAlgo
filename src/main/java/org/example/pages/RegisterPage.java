@@ -33,10 +33,10 @@ public class RegisterPage extends BaseLogger {
    
     }
 
-    public String getTitleforDSI()
-    {
-  return driver.findElement(getTitle_DSI).getText();
-    }
+//    public String getTitleforDSI()
+//    {
+//  return driver.findElement(getTitle_DSI).getText();
+//    }
 
     public boolean getRegister()
     {
@@ -186,7 +186,6 @@ public class RegisterPage extends BaseLogger {
     	WebElement field = driver.findElement(pwdMismatchAlertmsg);
         return (String) ((JavascriptExecutor) driver)
             .executeScript("return arguments[0].validationMessage;", field);
-		
     }
     
     public By getPwdMismatchAlertlocator() {
