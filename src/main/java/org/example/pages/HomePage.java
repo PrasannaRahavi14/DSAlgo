@@ -1,10 +1,12 @@
 package org.example.pages;
 
+
 import org.example.utilities.BaseLogger;
 import org.example.utilities.ElementsUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+
 
 public class HomePage extends BaseLogger {
 
@@ -258,6 +260,10 @@ public class HomePage extends BaseLogger {
     	log.info("Getting Success Message for LogOut");
         return driver.findElement(successLogOut).getText();
     }
+    public String verifyIncorrectTitle()
+    {
+    	return elementsUtil.doGetText(PageTitle);
+    	
 
-
+}
 }

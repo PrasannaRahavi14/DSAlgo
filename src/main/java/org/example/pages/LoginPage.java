@@ -15,7 +15,7 @@ public class LoginPage extends BaseLogger {
 
     private WebDriver driver;
     private ElementsUtil elementsUtil;
-
+    
     String filepath = ConfigReader.getProperty("testData");
     //1. By Locators :
     private By SignInLink = By.xpath("//a[text()='Sign in']");
@@ -24,8 +24,8 @@ public class LoginPage extends BaseLogger {
     private By LoginBtn = By.cssSelector("input[value='Login']");
     private By Alertmsg = By.id("id_username");
     private By GetStartedBtn = By.cssSelector(".btn");
-
-
+    
+    
     String url = ConfigReader.getProperty("baseurl");
 
 
@@ -35,10 +35,10 @@ public class LoginPage extends BaseLogger {
         this.driver=driver;
         this.elementsUtil = new ElementsUtil(driver);
     }
-
+    
     public void Loginurl()
     {
-        driver.get(url);
+    	driver.get(url);
     }
 
     //3. page actions
@@ -56,27 +56,27 @@ public class LoginPage extends BaseLogger {
     {
         driver.findElement(LoginBtn).click();
     }
-
+    
     public void clickGetStartedBtn ()
     {
-
+       
         driver.findElement(GetStartedBtn).click();
     }
 
     public void clickSignInLink()
     {
-
+                
         elementsUtil.doClick(SignInLink);
     }
-
+    
     public void Login()
     {
-        driver.get(url);
-        driver.findElement(GetStartedBtn).click();
-        elementsUtil.doClick(SignInLink);
-        performLoginDataDriven();
+    	driver.get(url);
+    	driver.findElement(GetStartedBtn).click();
+    	elementsUtil.doClick(SignInLink);
+    	performLoginDataDriven();
     }
-
+    
     public void performLoginDataDriven()
     {
         log.info("Performing Login with TestData from Excel");
@@ -94,12 +94,12 @@ public class LoginPage extends BaseLogger {
         driver.findElement(Password).sendKeys(pwd);
         driver.findElement(LoginBtn).click();
     }
-
+    
     public void FailedLogin(String TestCaseID) {
-
-        log.info("Performing Login with TestData from Excel:");
+    	
+    	log.info("Performing Login with TestData from Excel:");
         Map<String, String> loginData = ExcelReader.getRowByTestCaseId(filepath,"Login",TestCaseID);
-
+        
         String username = loginData.get("username");
         String password = loginData.get("password");
 
@@ -111,24 +111,24 @@ public class LoginPage extends BaseLogger {
         }
 
         driver.findElement(LoginBtn).click();
-
+        
     }
-
+    
     public void alert()
     {
+    	
+    	WebElement field = driver.findElement(Alertmsg);
+    	boolean isRequired = Boolean.parseBoolean(field.getAttribute("required"));
+    	System.out.println("Is required? " + isRequired);
+    	
+    	Boolean valid = (Boolean) ((JavascriptExecutor) driver)
+    	        .executeScript("return arguments[0].checkValidity();", field);
 
-        WebElement field = driver.findElement(Alertmsg);
-        boolean isRequired = Boolean.parseBoolean(field.getAttribute("required"));
-        System.out.println("Is required? " + isRequired);
-
-        Boolean valid = (Boolean) ((JavascriptExecutor) driver)
-                .executeScript("return arguments[0].checkValidity();", field);
-
-        if (!valid) {
-            String validationMessage = (String) ((JavascriptExecutor) driver)
-                    .executeScript("return arguments[0].validationMessage;", field);
-            System.out.println("Browser says: " + validationMessage);
-        }
+    	if (!valid) {
+    	    String validationMessage = (String) ((JavascriptExecutor) driver)
+    	        .executeScript("return arguments[0].validationMessage;", field);
+    	    System.out.println("Browser says: " + validationMessage);
+    	}
     }
 
 }

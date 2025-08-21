@@ -52,7 +52,7 @@ public class ExcelReader {
                 return row;
             }
         }
-        return null;
+        return new HashMap<String, String>();
     }
 
     // Get default login credentials
