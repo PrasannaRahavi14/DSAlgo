@@ -3,7 +3,7 @@
     Background:
     Given User is in Array page after successful login
 
-    @topicPage_1
+    @topicPage
       Scenario Outline: Verify if the user is able to navigate to Array page
         When User clicks "<arrayTopic>" hyperlink
         Then User should be redirected to "<arrayTopic>" page
@@ -14,7 +14,7 @@
         | Basic Operations in Lists |
         | Applications of Array     |
 
-    @tryEditorPage_1
+    @tryEditorPage
       Scenario Outline: Verify if the user is able to navigate to try editor page
         Given User is on the Arrays in Python page after clicking "<arrayTopic>"
         When User scrolls down to the bottom and click on Try here button
@@ -26,7 +26,7 @@
         | Basic Operations in Lists |
         | Applications of Array     |
 
-    @validCode_1
+    @validCode
       Scenario Outline: Verify if the user is able to run valid python code
         Given User is on Try Editor page of the topic "<arrayTopic>"
         When User enters valid python code and click Run
@@ -38,7 +38,7 @@
         | Basic Operations in Lists |
         | Applications of Array     |
 
-    @invalidCode_1
+    @invalidCode
     Scenario Outline: Verify if the user is able to run invalid python code
       Given User is on Try Editor page of the topic "<arrayTopic>"
       When User enters invalid python code and click Run
@@ -50,7 +50,7 @@
         | Basic Operations in Lists |
         | Applications of Array     |
 
-    @practiceQuestionsPage_1_1
+    @practiceQuestionsPage
     Scenario Outline: Verify if the user is able to navigate to Practice Questions page
       Given User is on the Arrays in Python page after clicking "<arrayTopic>"
       When User clicks on Practice Questions hyperlink
@@ -62,7 +62,7 @@
         | Basic Operations in Lists |
         | Applications of Array     |
 
-    @practiceQuestionsPageOptions_1_1
+    @practiceQuestionsPageOptions
     Scenario Outline: Verify if the user is able to click the options in Practice Questions page
       Given User is in Practice Questions page under "<arrayTopic>"
       When User clicks "<practiceQuestions>" option in Practice Questions page
@@ -86,7 +86,7 @@
         | Applications of Array     | Find Numbers with Even Number of Digits |
         | Applications of Array     | Squares of  a Sorted Array              |
 
-    @practiceQuestionsValidCode_1_1
+    @practiceQuestionsValidCode
     Scenario Outline: Verify if the user is able to run valid python code in Practice Questions page
       Given User is on Run page under the Array topic "<arrayTopic>" and Practice Questions option "<practiceQuestions>"
       When User enters valid python code and click Run
@@ -110,7 +110,7 @@
         | Applications of Array     | Find Numbers with Even Number of Digits |
         | Applications of Array     | Squares of  a Sorted Array              |
 
-    @practiceQuestionsInvalidCode_1_1
+    @practiceQuestionsInvalidCode
     Scenario Outline: Verify if the user is able to run invalid python code in Practice Questions page
       Given User is on Run page under the Array topic "<arrayTopic>" and Practice Questions option "<practiceQuestions>"
       When User enters invalid python code and click Run
