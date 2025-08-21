@@ -16,7 +16,6 @@ public class RegisterPage extends BaseLogger {
 
 	private WebDriver driver;
 	ElementsUtil elementsUtil;
-	private By getTitle_DSI = By.cssSelector("h4[class='bg-secondary text-white']");
 	private By getRegister_Page = By.cssSelector("a[href='/register']");
 	private By username = By.id("id_username");
 	private By password = By.id("id_password1");
@@ -25,6 +24,7 @@ public class RegisterPage extends BaseLogger {
 	private By NewAccountAlertmsg = By.xpath("//div[contains(@class,'alert') and contains(text(),'New Account Created')]");
 	private By LoginLink = By.xpath("(//a[@href='/login'])[2]");
 	private By Loginpage = By.xpath("//a[contains(text(), 'NumpyNinja')]");
+	private By Registerbtn = By.xpath("//input[@value='Register']");
 	String filepath = ConfigReader.getProperty("testData");		
     
 	public RegisterPage(WebDriver driver) {
@@ -33,10 +33,10 @@ public class RegisterPage extends BaseLogger {
    
     }
 
-    public String getTitleforDSI()
-    {
-  return driver.findElement(getTitle_DSI).getText();
-    }
+//    public String getTitleforDSI()
+//    {
+//  return driver.findElement(getTitle_DSI).getText();
+//    }
 
     public boolean getRegister()
     {
@@ -52,17 +52,22 @@ public class RegisterPage extends BaseLogger {
         return driver.findElement(Loginpage).isDisplayed();
     }
     
+   
+    
     public void getEmptyValues()
     {
     	log.info("Performing Register with TestData from Excel:");
         Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","EmptyValues");       
-        String username = RegisterData.get("username");
-        String password = RegisterData.get("password");
-        String pwdconfirmation = RegisterData.get("password confirmation");
-		driver.findElement(By.xpath("//input[@value='Register']")).click();
-		System.out.println("Username is: " + username);
-		System.out.println("Password is: " + password);
-		System.out.println("Password Confirmation is: " + pwdconfirmation);
+        String Excelusername = RegisterData.get("username");
+        String Excelpassword = RegisterData.get("password");
+        String Excelpwdconfirmation = RegisterData.get("password confirmation");
+        driver.findElement(username).sendKeys(Excelusername);
+        driver.findElement(password).sendKeys(Excelpassword);
+        driver.findElement(pwdconfirmation).sendKeys(Excelpwdconfirmation);
+     	driver.findElement(Registerbtn).click();
+     	System.out.println("Username is: " + Excelusername);
+ 		System.out.println("Password is: " + Excelpassword);
+ 		System.out.println("Password Confirmation is: " + Excelpwdconfirmation);
     
     }
 
@@ -70,21 +75,23 @@ public class RegisterPage extends BaseLogger {
     {
     	log.info("Performing Register with TestData from Excel:");
     	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","UsernameValues");
-    	String username = RegisterData.get("username");
-        String password = RegisterData.get("password");
-        String pwdconfirmation = RegisterData.get("password confirmation");
-		driver.findElement(By.xpath("//input[@value='Register']")).click();
-		System.out.println("Username is: " + username);
-		System.out.println("Password is: " + password);
-		System.out.println("Password Confirmation is: " + pwdconfirmation);
+    	String Excelusername = RegisterData.get("username");
+        String Excelpassword = RegisterData.get("password");
+        String Excelpwdconfirmation = RegisterData.get("password confirmation");
+        driver.findElement(username).sendKeys(Excelusername);
+        driver.findElement(password).sendKeys(Excelpassword);
+        driver.findElement(pwdconfirmation).sendKeys(Excelpwdconfirmation);
+     	driver.findElement(Registerbtn).click();
+     	System.out.println("Username is: " + Excelusername);
+ 		System.out.println("Password is: " + Excelpassword);
+ 		System.out.println("Password Confirmation is: " + Excelpwdconfirmation);
     }
     
     public String getUsernameValidationMessage()
     {
     	WebElement field = driver.findElement(username);
         return (String) ((JavascriptExecutor) driver)
-            .executeScript("return arguments[0].validationMessage;", field);
-    	
+            .executeScript("return arguments[0].validationMessage;", field);	
     }
     
     public By getusernamelocator() {
@@ -95,13 +102,16 @@ public class RegisterPage extends BaseLogger {
     {   
     	log.info("Performing Register with TestData from Excel:");
     	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","PasswordValues");
-    	String username = RegisterData.get("username");
-        String password = RegisterData.get("password");
-        String pwdconfirmation = RegisterData.get("password confirmation");
-		driver.findElement(By.xpath("//input[@value='Register']")).click();
-		System.out.println("Username is: " + username);
-		System.out.println("Password is: " + password);
-		System.out.println("Password Confirmation is: " + pwdconfirmation);
+    	String Excelusername = RegisterData.get("username");
+        String Excelpassword = RegisterData.get("password");
+        String Excelpwdconfirmation = RegisterData.get("password confirmation");
+        driver.findElement(username).sendKeys(Excelusername);
+        driver.findElement(password).sendKeys(Excelpassword);
+        driver.findElement(pwdconfirmation).sendKeys(Excelpwdconfirmation);
+     	driver.findElement(Registerbtn).click();
+     	System.out.println("Username is: " + Excelusername);
+ 		System.out.println("Password is: " + Excelpassword);
+ 		System.out.println("Password Confirmation is: " + Excelpwdconfirmation);
 		
     }
     
@@ -121,13 +131,16 @@ public class RegisterPage extends BaseLogger {
     {
     	log.info("Performing Register with TestData from Excel:");
     	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","NoPasswordConfirmation");
-    	String username = RegisterData.get("username");
-        String password = RegisterData.get("password");
-        String pwdconfirmation = RegisterData.get("password confirmation");
-    	driver.findElement(By.xpath("//input[@value='Register']")).click();
-    	System.out.println("Username is: " + username);
-		System.out.println("Password is: " + password);
-		System.out.println("Password Confirmation is: " + pwdconfirmation);
+    	String Excelusername = RegisterData.get("username");
+        String Excelpassword = RegisterData.get("password");
+        String Excelpwdconfirmation = RegisterData.get("password confirmation");
+        driver.findElement(username).sendKeys(Excelusername);
+        driver.findElement(password).sendKeys(Excelpassword);
+        driver.findElement(pwdconfirmation).sendKeys(Excelpwdconfirmation);
+     	driver.findElement(Registerbtn).click();
+     	System.out.println("Username is: " + Excelusername);
+ 		System.out.println("Password is: " + Excelpassword);
+ 		System.out.println("Password Confirmation is: " + Excelpwdconfirmation);
     }
     
     public String getPwdConfimationValidationMessage()
@@ -146,13 +159,16 @@ public class RegisterPage extends BaseLogger {
     {
   	    log.info("Performing Register with TestData from Excel:");
     	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","ValidCredentials");
-    	String username = RegisterData.get("username");
-        String password = RegisterData.get("password");
-        String pwdconfirmation = RegisterData.get("password confirmation");
-    	driver.findElement(By.xpath("//input[@value='Register']")).click();
-    	System.out.println("Username is: " + username);
-		System.out.println("Password is: " + password);
-		System.out.println("Password Confirmation is: " + pwdconfirmation);
+    	String Excelusername = RegisterData.get("username");
+        String Excelpassword = RegisterData.get("password");
+        String Excelpwdconfirmation = RegisterData.get("password confirmation");
+        driver.findElement(username).sendKeys(Excelusername);
+        driver.findElement(password).sendKeys(Excelpassword);
+        driver.findElement(pwdconfirmation).sendKeys(Excelpwdconfirmation);
+     	driver.findElement(Registerbtn).click();
+     	System.out.println("Username is: " + Excelusername);
+ 		System.out.println("Password is: " + Excelpassword);
+ 		System.out.println("Password Confirmation is: " + Excelpwdconfirmation);
     	
     }
     
@@ -172,13 +188,17 @@ public class RegisterPage extends BaseLogger {
     {
     	log.info("Performing Register with TestData from Excel:");
      	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","MismatchPassword");
-     	String username = RegisterData.get("username");
-        String password = RegisterData.get("password");
-        String pwdconfirmation = RegisterData.get("password confirmation");
-     	driver.findElement(By.xpath("//input[@value='Register']")).click();
-     	System.out.println("Username is: " + username);
- 		System.out.println("Password is: " + password);
- 		System.out.println("Password Confirmation is: " + pwdconfirmation);
+     	String Excelusername = RegisterData.get("username");
+        String Excelpassword = RegisterData.get("password");
+        String Excelpwdconfirmation = RegisterData.get("password confirmation");
+        driver.findElement(username).sendKeys(Excelusername);
+        driver.findElement(password).sendKeys(Excelpassword);
+        driver.findElement(pwdconfirmation).sendKeys(Excelpwdconfirmation);
+     	driver.findElement(Registerbtn).click();
+     	System.out.println("Username is: " + Excelusername);
+ 		System.out.println("Password is: " + Excelpassword);
+ 		System.out.println("Password Confirmation is: " + Excelpwdconfirmation);
+ 		System.out.println("Message" + getpwdmismatchtext());
  	
     }
     
@@ -187,7 +207,6 @@ public class RegisterPage extends BaseLogger {
     	WebElement field = driver.findElement(pwdMismatchAlertmsg);
         return (String) ((JavascriptExecutor) driver)
             .executeScript("return arguments[0].validationMessage;", field);
-		
     }
     
     public By getPwdMismatchAlertlocator() {
@@ -204,26 +223,34 @@ public class RegisterPage extends BaseLogger {
     {
     	log.info("Performing Register with TestData from Excel:");
      	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","InvalidUsername");
-     	String username = RegisterData.get("username");
-        String password = RegisterData.get("password");
-        String pwdconfirmation = RegisterData.get("password confirmation");
-     	driver.findElement(By.xpath("//input[@value='Register']")).click();
-     	System.out.println("Username is: " + username);
- 		System.out.println("Password is: " + password);
- 		System.out.println("Password Confirmation is: " + pwdconfirmation);
+     	String Excelusername = RegisterData.get("username");
+        String Excelpassword = RegisterData.get("password");
+        String Excelpwdconfirmation = RegisterData.get("password confirmation");
+        driver.findElement(username).sendKeys(Excelusername);
+        driver.findElement(password).sendKeys(Excelpassword);
+        driver.findElement(pwdconfirmation).sendKeys(Excelpwdconfirmation);
+     	driver.findElement(Registerbtn).click();
+     	System.out.println("Username is: " + Excelusername);
+ 		System.out.println("Password is: " + Excelpassword);
+ 		System.out.println("Password Confirmation is: " + Excelpwdconfirmation);
+ 		System.out.println("Message" + getpwdmismatchtext());
     }
         
     public void getPwdNumericValue()
     {
     	log.info("Performing Register with TestData from Excel:");
      	Map<String, String> RegisterData = ExcelReader.getRowByTestCaseId(filepath,"Register","PwdNumericValue");
-     	String username = RegisterData.get("username");
-        String password = RegisterData.get("password");
-        String pwdconfirmation = RegisterData.get("password confirmation");
-     	driver.findElement(By.xpath("//input[@value='Register']")).click();
-     	System.out.println("Username is: " + username);
- 		System.out.println("Password is: " + password);
- 		System.out.println("Password Confirmation is: " + pwdconfirmation);
+     	String Excelusername = RegisterData.get("username");
+        String Excelpassword = RegisterData.get("password");
+        String Excelpwdconfirmation = RegisterData.get("password confirmation");
+        driver.findElement(username).sendKeys(Excelusername);
+        driver.findElement(password).sendKeys(Excelpassword);
+        driver.findElement(pwdconfirmation).sendKeys(Excelpwdconfirmation);
+     	driver.findElement(Registerbtn).click();
+     	System.out.println("Username is: " + Excelusername);
+ 		System.out.println("Password is: " + Excelpassword);
+ 		System.out.println("Password Confirmation is: " + Excelpwdconfirmation);
+ 		System.out.println("Message" + getpwdmismatchtext());
     }
     
     public void getClickLoginLink()
