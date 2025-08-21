@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="10" passed="6" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
   <suite started-at="2025-08-20T21:22:56 EDT" name="Default suite" finished-at="2025-08-20T21:23:32 EDT" duration-ms="35796">
+=======
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-19T11:31:10 EDT" name="Default suite" finished-at="2025-08-19T11:31:17 EDT" duration-ms="7556">
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
     <test started-at="2025-08-20T21:22:56 EDT" name="Default test" finished-at="2025-08-20T21:23:32 EDT" duration-ms="35796">
       <class name="org.example.runners.TestRunner">
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:22:56 EDT" name="setUpClass" finished-at="2025-08-20T21:22:57 EDT" duration-ms="680" status="PASS">
@@ -15,101 +23,179 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@61d09475]]>
+=======
+    <test started-at="2025-08-19T11:31:10 EDT" name="Default test" finished-at="2025-08-19T11:31:17 EDT" duration-ms="7556">
+      <class name="org.example.runners.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="setUpClass" finished-at="2025-08-19T11:31:10 EDT" duration-ms="582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2611b9a3]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:22:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:03 EDT" duration-ms="6251" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Landing on Register page"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6296" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["User Registration in DSPortalapp"]]>
+=======
+                <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:03 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:07 EDT" duration-ms="3962" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Register with all empty fields"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:17 EDT" duration-ms="6925" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Succesful login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["User Registration in DSPortalapp"]]>
+=======
+                <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:07 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:10 EDT" duration-ms="2640" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Register with only Username and remaining fields empty"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6229" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["User Registration in DSPortalapp"]]>
+=======
+                <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:13 EDT" duration-ms="3149" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Register with only Password and remaining fields empty"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6264" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["User Registration in DSPortalapp"]]>
+=======
+                <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:16 EDT" duration-ms="3325" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Register without Password confirmation"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6229" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["User Registration in DSPortalapp"]]>
+=======
+                <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:16 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:20 EDT" duration-ms="3133" status="FAIL">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Register with Mismatch Password"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:17 EDT" duration-ms="6357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["User Registration in DSPortalapp"]]>
               </value>
             </param>
@@ -343,13 +429,20 @@ at ✽.The user should see an warning message as "Your password can’t be entir
             <param index="1">
               <value>
                 <![CDATA["User Registration in DSPortalapp"]]>
+=======
+                <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:32 EDT" name="tearDownClass" finished-at="2025-08-20T21:23:32 EDT" duration-ms="4" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:17 EDT" name="tearDownClass" finished-at="2025-08-19T11:31:17 EDT" duration-ms="3" status="PASS">
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

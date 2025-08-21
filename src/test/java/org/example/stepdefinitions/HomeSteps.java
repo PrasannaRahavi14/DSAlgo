@@ -113,11 +113,12 @@
 		}
 		@Given("The user successfully sign in {string} and {string}")
 		public void the_user_successfully_sign_in_and(String UserName, String Password) {
-			landingPage.getURL();
+			/*landingPage.getURL();
 			landingPage.clickGetStartedBtn();
 			   home.clickSignIn();
 			   Map<String, String> loginData = ExcelReader.getDefaultLogin(filePath);
-			   loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));
+			   loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));*/
+			loginpage.Login();
 			   
 		}
 
@@ -248,11 +249,16 @@
 			Assert.assertEquals(expectedtxt, "Logged out successfully");
     	   
                   }
+       @Then("The user should be redireced to Home page and the page title should be {string}")
+       public void the_user_should_be_redireced_to_home_page_and_the_page_title_should_not_be(String title) {
+    	   String actualTitle =home.verifyIncorrectTitle();
+       	String expectedTitle = "Data structure";
+       	if (!actualTitle.equals(expectedTitle)) {
+       	    Assert.fail("Condition failed: expected true but got false.");
+       	}
+       }
 
 
-
-			
-		    
-		}
+}
 		
 

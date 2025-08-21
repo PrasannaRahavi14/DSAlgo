@@ -121,12 +121,7 @@ public class DataStructurePage extends BaseLogger {
         return output;
     }
 
-    public String getInvalidCodeDataDriven()
-    {
-        Map<String, String> getCode = ExcelReader.getRowByTestCaseId(filepath,"DataStructure","InvalidCode");
-        String codeToInput = getCode.get("Python Code");
-        return codeToInput;
-    }
+   
 
 
 }

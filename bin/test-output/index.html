@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+              <span class="suite-name border-failed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\narmu\AppData\Local\Temp\testng-eclipse-336983598\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">30 methods, 1 failed,   29 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is on Home page and click getstarted link &quot;Linkedlist&quot; on home page without sign in&quot;, &quot;Homepag...)">runScenario("User is on Home page and click getstarted link "Linkedlist" on home page without sign in", "Homepag...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Home page Title&quot;, &quot;Homepage test&quot;)">runScenario("Verify Home page Title", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;: Verify &quot;Array&quot; page after sign in&quot;, &quot;Homepage test&quot;)">runScenario(": Verify "Array" page after sign in", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;: Verify &quot;Datastructures&quot; page after sign in&quot;, &quot;Homepage test&quot;)">runScenario(": Verify "Datastructures" page after sign in", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;: Verify &quot;Queue&quot; page after sign in&quot;, &quot;Homepage test&quot;)">runScenario(": Verify "Queue" page after sign in", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Tree&quot; from dropdown on home page without Sign in&quot;, &quot;Homepage t...)">runScenario("Verify the user is able to click on "Tree" from dropdown on home page without Sign in", "Homepage t...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;: Verify &quot;Linkedlist&quot; page after sign in&quot;, &quot;Homepage test&quot;)">runScenario(": Verify "Linkedlist" page after sign in", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;: Verify &quot;Tree&quot; page after sign in&quot;, &quot;Homepage test&quot;)">runScenario(": Verify "Tree" page after sign in", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Sign in element is displayed in Sign in page&quot;, &quot;Homepage test&quot;)">runScenario("Verify Sign in element is displayed in Sign in page", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is on Home page and click getstarted link &quot;Tree&quot; on home page without sign in&quot;, &quot;Homepage test...)">runScenario("User is on Home page and click getstarted link "Tree" on home page without sign in", "Homepage test...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Stack&quot; from dropdown on home page after Sign in&quot;, &quot;Homepage te...)">runScenario("Verify the user is able to click on "Stack" from dropdown on home page after Sign in", "Homepage te...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is on Home page and click getstarted link &quot;Stack&quot; on home page without sign in&quot;, &quot;Homepage tes...)">runScenario("User is on Home page and click getstarted link "Stack" on home page without sign in", "Homepage tes...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;: Verify &quot;Graph&quot; page after sign in&quot;, &quot;Homepage test&quot;)">runScenario(": Verify "Graph" page after sign in", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Queue&quot; from dropdown on home page without Sign in&quot;, &quot;Homepage ...)">runScenario("Verify the user is able to click on "Queue" from dropdown on home page without Sign in", "Homepage ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Array&quot; from dropdown on home page without Sign in&quot;, &quot;Homepage ...)">runScenario("Verify the user is able to click on "Array" from dropdown on home page without Sign in", "Homepage ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Array&quot; from dropdown on home page after Sign in&quot;, &quot;Homepage te...)">runScenario("Verify the user is able to click on "Array" from dropdown on home page after Sign in", "Homepage te...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Graph&quot; from dropdown on home page after Sign in&quot;, &quot;Homepage te...)">runScenario("Verify the user is able to click on "Graph" from dropdown on home page after Sign in", "Homepage te...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is on Home page and click getstarted link &quot;Datastructures&quot; on home page without sign in&quot;, &quot;Hom...)">runScenario("User is on Home page and click getstarted link "Datastructures" on home page without sign in", "Hom...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the Register element is displayed in Register page&quot;, &quot;Homepage test&quot;)">runScenario("Verify the Register element is displayed in Register page", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Successfull SignOut message&quot;, &quot;Homepage test&quot;)">runScenario("Verify Successfull SignOut message", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Graph&quot; from dropdown on home page without Sign in&quot;, &quot;Homepage ...)">runScenario("Verify the user is able to click on "Graph" from dropdown on home page without Sign in", "Homepage ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;: Verify &quot;Stack&quot; page after sign in&quot;, &quot;Homepage test&quot;)">runScenario(": Verify "Stack" page after sign in", "Homepage test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is on Home page and click getstarted link &quot;Array&quot; on home page without sign in&quot;, &quot;Homepage tes...)">runScenario("User is on Home page and click getstarted link "Array" on home page without sign in", "Homepage tes...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is on Home page and click getstarted link &quot;Queue&quot; on home page without sign in&quot;, &quot;Homepage tes...)">runScenario("User is on Home page and click getstarted link "Queue" on home page without sign in", "Homepage tes...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Linkedlist&quot; from dropdown on home page without Sign in&quot;, &quot;Home...)">runScenario("Verify the user is able to click on "Linkedlist" from dropdown on home page without Sign in", "Home...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Stack&quot; from dropdown on home page without Sign in&quot;, &quot;Homepage ...)">runScenario("Verify the user is able to click on "Stack" from dropdown on home page without Sign in", "Homepage ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User is on Home page and click getstarted link &quot;Graph&quot; on home page without sign in&quot;, &quot;Homepage tes...)">runScenario("User is on Home page and click getstarted link "Graph" on home page without sign in", "Homepage tes...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Tree&quot; from dropdown on home page after Sign in&quot;, &quot;Homepage tes...)">runScenario("Verify the user is able to click on "Tree" from dropdown on home page after Sign in", "Homepage tes...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Linkedlist&quot; from dropdown on home page after Sign in&quot;, &quot;Homepa...)">runScenario("Verify the user is able to click on "Linkedlist" from dropdown on home page after Sign in", "Homepa...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.example.runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the user is able to click on &quot;Queue&quot; from dropdown on home page after Sign in&quot;, &quot;Homepage te...)">runScenario("Verify the user is able to click on "Queue" from dropdown on home page after Sign in", "Homepage te...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">org.example.runners.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is on Home page and click getstarted link &quot;Linkedlist&quot; on home page without sign in&quot;, &quot;Homepag...)">
+                  </a> <!-- runScenario("User is on Home page and click getstarted link "Linkedlist" on home page without sign in", "Homepag...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is on Home page and click getstarted link "Linkedlist" on home page without sign in","Homepage test")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/div[3]/div[3]/div/div/a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: C:\Users\narmu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54549}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54549/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1909537ef510c67826e7dcd4dc171716
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at org.example.utilities.ElementsUtil.waitForElementToBeClickable(ElementsUtil.java:26)
+	at org.example.utilities.ElementsUtil.doClick(ElementsUtil.java:32)
+	at org.example.pages.Home.clickLinkedListGet(Home.java:92)
+	at org.example.stepdefinitions.HomeSteps.the_user_clicks_on_get_started_link_on_homepage_without_login(HomeSteps.java:62)
+	at ✽.The user clicks on Get Started link on homepage &quot;Linkedlist&quot; without login(file:///C:/Users/narmu/git/DSAlgo/src/test/resources/features/Home.feature:29)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.example.runners.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Home page Title&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario("Verify Home page Title", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Home page Title","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;: Verify &quot;Array&quot; page after sign in&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario(": Verify "Array" page after sign in", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">(": Verify "Array" page after sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;: Verify &quot;Datastructures&quot; page after sign in&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario(": Verify "Datastructures" page after sign in", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">(": Verify "Datastructures" page after sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;: Verify &quot;Queue&quot; page after sign in&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario(": Verify "Queue" page after sign in", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">(": Verify "Queue" page after sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Tree&quot; from dropdown on home page without Sign in&quot;, &quot;Homepage t...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Tree" from dropdown on home page without Sign in", "Homepage t...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Tree" from dropdown on home page without Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;: Verify &quot;Linkedlist&quot; page after sign in&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario(": Verify "Linkedlist" page after sign in", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">(": Verify "Linkedlist" page after sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;: Verify &quot;Tree&quot; page after sign in&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario(": Verify "Tree" page after sign in", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">(": Verify "Tree" page after sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Sign in element is displayed in Sign in page&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario("Verify Sign in element is displayed in Sign in page", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Sign in element is displayed in Sign in page","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is on Home page and click getstarted link &quot;Tree&quot; on home page without sign in&quot;, &quot;Homepage test...)">
+                  </a> <!-- runScenario("User is on Home page and click getstarted link "Tree" on home page without sign in", "Homepage test...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is on Home page and click getstarted link "Tree" on home page without sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Stack&quot; from dropdown on home page after Sign in&quot;, &quot;Homepage te...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Stack" from dropdown on home page after Sign in", "Homepage te...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Stack" from dropdown on home page after Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is on Home page and click getstarted link &quot;Stack&quot; on home page without sign in&quot;, &quot;Homepage tes...)">
+                  </a> <!-- runScenario("User is on Home page and click getstarted link "Stack" on home page without sign in", "Homepage tes...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is on Home page and click getstarted link "Stack" on home page without sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;: Verify &quot;Graph&quot; page after sign in&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario(": Verify "Graph" page after sign in", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">(": Verify "Graph" page after sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Queue&quot; from dropdown on home page without Sign in&quot;, &quot;Homepage ...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Queue" from dropdown on home page without Sign in", "Homepage ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Queue" from dropdown on home page without Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Array&quot; from dropdown on home page without Sign in&quot;, &quot;Homepage ...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Array" from dropdown on home page without Sign in", "Homepage ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Array" from dropdown on home page without Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Array&quot; from dropdown on home page after Sign in&quot;, &quot;Homepage te...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Array" from dropdown on home page after Sign in", "Homepage te...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Array" from dropdown on home page after Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Graph&quot; from dropdown on home page after Sign in&quot;, &quot;Homepage te...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Graph" from dropdown on home page after Sign in", "Homepage te...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Graph" from dropdown on home page after Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is on Home page and click getstarted link &quot;Datastructures&quot; on home page without sign in&quot;, &quot;Hom...)">
+                  </a> <!-- runScenario("User is on Home page and click getstarted link "Datastructures" on home page without sign in", "Hom...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is on Home page and click getstarted link "Datastructures" on home page without sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the Register element is displayed in Register page&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario("Verify the Register element is displayed in Register page", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the Register element is displayed in Register page","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Successfull SignOut message&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario("Verify Successfull SignOut message", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Successfull SignOut message","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Graph&quot; from dropdown on home page without Sign in&quot;, &quot;Homepage ...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Graph" from dropdown on home page without Sign in", "Homepage ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Graph" from dropdown on home page without Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;: Verify &quot;Stack&quot; page after sign in&quot;, &quot;Homepage test&quot;)">
+                  </a> <!-- runScenario(": Verify "Stack" page after sign in", "Homepage test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">(": Verify "Stack" page after sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is on Home page and click getstarted link &quot;Array&quot; on home page without sign in&quot;, &quot;Homepage tes...)">
+                  </a> <!-- runScenario("User is on Home page and click getstarted link "Array" on home page without sign in", "Homepage tes...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is on Home page and click getstarted link "Array" on home page without sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is on Home page and click getstarted link &quot;Queue&quot; on home page without sign in&quot;, &quot;Homepage tes...)">
+                  </a> <!-- runScenario("User is on Home page and click getstarted link "Queue" on home page without sign in", "Homepage tes...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is on Home page and click getstarted link "Queue" on home page without sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Linkedlist&quot; from dropdown on home page without Sign in&quot;, &quot;Home...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Linkedlist" from dropdown on home page without Sign in", "Home...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Linkedlist" from dropdown on home page without Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Stack&quot; from dropdown on home page without Sign in&quot;, &quot;Homepage ...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Stack" from dropdown on home page without Sign in", "Homepage ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Stack" from dropdown on home page without Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;User is on Home page and click getstarted link &quot;Graph&quot; on home page without sign in&quot;, &quot;Homepage tes...)">
+                  </a> <!-- runScenario("User is on Home page and click getstarted link "Graph" on home page without sign in", "Homepage tes...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("User is on Home page and click getstarted link "Graph" on home page without sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Tree&quot; from dropdown on home page after Sign in&quot;, &quot;Homepage tes...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Tree" from dropdown on home page after Sign in", "Homepage tes...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Tree" from dropdown on home page after Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Linkedlist&quot; from dropdown on home page after Sign in&quot;, &quot;Homepa...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Linkedlist" from dropdown on home page after Sign in", "Homepa...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Linkedlist" from dropdown on home page after Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify the user is able to click on &quot;Queue&quot; from dropdown on home page after Sign in&quot;, &quot;Homepage te...)">
+                  </a> <!-- runScenario("Verify the user is able to click on "Queue" from dropdown on home page after Sign in", "Homepage te...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify the user is able to click on "Queue" from dropdown on home page after Sign in","Homepage test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\narmu\AppData\Local\Temp\testng-eclipse-336983598\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.example.runners.TestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">cucumber</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">runScenario</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(30);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'runScenario')
+data.setCell(0, 2, 'org.example.runners.TestRunner')
+data.setCell(0, 3, 12722);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'org.example.runners.TestRunner')
+data.setCell(1, 3, 3638);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'org.example.runners.TestRunner')
+data.setCell(2, 3, 3622);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'org.example.runners.TestRunner')
+data.setCell(3, 3, 3619);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'org.example.runners.TestRunner')
+data.setCell(4, 3, 3617);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'org.example.runners.TestRunner')
+data.setCell(5, 3, 3616);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'org.example.runners.TestRunner')
+data.setCell(6, 3, 3592);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'org.example.runners.TestRunner')
+data.setCell(7, 3, 3567);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'org.example.runners.TestRunner')
+data.setCell(8, 3, 3547);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'org.example.runners.TestRunner')
+data.setCell(9, 3, 3157);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'runScenario')
+data.setCell(10, 2, 'org.example.runners.TestRunner')
+data.setCell(10, 3, 3150);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'runScenario')
+data.setCell(11, 2, 'org.example.runners.TestRunner')
+data.setCell(11, 3, 3122);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'runScenario')
+data.setCell(12, 2, 'org.example.runners.TestRunner')
+data.setCell(12, 3, 3117);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'runScenario')
+data.setCell(13, 2, 'org.example.runners.TestRunner')
+data.setCell(13, 3, 3102);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'runScenario')
+data.setCell(14, 2, 'org.example.runners.TestRunner')
+data.setCell(14, 3, 3091);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'runScenario')
+data.setCell(15, 2, 'org.example.runners.TestRunner')
+data.setCell(15, 3, 3042);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'runScenario')
+data.setCell(16, 2, 'org.example.runners.TestRunner')
+data.setCell(16, 3, 2581);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'runScenario')
+data.setCell(17, 2, 'org.example.runners.TestRunner')
+data.setCell(17, 3, 2457);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'runScenario')
+data.setCell(18, 2, 'org.example.runners.TestRunner')
+data.setCell(18, 3, 2451);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'runScenario')
+data.setCell(19, 2, 'org.example.runners.TestRunner')
+data.setCell(19, 3, 2447);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'runScenario')
+data.setCell(20, 2, 'org.example.runners.TestRunner')
+data.setCell(20, 3, 2438);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'runScenario')
+data.setCell(21, 2, 'org.example.runners.TestRunner')
+data.setCell(21, 3, 2437);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'runScenario')
+data.setCell(22, 2, 'org.example.runners.TestRunner')
+data.setCell(22, 3, 2422);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'runScenario')
+data.setCell(23, 2, 'org.example.runners.TestRunner')
+data.setCell(23, 3, 2410);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'runScenario')
+data.setCell(24, 2, 'org.example.runners.TestRunner')
+data.setCell(24, 3, 2402);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'runScenario')
+data.setCell(25, 2, 'org.example.runners.TestRunner')
+data.setCell(25, 3, 2394);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'runScenario')
+data.setCell(26, 2, 'org.example.runners.TestRunner')
+data.setCell(26, 3, 2392);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'runScenario')
+data.setCell(27, 2, 'org.example.runners.TestRunner')
+data.setCell(27, 3, 2373);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'runScenario')
+data.setCell(28, 2, 'org.example.runners.TestRunner')
+data.setCell(28, 3, 2370);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'runScenario')
+data.setCell(29, 2, 'org.example.runners.TestRunner')
+data.setCell(29, 3, 2308);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.example.runners.TestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@4902c584)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Home page Title", "Homepage test")</span>
+                <span class="method-start">433 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the Register element is displayed in Register page", "Homepage test")</span>
+                <span class="method-start">3481 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Sign in element is displayed in Sign in page", "Homepage test")</span>
+                <span class="method-start">5929 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is on Home page and click getstarted link "Datastructures" on home page without sign in", "Hom...)</span>
+                <span class="method-start">8304 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is on Home page and click getstarted link "Array" on home page without sign in", "Homepage tes...)</span>
+                <span class="method-start">10887 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("User is on Home page and click getstarted link "Linkedlist" on home page without sign in", "Homepag...)</span>
+                <span class="method-start">13282 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is on Home page and click getstarted link "Stack" on home page without sign in", "Homepage tes...)</span>
+                <span class="method-start">26005 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is on Home page and click getstarted link "Queue" on home page without sign in", "Homepage tes...)</span>
+                <span class="method-start">28415 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is on Home page and click getstarted link "Tree" on home page without sign in", "Homepage test...)</span>
+                <span class="method-start">30817 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("User is on Home page and click getstarted link "Graph" on home page without sign in", "Homepage tes...)</span>
+                <span class="method-start">33125 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Array" from dropdown on home page without Sign in", "Homepage ...)</span>
+                <span class="method-start">35496 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Linkedlist" from dropdown on home page without Sign in", "Home...)</span>
+                <span class="method-start">37955 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Stack" from dropdown on home page without Sign in", "Homepage ...)</span>
+                <span class="method-start">40408 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Queue" from dropdown on home page without Sign in", "Homepage ...)</span>
+                <span class="method-start">42801 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Tree" from dropdown on home page without Sign in", "Homepage t...)</span>
+                <span class="method-start">45226 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Graph" from dropdown on home page without Sign in", "Homepage ...)</span>
+                <span class="method-start">47664 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario(": Verify "Datastructures" page after sign in", "Homepage test")</span>
+                <span class="method-start">50103 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario(": Verify "Array" page after sign in", "Homepage test")</span>
+                <span class="method-start">53255 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario(": Verify "Linkedlist" page after sign in", "Homepage test")</span>
+                <span class="method-start">56378 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario(": Verify "Stack" page after sign in", "Homepage test")</span>
+                <span class="method-start">59496 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario(": Verify "Queue" page after sign in", "Homepage test")</span>
+                <span class="method-start">62655 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario(": Verify "Tree" page after sign in", "Homepage test")</span>
+                <span class="method-start">65758 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario(": Verify "Graph" page after sign in", "Homepage test")</span>
+                <span class="method-start">69375 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Array" from dropdown on home page after Sign in", "Homepage te...)</span>
+                <span class="method-start">72467 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Linkedlist" from dropdown on home page after Sign in", "Homepa...)</span>
+                <span class="method-start">76086 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Stack" from dropdown on home page after Sign in", "Homepage te...)</span>
+                <span class="method-start">79654 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Queue" from dropdown on home page after Sign in", "Homepage te...)</span>
+                <span class="method-start">83202 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Tree" from dropdown on home page after Sign in", "Homepage tes...)</span>
+                <span class="method-start">86825 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify the user is able to click on "Graph" from dropdown on home page after Sign in", "Homepage te...)</span>
+                <span class="method-start">90442 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Successfull SignOut message", "Homepage test")</span>
+                <span class="method-start">94035 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">97677 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
