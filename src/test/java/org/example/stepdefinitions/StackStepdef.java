@@ -1,7 +1,6 @@
 package org.example.stepdefinitions;
 
 import org.example.factory.DriverFactory;
-import org.example.pages.DataStructurePage;
 import org.example.pages.Stackpage;
 import org.example.utilities.BaseLogger;
 import org.openqa.selenium.WebDriver;
@@ -14,8 +13,7 @@ import io.cucumber.java.en.When;
 public class StackStepdef extends BaseLogger{
 	WebDriver driver = DriverFactory.getDriver();
 	  Stackpage stackpage = new Stackpage(DriverFactory.getDriver());
-	 // DataStructurePage pycode = new DataStructurePage(DriverFactory.getDriver());
-	 
+	 	 
 	@Given("the user is on the Stack Page")
 	  public void the_user_is_on_the_stack_page() {
 		  stackpage.getStartedStack();
@@ -66,9 +64,8 @@ public class StackStepdef extends BaseLogger{
 	  public void the_user_write_the_valid_code_in_editor_and_click_the_button(String string) {
 		  log.info("Entering the Python Code in the editor "+ stackpage.getPythonCodeDataDriven());
 		  stackpage.enterPythonCode(stackpage.getPythonCodeDataDriven());
-	       // stackpage.enterPythonCode(stackpage.getPythonCodeDataDriven());
-	        log.info("Clicking on Run button");
-	        stackpage.ClickRun();
+	      log.info("Clicking on Run button");
+	      stackpage.ClickRun();
 	  }
 
 	  @Then("The user should able to see output in the console below")
