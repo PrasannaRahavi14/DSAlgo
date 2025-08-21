@@ -1,8 +1,0 @@
-The user is on Landing Page
-The user signed in to ds algo page with username "Prasanna" and password "Welcome@01"
-The user is in Home Page after login
-The user clicks the Get Started Button of DS page
-The user is in "Data Structures-Introduction" Page
-The user clicks the "Time Complexity" from the topics
-the user is in DataStructure page
-The user should be in "Time Complexity" Page

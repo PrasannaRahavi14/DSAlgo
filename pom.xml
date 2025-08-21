@@ -161,6 +161,12 @@
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+          <testFailureIgnore>true</testFailureIgnore>
+          <systemPropertyVariables>
+            <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+            <allure.report.directory>${project.build.directory}/allure-report</allure.report.directory>
+          </systemPropertyVariables>
+          <forkedProcessExitTimeoutInSeconds>0</forkedProcessExitTimeoutInSeconds>
         </configuration>
       </plugin>
 

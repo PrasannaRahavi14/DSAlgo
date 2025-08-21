@@ -11,7 +11,6 @@ import org.example.utilities.LoggerHelper;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -31,10 +30,12 @@ public class Hooks {
         configReader = new ConfigReader();
         prop = configReader.init_prop();
     }
-
     @Before(order = 1)
     public void launchBrowser() {
-        String browserName = prop.getProperty("browser");
+        String browserName = System.getProperty("browser");
+        if (browserName == null) {
+            browserName = prop.getProperty("browser");
+        }
         log.info("Browser from config: " + browserName);
         driverFactory = new DriverFactory();
         driver = driverFactory.init_driver(browserName);
