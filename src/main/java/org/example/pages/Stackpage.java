@@ -49,10 +49,6 @@ public class Stackpage extends BaseLogger{
     
     public void getStartedStack()
     {
-//      landingpage.getURL();
-//      landingpage.clickGetStartedBtn();
-//   	  homePage.clickSignInLink();
-//   	  loginpage.performLoginDataDriven();
     	loginpage.Login();
    	  homePage.clickGetStartedForStack();
    	
