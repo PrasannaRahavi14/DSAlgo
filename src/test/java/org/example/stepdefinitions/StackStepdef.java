@@ -102,8 +102,8 @@ public class StackStepdef extends BaseLogger{
 
 	  @When("the user input the valid python code and clicks run button")
 	  public void the_user_input_the_valid_python_code_and_clicks_run_button() {
-		  log.info("Entering the Python Code in the editor "+ stackpage.getInvalidCodeDataDriven());
-	        stackpage.enterPythonCode(stackpage.getInvalidCodeDataDriven());
+		  log.info("Entering the Python Code in the editor "+ stackpage.getPythonCodeDataDriven());
+		  stackpage.enterPythonCode(stackpage.getPythonCodeDataDriven());
 	      log.info("Clicking on Run button");
 	      stackpage.ClickRun();
 	  }
@@ -123,6 +123,6 @@ public class StackStepdef extends BaseLogger{
 		  log.info("Entering the Python Code in the editor "+ stackpage.getInvalidCodeDataDriven());
 	        stackpage.enterPythonCode(stackpage.getInvalidCodeDataDriven());
 	        log.info("Clicking on Run button");
-	        stackpage.ClickRun();   
+	        stackpage.ClickRun(); 
 		  }
 }

@@ -99,7 +99,8 @@ public class RegisterStepdef extends BaseLogger {
    public void the_user_should_able_to_see_an_pwd_warning_message(String ExpectedAlert) {
        String ActualAlert = registerpage.getPwdMismatchAlertmsg();  
        log.info("Actual message: " + ActualAlert);
-	   Assert.assertEquals(ActualAlert, ExpectedAlert, "password_mismatch:The two password fields didn’t match.");
+       Assert.assertEquals(ActualAlert, ExpectedAlert);
+	  // Assert.assertEquals(ActualAlert, ExpectedAlert, "password_mismatch:The two password fields didn’t match.");
      }
    
    @When("the user clicks Register button with valid Username,Password and Password Confirmation")

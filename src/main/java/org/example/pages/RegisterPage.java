@@ -83,8 +83,7 @@ public class RegisterPage extends BaseLogger {
     {
     	WebElement field = driver.findElement(username);
         return (String) ((JavascriptExecutor) driver)
-            .executeScript("return arguments[0].validationMessage;", field);
-    	
+            .executeScript("return arguments[0].validationMessage;", field);	
     }
     
     public By getusernamelocator() {
@@ -197,7 +196,7 @@ public class RegisterPage extends BaseLogger {
 //       
 //            return elementsUtil.doGetText(pwdMismatchAlertmsg);
 //    }
-    
+//    
     public void getInvalidUsername()
     {
     	log.info("Performing Register with TestData from Excel:");
