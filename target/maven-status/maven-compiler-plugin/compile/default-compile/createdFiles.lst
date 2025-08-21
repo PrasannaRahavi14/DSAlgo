@@ -3,6 +3,7 @@ org\example\pages\RegisterPage.class
 org\example\pages\Graph.class
 org\example\utilities\ConfigReader.class
 org\example\pages\DataStructurePage.class
+org\example\pages\TreePage.class
 org\example\utilities\ElementsUtil.class
 org\example\factory\DriverFactory.class
 org\example\pages\LinkedListPage.class
@@ -11,7 +12,6 @@ org\example\utilities\BaseLogger.class
 org\example\pages\LandingPage.class
 org\example\pages\Queue.class
 org\example\pages\LoginPage.class
-org\example\pages\Tree.class
 org\example\utilities\ExcelReader.class
 org\example\pages\ArrayPage.class
 org\example\utilities\Constants.class

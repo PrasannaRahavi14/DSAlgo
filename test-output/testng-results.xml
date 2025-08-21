@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results ignored="0" total="10" passed="6" failed="4" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-20T21:22:56 EDT" name="Default suite" finished-at="2025-08-20T21:23:32 EDT" duration-ms="35796">
+=======
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2025-08-20T23:23:34 EDT" name="Default suite" finished-at="2025-08-20T23:23:50 EDT" duration-ms="16016">
     <groups>
       <group name="cucumber">
@@ -9,34 +16,75 @@
       </group> <!-- cucumber -->
     </groups>
     <test started-at="2025-08-20T23:23:34 EDT" name="Default test" finished-at="2025-08-20T23:23:50 EDT" duration-ms="16016">
+=======
+  <suite started-at="2025-08-19T11:31:10 EDT" name="Default suite" finished-at="2025-08-19T11:31:17 EDT" duration-ms="7556">
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+<<<<<<< HEAD
+    <test started-at="2025-08-20T21:22:56 EDT" name="Default test" finished-at="2025-08-20T21:23:32 EDT" duration-ms="35796">
+      <class name="org.example.runners.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:22:56 EDT" name="setUpClass" finished-at="2025-08-20T21:22:57 EDT" duration-ms="680" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@61d09475]]>
+=======
+    <test started-at="2025-08-19T11:31:10 EDT" name="Default test" finished-at="2025-08-19T11:31:17 EDT" duration-ms="7556">
+>>>>>>> f9725dc57b88bebad1ce7da05cf5e9ed12814193
       <class name="org.example.runners.TestRunner">
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T23:23:34 EDT" name="setUpClass" finished-at="2025-08-20T23:23:35 EDT" duration-ms="624" status="PASS">
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[org.testng.TestRunner@2862271a]]>
+=======
+                <![CDATA[org.testng.TestRunner@2611b9a3]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+>>>>>>> f9725dc57b88bebad1ce7da05cf5e9ed12814193
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T23:23:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T23:23:39 EDT" duration-ms="4349" status="PASS">
+=======
+<<<<<<< HEAD
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:22:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:03 EDT" duration-ms="6251" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Landing on Register page"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6296" status="PASS">
+>>>>>>> f9725dc57b88bebad1ce7da05cf5e9ed12814193
           <params>
             <param index="0">
               <value>
                 <![CDATA["Failed login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
+                <![CDATA["User Registration in DSPortalapp"]]>
+=======
                 <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T23:23:39 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T23:23:41 EDT" duration-ms="1961" status="PASS">
           <params>
             <param index="0">
@@ -102,22 +150,389 @@
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T23:23:47 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T23:23:50 EDT" duration-ms="2696" status="PASS">
+=======
+<<<<<<< HEAD
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:03 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:07 EDT" duration-ms="3962" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register with all empty fields"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:17 EDT" duration-ms="6925" status="PASS">
+>>>>>>> f9725dc57b88bebad1ce7da05cf5e9ed12814193
           <params>
             <param index="0">
               <value>
                 <![CDATA["Succesful login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
+                <![CDATA["User Registration in DSPortalapp"]]>
+=======
                 <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.runners.TestRunner@e4487af]" started-at="2025-08-20T23:23:50 EDT" name="tearDownClass" finished-at="2025-08-20T23:23:50 EDT" duration-ms="321" status="PASS">
+=======
+<<<<<<< HEAD
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:07 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:10 EDT" duration-ms="2640" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register with only Username and remaining fields empty"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6229" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+              </value>
+            </param>
+            <param index="1">
+              <value>
+<<<<<<< HEAD
+                <![CDATA["User Registration in DSPortalapp"]]>
+=======
+                <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+<<<<<<< HEAD
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:13 EDT" duration-ms="3149" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register with only Password and remaining fields empty"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6264" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+              </value>
+            </param>
+            <param index="1">
+              <value>
+<<<<<<< HEAD
+                <![CDATA["User Registration in DSPortalapp"]]>
+=======
+                <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+<<<<<<< HEAD
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:16 EDT" duration-ms="3325" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register without Password confirmation"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:16 EDT" duration-ms="6229" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+              </value>
+            </param>
+            <param index="1">
+              <value>
+<<<<<<< HEAD
+                <![CDATA["User Registration in DSPortalapp"]]>
+=======
+                <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+<<<<<<< HEAD
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:16 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:20 EDT" duration-ms="3133" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register with Mismatch Password"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-19T11:31:17 EDT" duration-ms="6357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+              </value>
+            </param>
+            <param index="1">
+              <value>
+<<<<<<< HEAD
+                <![CDATA["User Registration in DSPortalapp"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')]"}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [788fa8611a195486a1916e7d210e8062, findElement {value=//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57417}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57417/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 788fa8611a195486a1916e7d210e8062]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')]"}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [788fa8611a195486a1916e7d210e8062, findElement {value=//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57417}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57417/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 788fa8611a195486a1916e7d210e8062
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.example.pages.RegisterPage.getPwdMismatchAlertmsg(RegisterPage.java:187)
+at org.example.stepdefinitions.RegisterStepdef.the_user_should_able_to_see_an_pwd_warning_message(RegisterStepdef.java:100)
+at ✽.The user should able to see an pwd warning message "password_mismatch:The two password fields didn’t match."(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:42)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:20 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:23 EDT" duration-ms="3100" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register with Valid Credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration in DSPortalapp"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert') and contains(text(),'New Account Created')]"}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5b3ab96cb43d4e417860524f4252345, findElement {value=//div[contains(@class,'alert') and contains(text(),'New Account Created')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52215}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52215/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5b3ab96cb43d4e417860524f4252345]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert') and contains(text(),'New Account Created')]"}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5b3ab96cb43d4e417860524f4252345, findElement {value=//div[contains(@class,'alert') and contains(text(),'New Account Created')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52215}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52215/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5b3ab96cb43d4e417860524f4252345
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.example.pages.RegisterPage.getNewAccountAlertmsg(RegisterPage.java:161)
+at org.example.stepdefinitions.RegisterStepdef.the_user_should_be_redirected_to_home_page_of_ds_algo_with_message(RegisterStepdef.java:112)
+at ✽.The user should be redirected to Home Page of DS Algo with message "New Account Created. You are logged in as <ID>"(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:48)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:26 EDT" duration-ms="2954" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register with Invalid Username"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration in DSPortalapp"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')]"}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8ec61956e437fe9a55650b3af8a453c7, findElement {value=//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49374}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49374/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ec61956e437fe9a55650b3af8a453c7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')]"}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8ec61956e437fe9a55650b3af8a453c7, findElement {value=//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49374}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49374/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ec61956e437fe9a55650b3af8a453c7
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.example.pages.RegisterPage.getPwdMismatchAlertmsg(RegisterPage.java:187)
+at org.example.stepdefinitions.RegisterStepdef.the_user_should_see_an_warning_message_as_below_username_textbox(RegisterStepdef.java:124)
+at ✽.the user should see an warning message as "Username is not valid" below Username textbox(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:54)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:26 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:29 EDT" duration-ms="3174" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register with Invalid Password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration in DSPortalapp"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')]"}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [31dda103e4fc941723027f058329b8ff, findElement {value=//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53659}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53659/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 31dda103e4fc941723027f058329b8ff]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')]"}
+  (Session info: chrome=139.0.7258.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [31dda103e4fc941723027f058329b8ff, findElement {value=//div[contains(@class,'alert') and contains(text(), ' password_mismatch:')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.138 (884e54ea8d4..., userDataDir: C:\Users\prasa\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53659}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53659/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 31dda103e4fc941723027f058329b8ff
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.example.pages.RegisterPage.getPwdMismatchAlertmsg(RegisterPage.java:187)
+at org.example.stepdefinitions.RegisterStepdef.the_user_should_see_an_warning_message_as_below_password_textbox(RegisterStepdef.java:136)
+at ✽.The user should see an warning message as "Your password can’t be entirely numeric." below password textbox(file:///C:/Users/prasa/git/DSAlgo/src/test/resources/features/Register.feature:60)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:29 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-20T21:23:32 EDT" duration-ms="3291" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration in DSPortalapp"]]>
+=======
+                <![CDATA["User sigin to DSAlgo Portal"]]>
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.runners.TestRunner@399c4be1]" started-at="2025-08-20T21:23:32 EDT" name="tearDownClass" finished-at="2025-08-20T21:23:32 EDT" duration-ms="4" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.runners.TestRunner@65d09a04]" started-at="2025-08-19T11:31:17 EDT" name="tearDownClass" finished-at="2025-08-19T11:31:17 EDT" duration-ms="3" status="PASS">
+>>>>>>> 591d50f082b5338fbe19c8c6c8b36f8fbcd15c3d
+>>>>>>> f9725dc57b88bebad1ce7da05cf5e9ed12814193
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

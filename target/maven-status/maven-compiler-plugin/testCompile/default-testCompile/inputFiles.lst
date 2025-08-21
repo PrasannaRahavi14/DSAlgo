@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\preet\eclipse-workspace\Preethi_Final\DSAlgo\src\test\java\org\example\hooks\Hooks.java
 C:\Users\preet\eclipse-workspace\Preethi_Final\DSAlgo\src\test\java\org\example\runners\TestRunner.java
 C:\Users\preet\eclipse-workspace\Preethi_Final\DSAlgo\src\test\java\org\example\stepdefinitions\ArraySteps.java
@@ -9,3 +10,16 @@ C:\Users\preet\eclipse-workspace\Preethi_Final\DSAlgo\src\test\java\org\example\
 C:\Users\preet\eclipse-workspace\Preethi_Final\DSAlgo\src\test\java\org\example\stepdefinitions\QueuePageStepDefinition.java
 C:\Users\preet\eclipse-workspace\Preethi_Final\DSAlgo\src\test\java\org\example\stepdefinitions\RegisterStepdef.java
 C:\Users\preet\eclipse-workspace\Preethi_Final\DSAlgo\src\test\java\org\example\stepdefinitions\StackStepdef.java
+=======
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\hooks\Hooks.java
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\runners\TestRunner.java
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\stepdefinitions\ArraySteps.java
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\stepdefinitions\DatastructureSteps.java
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\stepdefinitions\HomeSteps.java
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\stepdefinitions\LinkedListSteps.java
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\stepdefinitions\LoginSteps.java
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\stepdefinitions\QueuePageStepDefinition.java
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\stepdefinitions\RegisterStepdef.java
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\stepdefinitions\StackStepdef.java
+C:\Users\prasa\git\DSAlgo\src\test\java\org\example\stepdefinitions\TreeSteps.java
+>>>>>>> f9725dc57b88bebad1ce7da05cf5e9ed12814193

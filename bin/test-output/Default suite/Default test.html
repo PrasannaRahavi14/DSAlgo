@@ -1,0 +1,266 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>29/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Aug 16 15:17:56 EDT 2025</td>
+</tr>
+<tr><td>Total time:</td><td>97 seconds (97710 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Linkedlist" on home page without sign in", "Homepage test"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/div[3]/div[3]/div/div/a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: C:\Users\narmu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54549}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54549/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1909537ef510c67826e7dcd4dc171716
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at org.example.utilities.ElementsUtil.waitForElementToBeClickable(ElementsUtil.java:26)
+	at org.example.utilities.ElementsUtil.doClick(ElementsUtil.java:32)
+	at org.example.pages.Home.clickLinkedListGet(Home.java:92)
+	at org.example.stepdefinitions.HomeSteps.the_user_clicks_on_get_started_link_on_homepage_without_login(HomeSteps.java:62)
+	at ✽.The user clicks on Get Started link on homepage &quot;Linkedlist&quot; without login(file:///C:/Users/narmu/git/DSAlgo/src/test/resources/features/Home.feature:29)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1097684722", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1097684722'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/div[3]/div[3]/div/div/a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.128, chrome: {chromedriverVersion: 139.0.7258.68 (40ff94600b6e..., userDataDir: C:\Users\narmu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54549}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54549/devtoo..., se:cdpVersion: 139.0.7258.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1909537ef510c67826e7dcd4dc171716
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at org.example.utilities.ElementsUtil.waitForElementToBeClickable(ElementsUtil.java:26)
+	at org.example.utilities.ElementsUtil.doClick(ElementsUtil.java:32)
+	at org.example.pages.Home.clickLinkedListGet(Home.java:92)
+	at org.example.stepdefinitions.HomeSteps.the_user_clicks_on_get_started_link_on_homepage_without_login(HomeSteps.java:62)
+	at ✽.The user clicks on Get Started link on homepage &quot;Linkedlist&quot; without login(file:///C:/Users/narmu/git/DSAlgo/src/test/resources/features/Home.feature:29)
+</pre></div></td>
+<td>12</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Home page Title", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": Verify "Array" page after sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": Verify "Datastructures" page after sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": Verify "Queue" page after sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Tree" from dropdown on home page without Sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": Verify "Linkedlist" page after sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": Verify "Tree" page after sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Sign in element is displayed in Sign in page", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Tree" on home page without sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Stack" from dropdown on home page after Sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Stack" on home page without sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": Verify "Graph" page after sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Queue" from dropdown on home page without Sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Array" from dropdown on home page without Sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Array" from dropdown on home page after Sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Graph" from dropdown on home page after Sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Datastructures" on home page without sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the Register element is displayed in Register page", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Successfull SignOut message", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Graph" from dropdown on home page without Sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: ": Verify "Stack" page after sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Array" on home page without sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Queue" on home page without sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Linkedlist" from dropdown on home page without Sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Stack" from dropdown on home page without Sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User is on Home page and click getstarted link "Graph" on home page without sign in", "Homepage test"</td>
+<td></td>
+<td>2</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Tree" from dropdown on home page after Sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Linkedlist" from dropdown on home page after Sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the user is able to click on "Queue" from dropdown on home page after Sign in", "Homepage test"</td>
+<td></td>
+<td>3</td>
+<td>org.example.runners.TestRunner@71e9ddb4</td></tr>
+</table><p>
+</body>
+</html>
