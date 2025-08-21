@@ -7,7 +7,7 @@ Feature: Data Structures Page Validation
   Scenario: Get the total no of topics link in the DataStructure page
     When The user sees the topics covered section in Datastructure
     Then The user is able to get the total no of topics link present
-
+@DS01
   Scenario: verify the user is able to navigate to time complexity page
     When The user clicks the "Time Complexity" from the topics
     Then The user should be in "Time Complexity" Page
@@ -16,7 +16,7 @@ Feature: Data Structures Page Validation
     Given The user is in the time complexity page after clicking "Time Complexity"
     When The user click Try here button
     Then The user should be redirected to the page having a try editor with run button
-@DS01
+
   Scenario Outline: Verify the user is able to see the "<input>"
     Given The user is in the try editor page of the topic "Time Complexity"
     When The user enters the "<input>" code and clicks run button
