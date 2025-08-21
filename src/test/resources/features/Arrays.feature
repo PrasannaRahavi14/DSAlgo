@@ -50,7 +50,7 @@
       When User enters invalid python code and click Run
       Then the user should see the error popup
 
-    @practiceQuestionsInvalidCode_1_2
+    @practiceQuestionsInvalidCode_1_3
     Scenario: Verify if the user is able to run invalid python code in Practice Questions page
       Given User is on Run page under the Array topic "Arrays in Python" and Practice Questions option "Search the array"
       When User enters invalid python code and click Run
