@@ -5,6 +5,7 @@ org\example\stepdefinitions\LoginSteps.class
 org\example\hooks\Hooks.class
 org\example\stepdefinitions\ArraySteps.class
 org\example\runners\TestRunner.class
+org\example\stepdefinitions\Graphsteps.class
 org\example\stepdefinitions\RegisterStepdef.class
 org\example\stepdefinitions\TreeSteps.class
 org\example\stepdefinitions\LinkedListSteps.class
