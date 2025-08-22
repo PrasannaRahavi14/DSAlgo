@@ -38,6 +38,7 @@ public class Stackpage extends BaseLogger{
     private By PracticeQuestions=By.xpath("//a[text()='Practice Questions']");
     private By DisplayPracticePage=By.xpath("//div[@class='bs-example']");
     ElementsUtil elementsUtil;
+    private By pqbrokenLink = By.cssSelector(".list-group-item.list-group-item-light.text-info");
     String filepath = ConfigReader.getProperty("testData");
     
     private By getTopicLinkByText(String topic) {
@@ -101,8 +102,7 @@ public class Stackpage extends BaseLogger{
     driver.findElement(runBtn).click();
 
     }
-    
-    
+       
     public void Alertmessage()
     {
     	try {
@@ -199,16 +199,32 @@ public class Stackpage extends BaseLogger{
 	public boolean isPracticePageDisplayed()
 	{
 		 try {
-	        	log.info("Verifying the Practice Questions Page");
-	            return elementsUtil.waitForElementToBeVisible(DisplayPracticePage).isDisplayed();
+	        	return elementsUtil.waitForElementToBeVisible(DisplayPracticePage).isDisplayed();
 	        } catch (TimeoutException e) {
 	            return false;
-	        }    
-		
+	        }    	
 	}
+	 public void ClickPQLink()
+	    {
+	        driver.findElement(pqbrokenLink).click();
+	        String pageSource = driver.getPageSource();
+	        if (pageSource.trim().isEmpty() || pageSource.contains("404") || pageSource.contains("Not Found")) {
+	            log.warn("❌ Broken Link Navigated to Empty/404 Page");
+	        } else {
+	            log.info("✅ Practice Questions Link Working Fine");
+	        }
+	    }
+	    public void emptyPage()
+	    {
+	        WebElement container = driver.findElement(By.cssSelector("div.container"));
+	        if (container.getText().trim().isEmpty()) {
+	            log.warn("⚠️ The container is empty → no practice content found");
+	        } else {
+	            log.info("✅ Container has content: " + container.getText());
+	        }
 	
-		
-	}
+	    }
+}
 
 
 
