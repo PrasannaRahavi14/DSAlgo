@@ -193,7 +193,7 @@ public class Stackpage extends BaseLogger{
     
     public void ClickPracticeQuestionsLink()
 	   {
-		log.info("Clicking Practice Questions Link from Introduction page");
+		log.info("Clicking Practice Question");
 		 elementsUtil.doClick(PracticeQuestions);
 	   }
 	public boolean isPracticePageDisplayed()
