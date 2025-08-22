@@ -45,6 +45,15 @@ Scenario Outline: Verify with invalid python code of "<StackTopics>"
    |StackTopics|
    |Implementation|
    |Applications|
- 
+   
+@StackTopics_BrokenLink   
+Scenario Outline: Verify the user is able to check the brokenlink
+    Given The user is on the topics page after clicking the "<StackTopics>"
+    When The user clicks on the Practice Question link
+    Then The user should be able to see the page is empty or not
+  Examples:
+   |StackTopics|
+   |Implementation|
+   |Applications|
 
 
