@@ -125,4 +125,20 @@ public class StackStepdef extends BaseLogger{
 	        log.info("Clicking on Run button");
 	        stackpage.ClickRun(); 
 		  }
+	  
+	  @Given("The user is on the topics page after clicking the {string}")
+	  public void the_user_is_on_the_topics_page_after_clicking_the(String option) {
+		  stackpage.StackTopics(option);
+		  
+	  }
+
+	  @When("The user clicks on the Practice Question link")
+	  public void the_user_clicks_on_the_practice_question_link() {
+	      stackpage.ClickPracticeQuestionsLink();
+	  }
+
+	  @Then("The user should be able to see the page is empty or not")
+	  public void the_user_should_be_able_to_see_the_page_is_empty_or_not() {
+	      stackpage.isPracticePageDisplayed();
+	  }
 }

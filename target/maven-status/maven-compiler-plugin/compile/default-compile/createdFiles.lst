@@ -14,5 +14,4 @@ org\example\pages\Queue.class
 org\example\pages\LoginPage.class
 org\example\utilities\ExcelReader.class
 org\example\pages\ArrayPage.class
-org\example\utilities\Constants.class
 org\example\utilities\LoggerHelper.class

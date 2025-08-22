@@ -35,11 +35,12 @@ public class Stackpage extends BaseLogger{
     private By runBtn = By.cssSelector("button[type='button']");
     private By tryEditor_text = By.cssSelector(".CodeMirror div.CodeMirror-code");
     private By outputinconsole = By.xpath("//pre[@id='output']");
+    private By PracticeQuestions=By.xpath("//a[text()='Practice Questions']");
+    private By DisplayPracticePage=By.xpath("//div[@class='bs-example']");
     ElementsUtil elementsUtil;
     String filepath = ConfigReader.getProperty("testData");
     
     private By getTopicLinkByText(String topic) {
-    	//String xpath = "//p[contains(text() = '" + topic + "']";
         String xpath = "//a[text()='" + topic + "']";
         return By.xpath(xpath);
     }
@@ -189,7 +190,22 @@ public class Stackpage extends BaseLogger{
         String codeToInput = getCode.get("Python Code");
         return codeToInput;
     }
-	
+    
+    public void ClickPracticeQuestionsLink()
+	   {
+		log.info("Clicking Practice Question");
+		 elementsUtil.doClick(PracticeQuestions);
+	   }
+	public boolean isPracticePageDisplayed()
+	{
+		 try {
+	        	log.info("Verifying the Practice Questions Page");
+	            return elementsUtil.waitForElementToBeVisible(DisplayPracticePage).isDisplayed();
+	        } catch (TimeoutException e) {
+	            return false;
+	        }    
+		
+	}
 	
 		
 	}

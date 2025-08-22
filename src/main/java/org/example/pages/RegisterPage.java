@@ -1,8 +1,6 @@
 package org.example.pages;
 
 import java.util.Map;
-//import java.util.NoSuchElementException;
-
 import org.example.utilities.BaseLogger;
 import org.example.utilities.ConfigReader;
 import org.example.utilities.ElementsUtil;
@@ -32,12 +30,6 @@ public class RegisterPage extends BaseLogger {
     this.elementsUtil = new ElementsUtil(driver);
    
     }
-
-//    public String getTitleforDSI()
-//    {
-//  return driver.findElement(getTitle_DSI).getText();
-//    }
-
     public boolean getRegister()
     {
     	return driver.findElement(getRegister_Page).isEnabled();
@@ -93,11 +85,7 @@ public class RegisterPage extends BaseLogger {
         return (String) ((JavascriptExecutor) driver)
             .executeScript("return arguments[0].validationMessage;", field);	
     }
-    
-    public By getusernamelocator() {
-        return username;
-    }
-    
+
     public void getPasswordValues()
     {   
     	log.info("Performing Register with TestData from Excel:");
@@ -122,10 +110,6 @@ public class RegisterPage extends BaseLogger {
             .executeScript("return arguments[0].validationMessage;", field);
     	
     }
-  
-    public By getPasswordlocator() {
-        return password;
-    } 
 
     public void getNoPasswordConfirmation()
     {
@@ -149,10 +133,6 @@ public class RegisterPage extends BaseLogger {
         return (String) ((JavascriptExecutor) driver)
             .executeScript("return arguments[0].validationMessage;", field);
     	
-    }
-    
-    public By getPwdConfirmationlocator() {
-        return pwdconfirmation;
     }
     
     public void getValidCredentials()
@@ -180,10 +160,6 @@ public class RegisterPage extends BaseLogger {
     	
     }
     
-    public By getNewAccountAlertlocator() {
-        return NewAccountAlertmsg;
-    } 
-    
     public void getMismatchPassword()
     {
     	log.info("Performing Register with TestData from Excel:");
@@ -208,10 +184,7 @@ public class RegisterPage extends BaseLogger {
         return (String) ((JavascriptExecutor) driver)
             .executeScript("return arguments[0].validationMessage;", field);
     }
-    
-    public By getPwdMismatchAlertlocator() {
-        return pwdMismatchAlertmsg;
-    }
+
     public String getpwdmismatchtext() {
        
             return elementsUtil.doGetText(pwdMismatchAlertmsg);
