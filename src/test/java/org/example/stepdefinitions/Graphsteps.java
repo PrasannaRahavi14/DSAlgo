@@ -27,6 +27,8 @@ public class Graphsteps extends BaseLogger{
 	@When("the user selects {string} from the Graph page")
 	public void the_user_selects_from_the_graph_page(String option) {
 	    Graphpage.selectGraphOption(option);
+	    Graphpage.clickOnPQLink();
+	    Graphpage.emptyPage();
 	    Graphpage.Tryhere();
 	    
 	}

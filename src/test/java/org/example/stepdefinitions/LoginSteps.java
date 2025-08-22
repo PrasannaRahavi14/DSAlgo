@@ -1,8 +1,6 @@
 package org.example.stepdefinitions;
 
 import org.example.factory.DriverFactory;
-import org.example.pages.HomePage;
-import org.example.pages.LandingPage;
 import org.example.pages.LoginPage;
 import org.example.utilities.BaseLogger;
 import org.openqa.selenium.WebDriver;

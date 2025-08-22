@@ -3,6 +3,7 @@ package org.example.pages;
 import java.time.Duration;
 import java.util.Map;
 
+import org.example.utilities.BaseLogger;
 import org.example.utilities.ConfigReader;
 import org.example.utilities.ElementsUtil;
 import org.example.utilities.ExcelReader;
@@ -15,7 +16,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Graph {
+public class Graph extends BaseLogger{
 	
 	    private WebDriver driver;
 	    private ElementsUtil elementsutil;
@@ -25,7 +26,7 @@ public class Graph {
 	    private By tryEditor_text = By.cssSelector(".CodeMirror div.CodeMirror-code");
 	    private By GraphLink = By.cssSelector("a[href='graph']");
 	    private By GraphRepLink = By.cssSelector("a[href='graph-representations']");
-	    
+	    private By pq_brokenLink = By.cssSelector(".list-group-item.list-group-item-light.text-info");
 	    
 	    String filepath = ConfigReader.getProperty("testData");
 	    
@@ -100,5 +101,26 @@ public class Graph {
 	    	    System.out.println("No alert appeared.");
 	    	}
 	    } 
+	    
+	    public void clickOnPQLink()
+	    {
+	        driver.findElement(pq_brokenLink).click();
+	        String pageSource = driver.getPageSource();
+	        if (pageSource.trim().isEmpty() || pageSource.contains("404") || pageSource.contains("Not Found")) {
+	            log.warn("❌ Broken Link Navigated to Empty/404 Page");
+	        } else {
+	            log.info("✅ Practice Questions Link Working Fine");
+	        }
+	    }
+	    public void emptyPage()
+	    {
+	        WebElement container = driver.findElement(By.cssSelector("div.container"));
+	        if (container.getText().trim().isEmpty()) {
+	            log.warn("⚠️ The container is empty → no practice content found");
+	        } else {
+	            log.info("✅ Container has content: " + container.getText());
+	        }
+            driver.navigate().back();
+	    }
 
 }

@@ -3,6 +3,7 @@ Feature: User sigin to DSAlgo Portal
 Background:
 Given the user is on the Signin page
 
+@fail
 Scenario Outline: Failed login 
 When the user clicks the Login button with "Error field"
 Then the user should be displayed with error message
