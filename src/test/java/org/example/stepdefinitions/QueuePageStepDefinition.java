@@ -31,7 +31,6 @@ public class QueuePageStepDefinition extends BaseLogger{
     Qp.QueueTopics(option);
     Qp.clickOnPQLink();
     Qp.emptyPage();
-    driver.navigate().back();
     Qp.Tryhere();
     Qp.enterPythonCode(Qp.getPythonCodeDataDriven());
     Qp.Run();
@@ -47,7 +46,6 @@ public class QueuePageStepDefinition extends BaseLogger{
     	Qp.QueueTopics(option);
     	Qp.clickOnPQLink();
         Qp.emptyPage();
-        driver.navigate().back();
         Qp.Tryhere();
         Qp.enterPythonCode(Qp.getInvalidCodeDataDriven());
         Qp.Run();
