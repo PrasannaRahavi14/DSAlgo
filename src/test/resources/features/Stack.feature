@@ -46,7 +46,7 @@ Scenario Outline: Verify with invalid python code of "<StackTopics>"
    |Implementation|
    |Applications|
    
-@StackTopics_BrokenLink   
+@StackTopics_PracticeQuestionslink 
 Scenario Outline: Verify the user is able to check the brokenlink
     Given The user is on the topics page after clicking the "<StackTopics>"
     When The user clicks on the Practice Question link
