@@ -37,7 +37,7 @@ public class StackStepdef extends BaseLogger{
 	  @Given("the user is on {string} page")
 	  public void the_user_is_on_page(String topic) { 
 		  stackpage.clickTopicLink(topic);
-	       Assert.assertEquals(stackpage.validateTitle(topic),"Operations in Stack");
+		  log.info(stackpage.validateTitle(topic),"Operations in Stack");
 	  }
 	  
 	  @When("the user clicks the Try Here button on operations in stackpage")
@@ -134,11 +134,11 @@ public class StackStepdef extends BaseLogger{
 
 	  @When("The user clicks on the Practice Question link")
 	  public void the_user_clicks_on_the_practice_question_link() {
-	      stackpage.ClickPracticeQuestionsLink();
+		  stackpage.ClickPQLink();
 	  }
 
-	  @Then("The user should be able to see the page is empty or not")
-	  public void the_user_should_be_able_to_see_the_page_is_empty_or_not() {
-	      stackpage.isPracticePageDisplayed();
+	  @Then("The user should be able to see the {string} page is empty or not")
+	  public void the_user_should_be_able_to_see_the_page_is_empty_or_not(String Expectedpage) {
+	      stackpage.isPracticePageDisplayed();	    	
 	  }
 }

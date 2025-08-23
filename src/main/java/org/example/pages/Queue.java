@@ -139,7 +139,7 @@ public class Queue extends BaseLogger {
         } else {
             log.info("✅ Container has content: " + container.getText());
         }
-
+        driver.navigate().back();
     }
     
 }
