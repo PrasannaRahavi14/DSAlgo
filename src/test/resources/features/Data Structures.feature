@@ -1,4 +1,3 @@
-@DSfull
 Feature: Data Structures Page Validation
 
   Background:

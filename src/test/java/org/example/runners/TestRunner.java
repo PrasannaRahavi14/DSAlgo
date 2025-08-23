@@ -1,6 +1,7 @@
 package org.example.runners;
 
-import org.testng.annotations.DataProvider;
+import org.example.factory.DriverFactory;
+import org.testng.annotations.*;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -15,11 +16,17 @@ import io.cucumber.testng.CucumberOptions;
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests  {
+	@BeforeClass(alwaysRun = true)
+	@Parameters("browser")
+	public void setBrowser(@Optional("chrome") String browser) {
+		DriverFactory.setBrowser(browser);
+		System.out.println("Running tests on: " + browser + " | Thread ID: " + Thread.currentThread().getId());
+	}
 	
-	  @Override
-	  @DataProvider(parallel = true) 
-	  public Object[][] scenarios()
-	  { return super.scenarios(); 
-	  }
-	 
+//	  @Override
+//	  @DataProvider(parallel = true)
+//	  public Object[][] scenarios()
+//	  { return super.scenarios();
+//	  }
+//
 }
