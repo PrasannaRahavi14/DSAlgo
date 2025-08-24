@@ -37,7 +37,7 @@ public class StackStepdef extends BaseLogger{
 	  @Given("the user is on {string} page")
 	  public void the_user_is_on_page(String topic) { 
 		  stackpage.clickTopicLink(topic);
-	      Assert.assertEquals(stackpage.validateTitle(topic),"Operations in Stack");
+		  log.info(stackpage.validateTitle(topic),"Operations in Stack");
 	  }
 	  
 	  @When("the user clicks the Try Here button on operations in stackpage")

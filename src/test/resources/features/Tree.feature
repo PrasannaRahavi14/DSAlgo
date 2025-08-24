@@ -1,4 +1,3 @@
-@TRfull
 Feature: Tree Page Validation
 
   Background:
