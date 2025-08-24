@@ -111,16 +111,18 @@ public void the_user_clicks_on_introduction_link_from_linked_list_module() {
 public void the_user_clicks_on_practice_questions_link_from_introduction_page() {
     linkedlistpage.clickPracticeQuestionsLink();
 }
+@Then("The user can able to land on practice page to check valid or not")
+public void the_user_can_able_to_land_on_practice_page_to_check_valid_or_not() {
+	linkedlistpage.emptyPage();
+	
+   }
 
-@Then("The user can able to land on practice page with empty content")
-public void the_user_can_able_to_land_on_practice_page_with_empty_content() {
-	linkedlistpage.isPracticePageDisplayed();
-    
-}
+
+    }
 
 
 	
-}
+
 
 
 

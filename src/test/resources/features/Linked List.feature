@@ -72,10 +72,12 @@ Examples:
 |Deletion|
 
 
+
 @LLT05
-Scenario: Verifying the practice questions page in Linked List module
+Scenario:Scenario: Verify the user is able to check broken links or empty page in Linked List module
 Given The user clicks on Introduction link from Linked List module
 When The user clicks on practice questions link from Introduction page
-Then The user can able to land on practice page with empty content
+Then The user can able to land on practice page to check valid or not
+
 
 
