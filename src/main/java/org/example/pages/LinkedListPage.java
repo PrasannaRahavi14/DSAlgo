@@ -146,17 +146,26 @@ public class LinkedListPage extends BaseLogger {
 	   {
 		log.info("Clicking Practice Questions Link from Introduction page");
 		 elementsUtil.doClick(practiceQuestions);
+		 String pageSource = driver.getPageSource();
+	        if (pageSource.trim().isEmpty() || pageSource.contains("404") || pageSource.contains("Not Found")) {
+	            log.warn("❌ Broken Link Navigated to Empty/404 Page");
+	        } else {
+	            log.info("✅ Practice Questions Link Working Fine");
+	        }
 	   }
-	public boolean isPracticePageDisplayed()
-	{
-		 try {
-	        	log.info("Verifying the Practice questions page");
-	            return elementsUtil.waitForElementToBeVisible(displayPracticepage).isDisplayed();
-	        } catch (TimeoutException e) {
-	            return false;
-	        }    
-		
-	}
+	
+	
+	    public void emptyPage()
+	    {
+	        WebElement container = driver.findElement(By.cssSelector("div.container"));
+	        if (container.getText().trim().isEmpty()) {
+	            log.warn("⚠️ The container is empty → no practice content found");
+	        } else {
+	            log.info("✅ Container has content: " + container.getText());
+	        }
+
+	    }
+	
    }
    
    

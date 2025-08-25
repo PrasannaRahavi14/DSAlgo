@@ -29,6 +29,8 @@ public class QueuePageStepDefinition extends BaseLogger{
     @When("the user clicks {string} on Queue Page")
     public void the_user_clicks_on_queue_page(String option) {
     Qp.QueueTopics(option);
+    Qp.clickOnPQLink();
+    Qp.emptyPage();
     Qp.Tryhere();
     Qp.enterPythonCode(Qp.getPythonCodeDataDriven());
     Qp.Run();
@@ -42,6 +44,8 @@ public class QueuePageStepDefinition extends BaseLogger{
     @When("the user clicks {string} from Queue page")
     public void the_user_clicks_from_queue_page(String option) {
     	Qp.QueueTopics(option);
+    	Qp.clickOnPQLink();
+        Qp.emptyPage();
         Qp.Tryhere();
         Qp.enterPythonCode(Qp.getInvalidCodeDataDriven());
         Qp.Run();
