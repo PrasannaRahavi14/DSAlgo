@@ -20,9 +20,7 @@
 		 HomePage home = new HomePage(DriverFactory.getDriver());
 	     LandingPage landingPage = new LandingPage(DriverFactory.getDriver());
 		 LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
-		 String url = ConfigReader.getProperty("baseurl");
-		 private final String filePath = "src/test/resources/testdata/TestData1.xlsx";
-
+		
 		
 
 		

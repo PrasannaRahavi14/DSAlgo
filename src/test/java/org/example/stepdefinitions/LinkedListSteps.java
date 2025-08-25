@@ -20,11 +20,9 @@ import io.cucumber.java.en.When;
 public class LinkedListSteps extends BaseLogger {
 	 WebDriver driver = DriverFactory.getDriver();
 	 HomePage home = new HomePage(DriverFactory.getDriver());
-	 LandingPage landingPage = new LandingPage(DriverFactory.getDriver());
 	 LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
 	 LinkedListPage linkedlistpage = new LinkedListPage(DriverFactory.getDriver());
-	 String url = ConfigReader.getProperty("baseurl");
-	 private final String filePath = "src/test/resources/testdata/TestData1.xlsx";
+	 
 
 	
 	
@@ -32,11 +30,7 @@ public class LinkedListSteps extends BaseLogger {
 @Given("the user in Linked List page after signed in")
 public void the_user_in_linked_list_page_after_signed_in() {
 	
-	/*landingPage.getURL();;
-	landingPage.clickGetStartedBtn();
-	home.clickSignIn();
-	Map<String, String> loginData = ExcelReader.getDefaultLogin(filePath);
-    loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));*/
+	
 	loginpage.Login();
      home.clickGetStartedForLinkedList();
 	   }
