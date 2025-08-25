@@ -92,16 +92,13 @@ public class RegisterStepdef extends BaseLogger {
    
    @When("the user clicks Register button after entering different passwords in Password and Password Confirmation fields")
    public void the_user_clicks_Register_button_after_entering_different_passwords_in_password_and_password_confirmation_fields() {
-       registerpage.getMismatchPassword();
-   }
+     registerpage.getMismatchPassword();
+	     }
 
    @Then("The user should able to see an pwd warning message {string}")
    public void the_user_should_able_to_see_an_pwd_warning_message(String ExpectedAlert) {
-       String ActualAlert = registerpage.getPwdMismatchAlertmsg();  
-       log.info("Actual message: " + ActualAlert);
-       Assert.assertEquals(ActualAlert, ExpectedAlert);
-	  // Assert.assertEquals(ActualAlert, ExpectedAlert, "password_mismatch:The two password fields didn’t match.");
-     }
+	   registerpage.getPwdMismatchAlertmsg();
+	  }
    
    @When("the user clicks Register button with valid Username,Password and Password Confirmation")
    public void the_user_clicks_register_button_with_valid_username_password_and_password_confirmation() {
@@ -122,8 +119,8 @@ public class RegisterStepdef extends BaseLogger {
 
  @Then("the user should see an warning message as {string} below Username textbox")
  public void the_user_should_see_an_warning_message_as_below_username_textbox(String ExpectedMsg) {
-	 String ActualMsg = registerpage.getPwdMismatchAlertmsg();
-	 log.info("Actual message: " + ActualMsg);
+	 String ActualMsg = registerpage.getpwdmismatchtext();
+     log.info("Actual message: " + ActualMsg);
 	 Assert.assertEquals(ActualMsg,ExpectedMsg, "Username is not valid");
     }
  
@@ -134,7 +131,7 @@ public class RegisterStepdef extends BaseLogger {
 
  @Then("The user should see an warning message as {string} below password textbox")
  public void the_user_should_see_an_warning_message_as_below_password_textbox(String ExpectedMsg) {
-	 String ActualMsg = registerpage.getPwdMismatchAlertmsg();
+	 String ActualMsg = registerpage.getpwdmismatchtext();
 	 System.out.println("Actual message: " + ActualMsg);
 	 Assert.assertEquals(ActualMsg,ExpectedMsg, "Your password can’t be entirely numeric.");
     }

@@ -20,11 +20,9 @@ import io.cucumber.java.en.When;
 public class LinkedListSteps extends BaseLogger {
 	 WebDriver driver = DriverFactory.getDriver();
 	 HomePage home = new HomePage(DriverFactory.getDriver());
-	 LandingPage landingPage = new LandingPage(DriverFactory.getDriver());
 	 LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
 	 LinkedListPage linkedlistpage = new LinkedListPage(DriverFactory.getDriver());
-	 String url = ConfigReader.getProperty("baseurl");
-	 private final String filePath = "src/test/resources/testdata/TestData1.xlsx";
+	 
 
 	
 	
@@ -32,11 +30,7 @@ public class LinkedListSteps extends BaseLogger {
 @Given("the user in Linked List page after signed in")
 public void the_user_in_linked_list_page_after_signed_in() {
 	
-	/*landingPage.getURL();;
-	landingPage.clickGetStartedBtn();
-	home.clickSignIn();
-	Map<String, String> loginData = ExcelReader.getDefaultLogin(filePath);
-    loginpage.doLogin(loginData.get("Username"),loginData.get("Password"));*/
+	
 	loginpage.Login();
      home.clickGetStartedForLinkedList();
 	   }
@@ -111,16 +105,18 @@ public void the_user_clicks_on_introduction_link_from_linked_list_module() {
 public void the_user_clicks_on_practice_questions_link_from_introduction_page() {
     linkedlistpage.clickPracticeQuestionsLink();
 }
+@Then("The user can able to land on practice page to check valid or not")
+public void the_user_can_able_to_land_on_practice_page_to_check_valid_or_not() {
+	linkedlistpage.emptyPage();
+	
+   }
 
-@Then("The user can able to land on practice page with empty content")
-public void the_user_can_able_to_land_on_practice_page_with_empty_content() {
-	linkedlistpage.isPracticePageDisplayed();
-    
-}
+
+    }
 
 
 	
-}
+
 
 
 

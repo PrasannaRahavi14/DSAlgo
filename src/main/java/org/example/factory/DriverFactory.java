@@ -10,10 +10,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class DriverFactory {
 
    public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
+    private static ThreadLocal<String> tlBrowser = new ThreadLocal<>();
 
    WebDriver driver;
     public WebDriver init_driver (String browser)
     {
+        setBrowser(browser);
 
         if(browser.equals("chrome"))
         {
@@ -33,7 +35,7 @@ public class DriverFactory {
         }
         else
         {
-            System.out.println("please pass the correct browser values" + browser);
+            throw new IllegalArgumentException("Please pass the correct browser value: " + browser);
         }
 
         getDriver().manage().deleteAllCookies();
@@ -41,8 +43,24 @@ public class DriverFactory {
         return getDriver();
     }
 
+    public static void setBrowser(String browser) {
+        tlBrowser.set(browser);
+    }
+
+    public static String getBrowser() {
+        return tlBrowser.get();
+    }
     public static WebDriver getDriver()
     {
         return tlDriver.get();
+    }
+
+
+
+    public static void quitDriver() {
+        if (tlDriver.get() != null) {
+            tlDriver.get().quit();
+            tlDriver.remove();
+        }
     }
 }

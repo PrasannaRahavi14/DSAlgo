@@ -28,6 +28,7 @@ public class Hooks {
     Properties prop;
     private Logger log = LoggerHelper.getLogger(Hooks.class);
     private static final String LOG_FILE_PATH = "target/logs/execution.log";
+
     @Before(order = 0)
     public void getProperty() {
         configReader = new ConfigReader();
@@ -36,10 +37,13 @@ public class Hooks {
 
     @Before(order = 1)
     public void launchBrowser() {
-        String browserName = prop.getProperty("browser");
-        log.info("Browser from config: " + browserName);
+        String browserName = DriverFactory.getBrowser();
+        if (browserName == null || browserName.isEmpty()) {
+            browserName = prop.getProperty("browser");
+        }
         driverFactory = new DriverFactory();
         driver = driverFactory.init_driver(browserName);
+        log.info("Browser launched: " + browserName + " | Thread: " + Thread.currentThread().getId());
     }
 
     @Before(order = 2)
@@ -50,8 +54,10 @@ public class Hooks {
     @After(order = 0)
     public void quitBrowser()
     {
-        log.info("Closing the browser");
-        driver.quit();
+        if (driver != null) {
+            log.info("Closing the browser");
+            DriverFactory.quitDriver();
+        }
     }
 
     @After(order = 1)
