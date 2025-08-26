@@ -7,7 +7,11 @@
         <methods>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
+<<<<<<< HEAD
+          <include name="runScenario" invocation-numbers="6 7 8 9"/>
+=======
           <include name="runScenario" invocation-numbers="0"/>
+>>>>>>> 90eb2789eb5e82bb1e7c487bdda295942f0a539f
         </methods>
       </class> <!-- org.example.runners.TestRunner -->
     </classes>
